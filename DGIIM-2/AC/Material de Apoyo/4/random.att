@@ -1,0 +1,2385 @@
+
+random:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 5f 00 00 	mov    0x5fd9(%rip),%rax        # 6fe8 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	callq  *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	retq   
+
+Desensamblado de la sección .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 2a 5f 00 00    	pushq  0x5f2a(%rip)        # 6f50 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 2b 5f 00 00 	bnd jmpq *0x5f2b(%rip)        # 6f58 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nopl   (%rax)
+    1030:	f3 0f 1e fa          	endbr64 
+    1034:	68 00 00 00 00       	pushq  $0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmpq 1020 <.plt>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64 
+    1044:	68 01 00 00 00       	pushq  $0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmpq 1020 <.plt>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64 
+    1054:	68 02 00 00 00       	pushq  $0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmpq 1020 <.plt>
+    105f:	90                   	nop
+    1060:	f3 0f 1e fa          	endbr64 
+    1064:	68 03 00 00 00       	pushq  $0x3
+    1069:	f2 e9 b1 ff ff ff    	bnd jmpq 1020 <.plt>
+    106f:	90                   	nop
+    1070:	f3 0f 1e fa          	endbr64 
+    1074:	68 04 00 00 00       	pushq  $0x4
+    1079:	f2 e9 a1 ff ff ff    	bnd jmpq 1020 <.plt>
+    107f:	90                   	nop
+    1080:	f3 0f 1e fa          	endbr64 
+    1084:	68 05 00 00 00       	pushq  $0x5
+    1089:	f2 e9 91 ff ff ff    	bnd jmpq 1020 <.plt>
+    108f:	90                   	nop
+    1090:	f3 0f 1e fa          	endbr64 
+    1094:	68 06 00 00 00       	pushq  $0x6
+    1099:	f2 e9 81 ff ff ff    	bnd jmpq 1020 <.plt>
+    109f:	90                   	nop
+    10a0:	f3 0f 1e fa          	endbr64 
+    10a4:	68 07 00 00 00       	pushq  $0x7
+    10a9:	f2 e9 71 ff ff ff    	bnd jmpq 1020 <.plt>
+    10af:	90                   	nop
+    10b0:	f3 0f 1e fa          	endbr64 
+    10b4:	68 08 00 00 00       	pushq  $0x8
+    10b9:	f2 e9 61 ff ff ff    	bnd jmpq 1020 <.plt>
+    10bf:	90                   	nop
+    10c0:	f3 0f 1e fa          	endbr64 
+    10c4:	68 09 00 00 00       	pushq  $0x9
+    10c9:	f2 e9 51 ff ff ff    	bnd jmpq 1020 <.plt>
+    10cf:	90                   	nop
+    10d0:	f3 0f 1e fa          	endbr64 
+    10d4:	68 0a 00 00 00       	pushq  $0xa
+    10d9:	f2 e9 41 ff ff ff    	bnd jmpq 1020 <.plt>
+    10df:	90                   	nop
+    10e0:	f3 0f 1e fa          	endbr64 
+    10e4:	68 0b 00 00 00       	pushq  $0xb
+    10e9:	f2 e9 31 ff ff ff    	bnd jmpq 1020 <.plt>
+    10ef:	90                   	nop
+
+Desensamblado de la sección .plt.got:
+
+00000000000010f0 <__cxa_finalize@plt>:
+    10f0:	f3 0f 1e fa          	endbr64 
+    10f4:	f2 ff 25 c5 5e 00 00 	bnd jmpq *0x5ec5(%rip)        # 6fc0 <__cxa_finalize@GLIBC_2.2.5>
+    10fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .plt.sec:
+
+0000000000001100 <std::chrono::_V2::system_clock::now()@plt>:
+    1100:	f3 0f 1e fa          	endbr64 
+    1104:	f2 ff 25 55 5e 00 00 	bnd jmpq *0x5e55(%rip)        # 6f60 <std::chrono::_V2::system_clock::now()@GLIBCXX_3.4.19>
+    110b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001110 <std::ostream::operator<<(unsigned long)@plt>:
+    1110:	f3 0f 1e fa          	endbr64 
+    1114:	f2 ff 25 4d 5e 00 00 	bnd jmpq *0x5e4d(%rip)        # 6f68 <std::ostream::operator<<(unsigned long)@GLIBCXX_3.4>
+    111b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>:
+    1120:	f3 0f 1e fa          	endbr64 
+    1124:	f2 ff 25 45 5e 00 00 	bnd jmpq *0x5e45(%rip)        # 6f70 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@GLIBCXX_3.4>
+    112b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001130 <memcpy@plt>:
+    1130:	f3 0f 1e fa          	endbr64 
+    1134:	f2 ff 25 3d 5e 00 00 	bnd jmpq *0x5e3d(%rip)        # 6f78 <memcpy@GLIBC_2.14>
+    113b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001140 <__cxa_atexit@plt>:
+    1140:	f3 0f 1e fa          	endbr64 
+    1144:	f2 ff 25 35 5e 00 00 	bnd jmpq *0x5e35(%rip)        # 6f80 <__cxa_atexit@GLIBC_2.2.5>
+    114b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>:
+    1150:	f3 0f 1e fa          	endbr64 
+    1154:	f2 ff 25 2d 5e 00 00 	bnd jmpq *0x5e2d(%rip)        # 6f88 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@GLIBCXX_3.4>
+    115b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>:
+    1160:	f3 0f 1e fa          	endbr64 
+    1164:	f2 ff 25 25 5e 00 00 	bnd jmpq *0x5e25(%rip)        # 6f90 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@GLIBCXX_3.4>
+    116b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001170 <__stack_chk_fail@plt>:
+    1170:	f3 0f 1e fa          	endbr64 
+    1174:	f2 ff 25 1d 5e 00 00 	bnd jmpq *0x5e1d(%rip)        # 6f98 <__stack_chk_fail@GLIBC_2.4>
+    117b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>:
+    1180:	f3 0f 1e fa          	endbr64 
+    1184:	f2 ff 25 15 5e 00 00 	bnd jmpq *0x5e15(%rip)        # 6fa0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@GLIBCXX_3.4>
+    118b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001190 <std::ios_base::Init::Init()@plt>:
+    1190:	f3 0f 1e fa          	endbr64 
+    1194:	f2 ff 25 0d 5e 00 00 	bnd jmpq *0x5e0d(%rip)        # 6fa8 <std::ios_base::Init::Init()@GLIBCXX_3.4>
+    119b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>:
+    11a0:	f3 0f 1e fa          	endbr64 
+    11a4:	f2 ff 25 05 5e 00 00 	bnd jmpq *0x5e05(%rip)        # 6fb0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@GLIBCXX_3.4>
+    11ab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011b0 <std::ostream::operator<<(double)@plt>:
+    11b0:	f3 0f 1e fa          	endbr64 
+    11b4:	f2 ff 25 fd 5d 00 00 	bnd jmpq *0x5dfd(%rip)        # 6fb8 <std::ostream::operator<<(double)@GLIBCXX_3.4>
+    11bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .text:
+
+00000000000011c0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>:
+    11c0:	48 83 ec 08          	sub    $0x8,%rsp
+    11c4:	48 8d 3d 46 5e 00 00 	lea    0x5e46(%rip),%rdi        # 7011 <std::__ioinit>
+    11cb:	e8 c0 ff ff ff       	callq  1190 <std::ios_base::Init::Init()@plt>
+    11d0:	48 8b 3d 21 5e 00 00 	mov    0x5e21(%rip),%rdi        # 6ff8 <std::ios_base::Init::~Init()@GLIBCXX_3.4>
+    11d7:	48 8d 15 2a 5e 00 00 	lea    0x5e2a(%rip),%rdx        # 7008 <__dso_handle>
+    11de:	48 8d 35 2c 5e 00 00 	lea    0x5e2c(%rip),%rsi        # 7011 <std::__ioinit>
+    11e5:	48 83 c4 08          	add    $0x8,%rsp
+    11e9:	e9 52 ff ff ff       	jmpq   1140 <__cxa_atexit@plt>
+    11ee:	66 90                	xchg   %ax,%ax
+
+00000000000011f0 <main>:
+    11f0:	f3 0f 1e fa          	endbr64 
+    11f4:	55                   	push   %rbp
+    11f5:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    11fc:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1201:	48 81 ec a0 03 00 00 	sub    $0x3a0,%rsp
+    1208:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+    120d:	48 89 ef             	mov    %rbp,%rdi
+    1210:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1217:	00 00 
+    1219:	48 89 84 24 98 13 00 	mov    %rax,0x1398(%rsp)
+    1220:	00 
+    1221:	31 c0                	xor    %eax,%eax
+    1223:	e8 a8 11 00 00       	callq  23d0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine()>
+    1228:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    122d:	e8 9e 13 00 00       	callq  25d0 <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>
+    1232:	48 89 ef             	mov    %rbp,%rdi
+    1235:	e8 96 11 00 00       	callq  23d0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine()>
+    123a:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    123f:	e8 8c 13 00 00       	callq  25d0 <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>
+    1244:	48 89 ef             	mov    %rbp,%rdi
+    1247:	e8 34 11 00 00       	callq  2380 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::linear_congruential_engine()>
+    124c:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+    1251:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+    1256:	e8 c5 14 00 00       	callq  2720 <void f<std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>)>
+    125b:	48 89 ef             	mov    %rbp,%rdi
+    125e:	e8 8d 10 00 00       	callq  22f0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine()>
+    1263:	48 81 ec 90 13 00 00 	sub    $0x1390,%rsp
+    126a:	ba 88 13 00 00       	mov    $0x1388,%edx
+    126f:	48 89 ee             	mov    %rbp,%rsi
+    1272:	48 89 e7             	mov    %rsp,%rdi
+    1275:	e8 b6 fe ff ff       	callq  1130 <memcpy@plt>
+    127a:	e8 f1 15 00 00       	callq  2870 <void f<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>)>
+    127f:	48 81 c4 90 13 00 00 	add    $0x1390,%rsp
+    1286:	48 89 ef             	mov    %rbp,%rdi
+    1289:	e8 e2 0f 00 00       	callq  2270 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine()>
+    128e:	48 81 ec d0 09 00 00 	sub    $0x9d0,%rsp
+    1295:	ba c8 09 00 00       	mov    $0x9c8,%edx
+    129a:	48 89 ee             	mov    %rbp,%rsi
+    129d:	48 89 e7             	mov    %rsp,%rdi
+    12a0:	e8 8b fe ff ff       	callq  1130 <memcpy@plt>
+    12a5:	e8 06 17 00 00       	callq  29b0 <void f<std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul> >(std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>)>
+    12aa:	48 81 c4 d0 09 00 00 	add    $0x9d0,%rsp
+    12b1:	48 89 ef             	mov    %rbp,%rdi
+    12b4:	e8 17 0f 00 00       	callq  21d0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::subtract_with_carry_engine()>
+    12b9:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12c0:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12c7:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12ce:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12d5:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12dc:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12e3:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12ea:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12f1:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12f8:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    12ff:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1306:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    130d:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1314:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    131b:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1322:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1329:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1330:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1337:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    133e:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1345:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    134c:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1353:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    135a:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1361:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    1368:	ff b4 24 d8 00 00 00 	pushq  0xd8(%rsp)
+    136f:	e8 7c 17 00 00       	callq  2af0 <void f<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul> >(std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>)>
+    1374:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+    137b:	48 89 ef             	mov    %rbp,%rdi
+    137e:	e8 7d 0d 00 00       	callq  2100 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::subtract_with_carry_engine()>
+    1383:	ff 74 24 78          	pushq  0x78(%rsp)
+    1387:	ff 74 24 78          	pushq  0x78(%rsp)
+    138b:	ff 74 24 78          	pushq  0x78(%rsp)
+    138f:	ff 74 24 78          	pushq  0x78(%rsp)
+    1393:	ff 74 24 78          	pushq  0x78(%rsp)
+    1397:	ff 74 24 78          	pushq  0x78(%rsp)
+    139b:	ff 74 24 78          	pushq  0x78(%rsp)
+    139f:	ff 74 24 78          	pushq  0x78(%rsp)
+    13a3:	ff 74 24 78          	pushq  0x78(%rsp)
+    13a7:	ff 74 24 78          	pushq  0x78(%rsp)
+    13ab:	ff 74 24 78          	pushq  0x78(%rsp)
+    13af:	ff 74 24 78          	pushq  0x78(%rsp)
+    13b3:	ff 74 24 78          	pushq  0x78(%rsp)
+    13b7:	ff 74 24 78          	pushq  0x78(%rsp)
+    13bb:	e8 70 18 00 00       	callq  2c30 <void f<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul> >(std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>)>
+    13c0:	48 83 c4 70          	add    $0x70,%rsp
+    13c4:	48 89 ef             	mov    %rbp,%rdi
+    13c7:	e8 14 0e 00 00       	callq  21e0 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::discard_block_engine()>
+    13cc:	48 83 ec 08          	sub    $0x8,%rsp
+    13d0:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13d7:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13de:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13e5:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13ec:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13f3:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    13fa:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1401:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1408:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    140f:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1416:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    141d:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1424:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    142b:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1432:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1439:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1440:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1447:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    144e:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1455:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    145c:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1463:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    146a:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1471:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1478:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    147f:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    1486:	ff b4 24 e8 00 00 00 	pushq  0xe8(%rsp)
+    148d:	e8 de 18 00 00       	callq  2d70 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>)>
+    1492:	48 81 c4 e0 00 00 00 	add    $0xe0,%rsp
+    1499:	48 89 ef             	mov    %rbp,%rdi
+    149c:	e8 6f 0c 00 00       	callq  2110 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::discard_block_engine()>
+    14a1:	48 83 ec 08          	sub    $0x8,%rsp
+    14a5:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14ac:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14b3:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14ba:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14c1:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14c8:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14cf:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14d6:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14dd:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14e4:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14eb:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14f2:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    14f9:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    1500:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    1507:	ff b4 24 88 00 00 00 	pushq  0x88(%rsp)
+    150e:	e8 9d 19 00 00       	callq  2eb0 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>)>
+    1513:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+    1517:	48 89 ef             	mov    %rbp,%rdi
+    151a:	e8 c1 0e 00 00       	callq  23e0 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::shuffle_order_engine()>
+    151f:	48 81 ec 10 08 00 00 	sub    $0x810,%rsp
+    1526:	48 89 e7             	mov    %rsp,%rdi
+    1529:	ba 10 08 00 00       	mov    $0x810,%edx
+    152e:	48 89 ee             	mov    %rbp,%rsi
+    1531:	e8 fa fb ff ff       	callq  1130 <memcpy@plt>
+    1536:	e8 b5 1a 00 00       	callq  2ff0 <void f<std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul> >(std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>)>
+    153b:	48 81 c4 10 08 00 00 	add    $0x810,%rsp
+    1542:	48 8b 84 24 98 13 00 	mov    0x1398(%rsp),%rax
+    1549:	00 
+    154a:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    1551:	00 00 
+    1553:	75 0b                	jne    1560 <main+0x370>
+    1555:	48 81 c4 a0 13 00 00 	add    $0x13a0,%rsp
+    155c:	31 c0                	xor    %eax,%eax
+    155e:	5d                   	pop    %rbp
+    155f:	c3                   	retq   
+    1560:	e8 0b fc ff ff       	callq  1170 <__stack_chk_fail@plt>
+    1565:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    156c:	00 00 00 00 
+
+0000000000001570 <_GLOBAL__sub_I_main>:
+    1570:	f3 0f 1e fa          	endbr64 
+    1574:	e9 47 fc ff ff       	jmpq   11c0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>
+    1579:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001580 <_start>:
+    1580:	f3 0f 1e fa          	endbr64 
+    1584:	31 ed                	xor    %ebp,%ebp
+    1586:	49 89 d1             	mov    %rdx,%r9
+    1589:	5e                   	pop    %rsi
+    158a:	48 89 e2             	mov    %rsp,%rdx
+    158d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    1591:	50                   	push   %rax
+    1592:	54                   	push   %rsp
+    1593:	4c 8d 05 06 1c 00 00 	lea    0x1c06(%rip),%r8        # 31a0 <__libc_csu_fini>
+    159a:	48 8d 0d 8f 1b 00 00 	lea    0x1b8f(%rip),%rcx        # 3130 <__libc_csu_init>
+    15a1:	48 8d 3d 48 fc ff ff 	lea    -0x3b8(%rip),%rdi        # 11f0 <main>
+    15a8:	ff 15 32 5a 00 00    	callq  *0x5a32(%rip)        # 6fe0 <__libc_start_main@GLIBC_2.2.5>
+    15ae:	f4                   	hlt    
+    15af:	90                   	nop
+
+00000000000015b0 <deregister_tm_clones>:
+    15b0:	48 8d 3d 59 5a 00 00 	lea    0x5a59(%rip),%rdi        # 7010 <__TMC_END__>
+    15b7:	48 8d 05 52 5a 00 00 	lea    0x5a52(%rip),%rax        # 7010 <__TMC_END__>
+    15be:	48 39 f8             	cmp    %rdi,%rax
+    15c1:	74 15                	je     15d8 <deregister_tm_clones+0x28>
+    15c3:	48 8b 05 0e 5a 00 00 	mov    0x5a0e(%rip),%rax        # 6fd8 <_ITM_deregisterTMCloneTable>
+    15ca:	48 85 c0             	test   %rax,%rax
+    15cd:	74 09                	je     15d8 <deregister_tm_clones+0x28>
+    15cf:	ff e0                	jmpq   *%rax
+    15d1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    15d8:	c3                   	retq   
+    15d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000015e0 <register_tm_clones>:
+    15e0:	48 8d 3d 29 5a 00 00 	lea    0x5a29(%rip),%rdi        # 7010 <__TMC_END__>
+    15e7:	48 8d 35 22 5a 00 00 	lea    0x5a22(%rip),%rsi        # 7010 <__TMC_END__>
+    15ee:	48 29 fe             	sub    %rdi,%rsi
+    15f1:	48 89 f0             	mov    %rsi,%rax
+    15f4:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    15f8:	48 c1 f8 03          	sar    $0x3,%rax
+    15fc:	48 01 c6             	add    %rax,%rsi
+    15ff:	48 d1 fe             	sar    %rsi
+    1602:	74 14                	je     1618 <register_tm_clones+0x38>
+    1604:	48 8b 05 e5 59 00 00 	mov    0x59e5(%rip),%rax        # 6ff0 <_ITM_registerTMCloneTable>
+    160b:	48 85 c0             	test   %rax,%rax
+    160e:	74 08                	je     1618 <register_tm_clones+0x38>
+    1610:	ff e0                	jmpq   *%rax
+    1612:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1618:	c3                   	retq   
+    1619:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001620 <__do_global_dtors_aux>:
+    1620:	f3 0f 1e fa          	endbr64 
+    1624:	80 3d e5 59 00 00 00 	cmpb   $0x0,0x59e5(%rip)        # 7010 <__TMC_END__>
+    162b:	75 2b                	jne    1658 <__do_global_dtors_aux+0x38>
+    162d:	55                   	push   %rbp
+    162e:	48 83 3d 8a 59 00 00 	cmpq   $0x0,0x598a(%rip)        # 6fc0 <__cxa_finalize@GLIBC_2.2.5>
+    1635:	00 
+    1636:	48 89 e5             	mov    %rsp,%rbp
+    1639:	74 0c                	je     1647 <__do_global_dtors_aux+0x27>
+    163b:	48 8b 3d c6 59 00 00 	mov    0x59c6(%rip),%rdi        # 7008 <__dso_handle>
+    1642:	e8 a9 fa ff ff       	callq  10f0 <__cxa_finalize@plt>
+    1647:	e8 64 ff ff ff       	callq  15b0 <deregister_tm_clones>
+    164c:	c6 05 bd 59 00 00 01 	movb   $0x1,0x59bd(%rip)        # 7010 <__TMC_END__>
+    1653:	5d                   	pop    %rbp
+    1654:	c3                   	retq   
+    1655:	0f 1f 00             	nopl   (%rax)
+    1658:	c3                   	retq   
+    1659:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001660 <frame_dummy>:
+    1660:	f3 0f 1e fa          	endbr64 
+    1664:	e9 77 ff ff ff       	jmpq   15e0 <register_tm_clones>
+    1669:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001670 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>:
+    1670:	89 f8                	mov    %edi,%eax
+    1672:	21 f0                	and    %esi,%eax
+    1674:	c3                   	retq   
+    1675:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    167c:	00 00 00 00 
+
+0000000000001680 <std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>:
+    1680:	89 f8                	mov    %edi,%eax
+    1682:	09 f0                	or     %esi,%eax
+    1684:	c3                   	retq   
+    1685:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    168c:	00 00 00 00 
+
+0000000000001690 <std::setw(int)>:
+    1690:	89 f8                	mov    %edi,%eax
+    1692:	c3                   	retq   
+    1693:	90                   	nop
+    1694:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    169b:	00 00 00 00 
+    169f:	90                   	nop
+
+00000000000016a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>:
+    16a0:	48 8b 87 c8 00 00 00 	mov    0xc8(%rdi),%rax
+    16a7:	48 89 c2             	mov    %rax,%rdx
+    16aa:	48 83 ea 0a          	sub    $0xa,%rdx
+    16ae:	48 8d 48 0e          	lea    0xe(%rax),%rcx
+    16b2:	48 0f 48 d1          	cmovs  %rcx,%rdx
+    16b6:	4c 8b 04 d7          	mov    (%rdi,%rdx,8),%r8
+    16ba:	48 8b 97 c0 00 00 00 	mov    0xc0(%rdi),%rdx
+    16c1:	48 03 14 c7          	add    (%rdi,%rax,8),%rdx
+    16c5:	49 39 d0             	cmp    %rdx,%r8
+    16c8:	72 2e                	jb     16f8 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()+0x58>
+    16ca:	49 29 d0             	sub    %rdx,%r8
+    16cd:	31 d2                	xor    %edx,%edx
+    16cf:	48 89 97 c0 00 00 00 	mov    %rdx,0xc0(%rdi)
+    16d6:	4c 89 04 c7          	mov    %r8,(%rdi,%rax,8)
+    16da:	48 ff c0             	inc    %rax
+    16dd:	48 83 f8 17          	cmp    $0x17,%rax
+    16e1:	ba 00 00 00 00       	mov    $0x0,%edx
+    16e6:	48 0f 47 c2          	cmova  %rdx,%rax
+    16ea:	48 89 87 c8 00 00 00 	mov    %rax,0xc8(%rdi)
+    16f1:	4c 89 c0             	mov    %r8,%rax
+    16f4:	c3                   	retq   
+    16f5:	0f 1f 00             	nopl   (%rax)
+    16f8:	49 29 d0             	sub    %rdx,%r8
+    16fb:	49 81 c0 00 00 00 01 	add    $0x1000000,%r8
+    1702:	ba 01 00 00 00       	mov    $0x1,%edx
+    1707:	eb c6                	jmp    16cf <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()+0x2f>
+    1709:	90                   	nop
+    170a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>:
+    1710:	48 8b 47 68          	mov    0x68(%rdi),%rax
+    1714:	48 89 c2             	mov    %rax,%rdx
+    1717:	48 83 ea 05          	sub    $0x5,%rdx
+    171b:	48 8d 48 07          	lea    0x7(%rax),%rcx
+    171f:	48 0f 48 d1          	cmovs  %rcx,%rdx
+    1723:	4c 8b 04 d7          	mov    (%rdi,%rdx,8),%r8
+    1727:	48 8b 57 60          	mov    0x60(%rdi),%rdx
+    172b:	48 03 14 c7          	add    (%rdi,%rax,8),%rdx
+    172f:	49 39 d0             	cmp    %rdx,%r8
+    1732:	72 2c                	jb     1760 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()+0x50>
+    1734:	49 29 d0             	sub    %rdx,%r8
+    1737:	31 d2                	xor    %edx,%edx
+    1739:	48 89 57 60          	mov    %rdx,0x60(%rdi)
+    173d:	4c 89 04 c7          	mov    %r8,(%rdi,%rax,8)
+    1741:	48 ff c0             	inc    %rax
+    1744:	48 83 f8 0b          	cmp    $0xb,%rax
+    1748:	ba 00 00 00 00       	mov    $0x0,%edx
+    174d:	48 0f 47 c2          	cmova  %rdx,%rax
+    1751:	48 89 47 68          	mov    %rax,0x68(%rdi)
+    1755:	4c 89 c0             	mov    %r8,%rax
+    1758:	c3                   	retq   
+    1759:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1760:	48 b9 00 00 00 00 00 	movabs $0x1000000000000,%rcx
+    1767:	00 01 00 
+    176a:	48 29 d1             	sub    %rdx,%rcx
+    176d:	49 01 c8             	add    %rcx,%r8
+    1770:	ba 01 00 00 00       	mov    $0x1,%edx
+    1775:	eb c2                	jmp    1739 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()+0x29>
+    1777:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    177e:	00 00 
+
+0000000000001780 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::max()>:
+    1780:	b8 fe ff ff 7f       	mov    $0x7ffffffe,%eax
+    1785:	c3                   	retq   
+    1786:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    178d:	00 00 00 
+
+0000000000001790 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min()>:
+    1790:	b8 01 00 00 00       	mov    $0x1,%eax
+    1795:	c3                   	retq   
+    1796:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    179d:	00 00 00 
+
+00000000000017a0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()>:
+    17a0:	c5 fd 6f 1d 78 28 00 	vmovdqa 0x2878(%rip),%ymm3        # 4020 <_IO_stdin_used+0x20>
+    17a7:	00 
+    17a8:	c5 fd 6f 25 90 28 00 	vmovdqa 0x2890(%rip),%ymm4        # 4040 <_IO_stdin_used+0x40>
+    17af:	00 
+    17b0:	c5 fd 6f 2d a8 28 00 	vmovdqa 0x28a8(%rip),%ymm5        # 4060 <_IO_stdin_used+0x60>
+    17b7:	00 
+    17b8:	c5 fd 6f 35 c0 28 00 	vmovdqa 0x28c0(%rip),%ymm6        # 4080 <_IO_stdin_used+0x80>
+    17bf:	00 
+    17c0:	48 8d 97 00 07 00 00 	lea    0x700(%rdi),%rdx
+    17c7:	48 89 f8             	mov    %rdi,%rax
+    17ca:	c5 c1 ef ff          	vpxor  %xmm7,%xmm7,%xmm7
+    17ce:	66 90                	xchg   %ax,%ax
+    17d0:	c5 dd db 48 08       	vpand  0x8(%rax),%ymm4,%ymm1
+    17d5:	c5 e5 db 00          	vpand  (%rax),%ymm3,%ymm0
+    17d9:	48 83 c0 20          	add    $0x20,%rax
+    17dd:	c5 fd eb c1          	vpor   %ymm1,%ymm0,%ymm0
+    17e1:	c5 f5 73 d0 01       	vpsrlq $0x1,%ymm0,%ymm1
+    17e6:	c5 fd db c5          	vpand  %ymm5,%ymm0,%ymm0
+    17ea:	c5 f5 ef 88 48 0c 00 	vpxor  0xc48(%rax),%ymm1,%ymm1
+    17f1:	00 
+    17f2:	c4 e2 7d 29 c7       	vpcmpeqq %ymm7,%ymm0,%ymm0
+    17f7:	c5 f5 ef d6          	vpxor  %ymm6,%ymm1,%ymm2
+    17fb:	c4 e3 6d 4c c1 00    	vpblendvb %ymm0,%ymm1,%ymm2,%ymm0
+    1801:	c5 fe 7f 40 e0       	vmovdqu %ymm0,-0x20(%rax)
+    1806:	48 39 c2             	cmp    %rax,%rdx
+    1809:	75 c5                	jne    17d0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()+0x30>
+    180b:	c5 f9 6f 05 ad 28 00 	vmovdqa 0x28ad(%rip),%xmm0        # 40c0 <_IO_stdin_used+0xc0>
+    1812:	00 
+    1813:	c5 f9 6f 0d b5 28 00 	vmovdqa 0x28b5(%rip),%xmm1        # 40d0 <_IO_stdin_used+0xd0>
+    181a:	00 
+    181b:	c5 f9 db 87 00 07 00 	vpand  0x700(%rdi),%xmm0,%xmm0
+    1822:	00 
+    1823:	c5 f1 db 8f 08 07 00 	vpand  0x708(%rdi),%xmm1,%xmm1
+    182a:	00 
+    182b:	48 8b 87 10 07 00 00 	mov    0x710(%rdi),%rax
+    1832:	c5 f9 eb c1          	vpor   %xmm1,%xmm0,%xmm0
+    1836:	c5 f1 73 d0 01       	vpsrlq $0x1,%xmm0,%xmm1
+    183b:	48 8b 97 18 07 00 00 	mov    0x718(%rdi),%rdx
+    1842:	c5 f9 db 05 96 28 00 	vpand  0x2896(%rip),%xmm0,%xmm0        # 40e0 <_IO_stdin_used+0xe0>
+    1849:	00 
+    184a:	c5 f1 ef 8f 68 13 00 	vpxor  0x1368(%rdi),%xmm1,%xmm1
+    1851:	00 
+    1852:	c5 c1 ef ff          	vpxor  %xmm7,%xmm7,%xmm7
+    1856:	81 e2 ff ff ff 7f    	and    $0x7fffffff,%edx
+    185c:	c4 e2 79 29 c7       	vpcmpeqq %xmm7,%xmm0,%xmm0
+    1861:	48 25 00 00 00 80    	and    $0xffffffff80000000,%rax
+    1867:	c5 f1 ef 15 81 28 00 	vpxor  0x2881(%rip),%xmm1,%xmm2        # 40f0 <_IO_stdin_used+0xf0>
+    186e:	00 
+    186f:	48 09 d0             	or     %rdx,%rax
+    1872:	48 89 c2             	mov    %rax,%rdx
+    1875:	c4 e3 69 4c c1 00    	vpblendvb %xmm0,%xmm1,%xmm2,%xmm0
+    187b:	48 d1 ea             	shr    %rdx
+    187e:	c5 fa 7f 87 00 07 00 	vmovdqu %xmm0,0x700(%rdi)
+    1885:	00 
+    1886:	48 33 97 78 13 00 00 	xor    0x1378(%rdi),%rdx
+    188d:	a8 01                	test   $0x1,%al
+    188f:	74 08                	je     1899 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()+0xf9>
+    1891:	b8 df b0 08 99       	mov    $0x9908b0df,%eax
+    1896:	48 31 c2             	xor    %rax,%rdx
+    1899:	48 89 97 10 07 00 00 	mov    %rdx,0x710(%rdi)
+    18a0:	48 8d 87 18 07 00 00 	lea    0x718(%rdi),%rax
+    18a7:	48 8d 97 78 13 00 00 	lea    0x1378(%rdi),%rdx
+    18ae:	c5 e9 ef d2          	vpxor  %xmm2,%xmm2,%xmm2
+    18b2:	c5 dd db 48 08       	vpand  0x8(%rax),%ymm4,%ymm1
+    18b7:	c5 e5 db 00          	vpand  (%rax),%ymm3,%ymm0
+    18bb:	48 83 c0 20          	add    $0x20,%rax
+    18bf:	c5 fd eb c1          	vpor   %ymm1,%ymm0,%ymm0
+    18c3:	c5 f5 73 d0 01       	vpsrlq $0x1,%ymm0,%ymm1
+    18c8:	c5 fd db c5          	vpand  %ymm5,%ymm0,%ymm0
+    18cc:	c5 f5 ef 88 c8 f8 ff 	vpxor  -0x738(%rax),%ymm1,%ymm1
+    18d3:	ff 
+    18d4:	c4 e2 7d 29 c2       	vpcmpeqq %ymm2,%ymm0,%ymm0
+    18d9:	c5 f5 ef fe          	vpxor  %ymm6,%ymm1,%ymm7
+    18dd:	c4 e3 45 4c c1 00    	vpblendvb %ymm0,%ymm1,%ymm7,%ymm0
+    18e3:	c5 fe 7f 40 e0       	vmovdqu %ymm0,-0x20(%rax)
+    18e8:	48 39 c2             	cmp    %rax,%rdx
+    18eb:	75 c5                	jne    18b2 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()+0x112>
+    18ed:	48 8b 87 78 13 00 00 	mov    0x1378(%rdi),%rax
+    18f4:	48 8b 17             	mov    (%rdi),%rdx
+    18f7:	48 25 00 00 00 80    	and    $0xffffffff80000000,%rax
+    18fd:	81 e2 ff ff ff 7f    	and    $0x7fffffff,%edx
+    1903:	48 09 d0             	or     %rdx,%rax
+    1906:	48 89 c2             	mov    %rax,%rdx
+    1909:	48 d1 ea             	shr    %rdx
+    190c:	48 33 97 60 0c 00 00 	xor    0xc60(%rdi),%rdx
+    1913:	a8 01                	test   $0x1,%al
+    1915:	74 08                	je     191f <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()+0x17f>
+    1917:	b8 df b0 08 99       	mov    $0x9908b0df,%eax
+    191c:	48 31 c2             	xor    %rax,%rdx
+    191f:	48 89 97 78 13 00 00 	mov    %rdx,0x1378(%rdi)
+    1926:	48 c7 87 80 13 00 00 	movq   $0x0,0x1380(%rdi)
+    192d:	00 00 00 00 
+    1931:	c5 f8 77             	vzeroupper 
+    1934:	c3                   	retq   
+    1935:	90                   	nop
+    1936:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    193d:	00 00 00 
+
+0000000000001940 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()>:
+    1940:	48 83 ec 08          	sub    $0x8,%rsp
+    1944:	48 8b 87 80 13 00 00 	mov    0x1380(%rdi),%rax
+    194b:	48 3d 6f 02 00 00    	cmp    $0x26f,%rax
+    1951:	77 4d                	ja     19a0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()+0x60>
+    1953:	48 8d 50 01          	lea    0x1(%rax),%rdx
+    1957:	48 8b 04 c7          	mov    (%rdi,%rax,8),%rax
+    195b:	48 89 97 80 13 00 00 	mov    %rdx,0x1380(%rdi)
+    1962:	48 89 c1             	mov    %rax,%rcx
+    1965:	48 c1 e9 0b          	shr    $0xb,%rcx
+    1969:	89 ca                	mov    %ecx,%edx
+    196b:	48 31 c2             	xor    %rax,%rdx
+    196e:	48 89 d0             	mov    %rdx,%rax
+    1971:	48 c1 e0 07          	shl    $0x7,%rax
+    1975:	25 80 56 2c 9d       	and    $0x9d2c5680,%eax
+    197a:	48 31 c2             	xor    %rax,%rdx
+    197d:	48 89 d0             	mov    %rdx,%rax
+    1980:	48 c1 e0 0f          	shl    $0xf,%rax
+    1984:	25 00 00 c6 ef       	and    $0xefc60000,%eax
+    1989:	48 31 d0             	xor    %rdx,%rax
+    198c:	48 89 c2             	mov    %rax,%rdx
+    198f:	48 c1 ea 12          	shr    $0x12,%rdx
+    1993:	48 31 d0             	xor    %rdx,%rax
+    1996:	48 83 c4 08          	add    $0x8,%rsp
+    199a:	c3                   	retq   
+    199b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    19a0:	e8 fb fd ff ff       	callq  17a0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()>
+    19a5:	48 8b 87 80 13 00 00 	mov    0x1380(%rdi),%rax
+    19ac:	eb a5                	jmp    1953 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()+0x13>
+    19ae:	66 90                	xchg   %ax,%ax
+
+00000000000019b0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()>:
+    19b0:	c5 fd 6f 15 68 26 00 	vmovdqa 0x2668(%rip),%ymm2        # 4020 <_IO_stdin_used+0x20>
+    19b7:	00 
+    19b8:	c5 fd 6f 1d 80 26 00 	vmovdqa 0x2680(%rip),%ymm3        # 4040 <_IO_stdin_used+0x40>
+    19bf:	00 
+    19c0:	c5 fd 6f 25 98 26 00 	vmovdqa 0x2698(%rip),%ymm4        # 4060 <_IO_stdin_used+0x60>
+    19c7:	00 
+    19c8:	c5 fd 6f 2d d0 26 00 	vmovdqa 0x26d0(%rip),%ymm5        # 40a0 <_IO_stdin_used+0xa0>
+    19cf:	00 
+    19d0:	48 8d 87 e0 04 00 00 	lea    0x4e0(%rdi),%rax
+    19d7:	48 89 fa             	mov    %rdi,%rdx
+    19da:	c5 c1 ef ff          	vpxor  %xmm7,%xmm7,%xmm7
+    19de:	66 90                	xchg   %ax,%ax
+    19e0:	c5 e5 db 4a 08       	vpand  0x8(%rdx),%ymm3,%ymm1
+    19e5:	c5 ed db 02          	vpand  (%rdx),%ymm2,%ymm0
+    19e9:	48 83 c2 20          	add    $0x20,%rdx
+    19ed:	c5 fd eb c1          	vpor   %ymm1,%ymm0,%ymm0
+    19f1:	c5 f5 73 d0 01       	vpsrlq $0x1,%ymm0,%ymm1
+    19f6:	c5 fd db c4          	vpand  %ymm4,%ymm0,%ymm0
+    19fa:	c5 f5 ef 8a c0 04 00 	vpxor  0x4c0(%rdx),%ymm1,%ymm1
+    1a01:	00 
+    1a02:	c4 e2 7d 29 c7       	vpcmpeqq %ymm7,%ymm0,%ymm0
+    1a07:	c5 f5 ef f5          	vpxor  %ymm5,%ymm1,%ymm6
+    1a0b:	c4 e3 4d 4c c1 00    	vpblendvb %ymm0,%ymm1,%ymm6,%ymm0
+    1a11:	c5 fe 7f 42 e0       	vmovdqu %ymm0,-0x20(%rdx)
+    1a16:	48 39 d0             	cmp    %rdx,%rax
+    1a19:	75 c5                	jne    19e0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x30>
+    1a1b:	48 8d 97 a0 09 00 00 	lea    0x9a0(%rdi),%rdx
+    1a22:	c5 c1 ef ff          	vpxor  %xmm7,%xmm7,%xmm7
+    1a26:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    1a2d:	00 00 00 
+    1a30:	c5 e5 db 48 08       	vpand  0x8(%rax),%ymm3,%ymm1
+    1a35:	c5 ed db 00          	vpand  (%rax),%ymm2,%ymm0
+    1a39:	48 83 c0 20          	add    $0x20,%rax
+    1a3d:	c5 fd eb c1          	vpor   %ymm1,%ymm0,%ymm0
+    1a41:	c5 f5 73 d0 01       	vpsrlq $0x1,%ymm0,%ymm1
+    1a46:	c5 fd db c4          	vpand  %ymm4,%ymm0,%ymm0
+    1a4a:	c5 f5 ef 88 00 fb ff 	vpxor  -0x500(%rax),%ymm1,%ymm1
+    1a51:	ff 
+    1a52:	c4 e2 7d 29 c7       	vpcmpeqq %ymm7,%ymm0,%ymm0
+    1a57:	c5 f5 ef f5          	vpxor  %ymm5,%ymm1,%ymm6
+    1a5b:	c4 e3 4d 4c c1 00    	vpblendvb %ymm0,%ymm1,%ymm6,%ymm0
+    1a61:	c5 fe 7f 40 e0       	vmovdqu %ymm0,-0x20(%rax)
+    1a66:	48 39 c2             	cmp    %rax,%rdx
+    1a69:	75 c5                	jne    1a30 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x80>
+    1a6b:	c5 f9 6f 05 4d 26 00 	vmovdqa 0x264d(%rip),%xmm0        # 40c0 <_IO_stdin_used+0xc0>
+    1a72:	00 
+    1a73:	c5 f9 6f 0d 55 26 00 	vmovdqa 0x2655(%rip),%xmm1        # 40d0 <_IO_stdin_used+0xd0>
+    1a7a:	00 
+    1a7b:	c5 f9 db 87 a0 09 00 	vpand  0x9a0(%rdi),%xmm0,%xmm0
+    1a82:	00 
+    1a83:	c5 f1 db 8f a8 09 00 	vpand  0x9a8(%rdi),%xmm1,%xmm1
+    1a8a:	00 
+    1a8b:	48 8b b7 b8 09 00 00 	mov    0x9b8(%rdi),%rsi
+    1a92:	c5 f9 eb c1          	vpor   %xmm1,%xmm0,%xmm0
+    1a96:	48 8b 97 b0 09 00 00 	mov    0x9b0(%rdi),%rdx
+    1a9d:	c5 f1 73 d0 01       	vpsrlq $0x1,%xmm0,%xmm1
+    1aa2:	48 89 f0             	mov    %rsi,%rax
+    1aa5:	c5 f9 db 05 33 26 00 	vpand  0x2633(%rip),%xmm0,%xmm0        # 40e0 <_IO_stdin_used+0xe0>
+    1aac:	00 
+    1aad:	c5 f1 ef 8f c0 04 00 	vpxor  0x4c0(%rdi),%xmm1,%xmm1
+    1ab4:	00 
+    1ab5:	48 81 e2 00 00 00 80 	and    $0xffffffff80000000,%rdx
+    1abc:	25 ff ff ff 7f       	and    $0x7fffffff,%eax
+    1ac1:	c5 e1 ef db          	vpxor  %xmm3,%xmm3,%xmm3
+    1ac5:	48 09 c2             	or     %rax,%rdx
+    1ac8:	c4 e2 79 29 c3       	vpcmpeqq %xmm3,%xmm0,%xmm0
+    1acd:	48 89 d1             	mov    %rdx,%rcx
+    1ad0:	c5 f1 ef 15 28 26 00 	vpxor  0x2628(%rip),%xmm1,%xmm2        # 4100 <_IO_stdin_used+0x100>
+    1ad7:	00 
+    1ad8:	48 d1 e9             	shr    %rcx
+    1adb:	c4 e3 69 4c c1 00    	vpblendvb %xmm0,%xmm1,%xmm2,%xmm0
+    1ae1:	48 33 8f d0 04 00 00 	xor    0x4d0(%rdi),%rcx
+    1ae8:	83 e2 01             	and    $0x1,%edx
+    1aeb:	c5 fa 7f 87 a0 09 00 	vmovdqu %xmm0,0x9a0(%rdi)
+    1af2:	00 
+    1af3:	74 0d                	je     1b02 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x152>
+    1af5:	48 b8 e9 19 66 a9 5a 	movabs $0xb5026f5aa96619e9,%rax
+    1afc:	6f 02 b5 
+    1aff:	48 31 c1             	xor    %rax,%rcx
+    1b02:	48 8b 07             	mov    (%rdi),%rax
+    1b05:	48 81 e6 00 00 00 80 	and    $0xffffffff80000000,%rsi
+    1b0c:	25 ff ff ff 7f       	and    $0x7fffffff,%eax
+    1b11:	48 09 f0             	or     %rsi,%rax
+    1b14:	48 89 c2             	mov    %rax,%rdx
+    1b17:	48 d1 ea             	shr    %rdx
+    1b1a:	48 89 8f b0 09 00 00 	mov    %rcx,0x9b0(%rdi)
+    1b21:	48 33 97 d8 04 00 00 	xor    0x4d8(%rdi),%rdx
+    1b28:	a8 01                	test   $0x1,%al
+    1b2a:	74 0d                	je     1b39 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x189>
+    1b2c:	48 b8 e9 19 66 a9 5a 	movabs $0xb5026f5aa96619e9,%rax
+    1b33:	6f 02 b5 
+    1b36:	48 31 c2             	xor    %rax,%rdx
+    1b39:	48 89 97 b8 09 00 00 	mov    %rdx,0x9b8(%rdi)
+    1b40:	48 c7 87 c0 09 00 00 	movq   $0x0,0x9c0(%rdi)
+    1b47:	00 00 00 00 
+    1b4b:	c5 f8 77             	vzeroupper 
+    1b4e:	c3                   	retq   
+    1b4f:	90                   	nop
+
+0000000000001b50 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()>:
+    1b50:	48 83 ec 08          	sub    $0x8,%rsp
+    1b54:	48 8b 87 c0 09 00 00 	mov    0x9c0(%rdi),%rax
+    1b5b:	48 3d 37 01 00 00    	cmp    $0x137,%rax
+    1b61:	77 6d                	ja     1bd0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()+0x80>
+    1b63:	48 8d 50 01          	lea    0x1(%rax),%rdx
+    1b67:	48 8b 04 c7          	mov    (%rdi,%rax,8),%rax
+    1b6b:	48 89 97 c0 09 00 00 	mov    %rdx,0x9c0(%rdi)
+    1b72:	48 89 c2             	mov    %rax,%rdx
+    1b75:	48 b9 55 55 55 55 55 	movabs $0x5555555555555555,%rcx
+    1b7c:	55 55 55 
+    1b7f:	48 c1 ea 1d          	shr    $0x1d,%rdx
+    1b83:	48 21 ca             	and    %rcx,%rdx
+    1b86:	48 31 c2             	xor    %rax,%rdx
+    1b89:	48 89 d0             	mov    %rdx,%rax
+    1b8c:	48 b9 00 00 a6 ed ff 	movabs $0x71d67fffeda60000,%rcx
+    1b93:	7f d6 71 
+    1b96:	48 c1 e0 11          	shl    $0x11,%rax
+    1b9a:	48 21 c8             	and    %rcx,%rax
+    1b9d:	48 31 c2             	xor    %rax,%rdx
+    1ba0:	48 89 d0             	mov    %rdx,%rax
+    1ba3:	48 c1 e0 25          	shl    $0x25,%rax
+    1ba7:	48 b9 00 00 00 00 e0 	movabs $0xfff7eee000000000,%rcx
+    1bae:	ee f7 ff 
+    1bb1:	48 21 c8             	and    %rcx,%rax
+    1bb4:	48 31 d0             	xor    %rdx,%rax
+    1bb7:	48 89 c2             	mov    %rax,%rdx
+    1bba:	48 c1 ea 2b          	shr    $0x2b,%rdx
+    1bbe:	48 31 d0             	xor    %rdx,%rax
+    1bc1:	48 83 c4 08          	add    $0x8,%rsp
+    1bc5:	c3                   	retq   
+    1bc6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    1bcd:	00 00 00 
+    1bd0:	e8 db fd ff ff       	callq  19b0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()>
+    1bd5:	48 8b 87 c0 09 00 00 	mov    0x9c0(%rdi),%rax
+    1bdc:	eb 85                	jmp    1b63 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()+0x13>
+    1bde:	66 90                	xchg   %ax,%ax
+
+0000000000001be0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::discard(unsigned long long)>:
+    1be0:	48 85 f6             	test   %rsi,%rsi
+    1be3:	74 0d                	je     1bf2 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::discard(unsigned long long)+0x12>
+    1be5:	0f 1f 00             	nopl   (%rax)
+    1be8:	e8 b3 fa ff ff       	callq  16a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>
+    1bed:	48 ff ce             	dec    %rsi
+    1bf0:	75 f6                	jne    1be8 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::discard(unsigned long long)+0x8>
+    1bf2:	c3                   	retq   
+    1bf3:	90                   	nop
+    1bf4:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1bfb:	00 00 00 00 
+    1bff:	90                   	nop
+
+0000000000001c00 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::operator()()>:
+    1c00:	48 8b 87 d0 00 00 00 	mov    0xd0(%rdi),%rax
+    1c07:	48 83 f8 16          	cmp    $0x16,%rax
+    1c0b:	77 13                	ja     1c20 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::operator()()+0x20>
+    1c0d:	48 ff c0             	inc    %rax
+    1c10:	48 89 87 d0 00 00 00 	mov    %rax,0xd0(%rdi)
+    1c17:	e9 84 fa ff ff       	jmpq   16a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>
+    1c1c:	0f 1f 40 00          	nopl   0x0(%rax)
+    1c20:	be df 00 00 00       	mov    $0xdf,%esi
+    1c25:	48 29 c6             	sub    %rax,%rsi
+    1c28:	e8 b3 ff ff ff       	callq  1be0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::discard(unsigned long long)>
+    1c2d:	b8 01 00 00 00       	mov    $0x1,%eax
+    1c32:	48 89 87 d0 00 00 00 	mov    %rax,0xd0(%rdi)
+    1c39:	e9 62 fa ff ff       	jmpq   16a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>
+    1c3e:	66 90                	xchg   %ax,%ax
+
+0000000000001c40 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::discard(unsigned long long)>:
+    1c40:	48 85 f6             	test   %rsi,%rsi
+    1c43:	74 0d                	je     1c52 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::discard(unsigned long long)+0x12>
+    1c45:	0f 1f 00             	nopl   (%rax)
+    1c48:	e8 c3 fa ff ff       	callq  1710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>
+    1c4d:	48 ff ce             	dec    %rsi
+    1c50:	75 f6                	jne    1c48 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::discard(unsigned long long)+0x8>
+    1c52:	c3                   	retq   
+    1c53:	90                   	nop
+    1c54:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1c5b:	00 00 00 00 
+    1c5f:	90                   	nop
+
+0000000000001c60 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::operator()()>:
+    1c60:	48 8b 47 70          	mov    0x70(%rdi),%rax
+    1c64:	48 83 f8 0a          	cmp    $0xa,%rax
+    1c68:	77 16                	ja     1c80 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::operator()()+0x20>
+    1c6a:	48 ff c0             	inc    %rax
+    1c6d:	48 89 47 70          	mov    %rax,0x70(%rdi)
+    1c71:	e9 9a fa ff ff       	jmpq   1710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>
+    1c76:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    1c7d:	00 00 00 
+    1c80:	be 85 01 00 00       	mov    $0x185,%esi
+    1c85:	48 29 c6             	sub    %rax,%rsi
+    1c88:	e8 b3 ff ff ff       	callq  1c40 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::discard(unsigned long long)>
+    1c8d:	b8 01 00 00 00       	mov    $0x1,%eax
+    1c92:	48 89 47 70          	mov    %rax,0x70(%rdi)
+    1c96:	e9 75 fa ff ff       	jmpq   1710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>
+    1c9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001ca0 <std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long)>:
+    1ca0:	48 69 ff a7 41 00 00 	imul   $0x41a7,%rdi,%rdi
+    1ca7:	48 ba 05 00 00 00 02 	movabs $0x200000005,%rdx
+    1cae:	00 00 00 
+    1cb1:	48 89 f8             	mov    %rdi,%rax
+    1cb4:	48 f7 e2             	mul    %rdx
+    1cb7:	48 89 f8             	mov    %rdi,%rax
+    1cba:	48 29 d0             	sub    %rdx,%rax
+    1cbd:	48 d1 e8             	shr    %rax
+    1cc0:	48 01 d0             	add    %rdx,%rax
+    1cc3:	48 c1 e8 1e          	shr    $0x1e,%rax
+    1cc7:	48 89 c2             	mov    %rax,%rdx
+    1cca:	48 c1 e2 1f          	shl    $0x1f,%rdx
+    1cce:	48 29 c2             	sub    %rax,%rdx
+    1cd1:	48 89 f8             	mov    %rdi,%rax
+    1cd4:	48 29 d0             	sub    %rdx,%rax
+    1cd7:	c3                   	retq   
+    1cd8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    1cdf:	00 
+
+0000000000001ce0 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long)>:
+    1ce0:	eb be                	jmp    1ca0 <std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long)>
+    1ce2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1ce9:	00 00 00 00 
+    1ced:	0f 1f 00             	nopl   (%rax)
+
+0000000000001cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>:
+    1cf0:	48 89 f9             	mov    %rdi,%rcx
+    1cf3:	48 8b 3f             	mov    (%rdi),%rdi
+    1cf6:	e8 e5 ff ff ff       	callq  1ce0 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long)>
+    1cfb:	48 89 01             	mov    %rax,(%rcx)
+    1cfe:	c3                   	retq   
+    1cff:	90                   	nop
+
+0000000000001d00 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::_M_initialize()>:
+    1d00:	49 89 f8             	mov    %rdi,%r8
+    1d03:	48 8d 77 08          	lea    0x8(%rdi),%rsi
+    1d07:	4c 8d 8f 08 08 00 00 	lea    0x808(%rdi),%r9
+    1d0e:	66 90                	xchg   %ax,%ax
+    1d10:	4c 89 c7             	mov    %r8,%rdi
+    1d13:	e8 d8 ff ff ff       	callq  1cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    1d18:	48 89 06             	mov    %rax,(%rsi)
+    1d1b:	48 83 c6 08          	add    $0x8,%rsi
+    1d1f:	4c 39 ce             	cmp    %r9,%rsi
+    1d22:	75 ec                	jne    1d10 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::_M_initialize()+0x10>
+    1d24:	4c 89 c7             	mov    %r8,%rdi
+    1d27:	e8 c4 ff ff ff       	callq  1cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    1d2c:	49 89 80 08 08 00 00 	mov    %rax,0x808(%r8)
+    1d33:	c3                   	retq   
+    1d34:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1d3b:	00 00 00 00 
+    1d3f:	90                   	nop
+
+0000000000001d40 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()>:
+    1d40:	48 83 ec 18          	sub    $0x18,%rsp
+    1d44:	e8 47 fa ff ff       	callq  1790 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::min()>
+    1d49:	48 89 c2             	mov    %rax,%rdx
+    1d4c:	e8 2f fa ff ff       	callq  1780 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::max()>
+    1d51:	48 8b 8f 08 08 00 00 	mov    0x808(%rdi),%rcx
+    1d58:	48 89 fe             	mov    %rdi,%rsi
+    1d5b:	48 29 d1             	sub    %rdx,%rcx
+    1d5e:	48 89 4c 24 08       	mov    %rcx,0x8(%rsp)
+    1d63:	df 6c 24 08          	fildll 0x8(%rsp)
+    1d67:	79 06                	jns    1d6f <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()+0x2f>
+    1d69:	d8 05 a1 23 00 00    	fadds  0x23a1(%rip)        # 4110 <_IO_stdin_used+0x110>
+    1d6f:	48 29 d0             	sub    %rdx,%rax
+    1d72:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    1d77:	df 6c 24 08          	fildll 0x8(%rsp)
+    1d7b:	79 06                	jns    1d83 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()+0x43>
+    1d7d:	d8 05 8d 23 00 00    	fadds  0x238d(%rip)        # 4110 <_IO_stdin_used+0x110>
+    1d83:	d9 e8                	fld1   
+    1d85:	de c1                	faddp  %st,%st(1)
+    1d87:	de f9                	fdivrp %st,%st(1)
+    1d89:	d8 0d 85 23 00 00    	fmuls  0x2385(%rip)        # 4114 <_IO_stdin_used+0x114>
+    1d8f:	d9 05 83 23 00 00    	flds   0x2383(%rip)        # 4118 <_IO_stdin_used+0x118>
+    1d95:	d9 c9                	fxch   %st(1)
+    1d97:	db f1                	fcomi  %st(1),%st
+    1d99:	73 35                	jae    1dd0 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()+0x90>
+    1d9b:	dd d9                	fstp   %st(1)
+    1d9d:	dd 4c 24 08          	fisttpll 0x8(%rsp)
+    1da1:	4c 8b 44 24 08       	mov    0x8(%rsp),%r8
+    1da6:	4a 8b 44 c6 08       	mov    0x8(%rsi,%r8,8),%rax
+    1dab:	48 89 f7             	mov    %rsi,%rdi
+    1dae:	48 89 86 08 08 00 00 	mov    %rax,0x808(%rsi)
+    1db5:	e8 36 ff ff ff       	callq  1cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    1dba:	4a 89 44 c6 08       	mov    %rax,0x8(%rsi,%r8,8)
+    1dbf:	48 8b 86 08 08 00 00 	mov    0x808(%rsi),%rax
+    1dc6:	48 83 c4 18          	add    $0x18,%rsp
+    1dca:	c3                   	retq   
+    1dcb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    1dd0:	de e1                	fsubp  %st,%st(1)
+    1dd2:	dd 4c 24 08          	fisttpll 0x8(%rsp)
+    1dd6:	4c 8b 44 24 08       	mov    0x8(%rsp),%r8
+    1ddb:	49 0f ba f8 3f       	btc    $0x3f,%r8
+    1de0:	eb c4                	jmp    1da6 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()+0x66>
+    1de2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1de9:	00 00 00 00 
+    1ded:	0f 1f 00             	nopl   (%rax)
+
+0000000000001df0 <std::__detail::_Mod<unsigned long, 2147483647ul, 48271ul, 0ul, true, true>::__calc(unsigned long)>:
+    1df0:	48 69 ff 8f bc 00 00 	imul   $0xbc8f,%rdi,%rdi
+    1df7:	48 ba 05 00 00 00 02 	movabs $0x200000005,%rdx
+    1dfe:	00 00 00 
+    1e01:	48 89 f8             	mov    %rdi,%rax
+    1e04:	48 f7 e2             	mul    %rdx
+    1e07:	48 89 f8             	mov    %rdi,%rax
+    1e0a:	48 29 d0             	sub    %rdx,%rax
+    1e0d:	48 d1 e8             	shr    %rax
+    1e10:	48 01 d0             	add    %rdx,%rax
+    1e13:	48 c1 e8 1e          	shr    $0x1e,%rax
+    1e17:	48 89 c2             	mov    %rax,%rdx
+    1e1a:	48 c1 e2 1f          	shl    $0x1f,%rdx
+    1e1e:	48 29 c2             	sub    %rax,%rdx
+    1e21:	48 89 f8             	mov    %rdi,%rax
+    1e24:	48 29 d0             	sub    %rdx,%rax
+    1e27:	c3                   	retq   
+    1e28:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    1e2f:	00 
+
+0000000000001e30 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 48271ul, 0ul>(unsigned long)>:
+    1e30:	eb be                	jmp    1df0 <std::__detail::_Mod<unsigned long, 2147483647ul, 48271ul, 0ul, true, true>::__calc(unsigned long)>
+    1e32:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1e39:	00 00 00 00 
+    1e3d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001e40 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::operator()()>:
+    1e40:	48 89 f9             	mov    %rdi,%rcx
+    1e43:	48 8b 3f             	mov    (%rdi),%rdi
+    1e46:	e8 e5 ff ff ff       	callq  1e30 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 48271ul, 0ul>(unsigned long)>
+    1e4b:	48 89 01             	mov    %rax,(%rcx)
+    1e4e:	c3                   	retq   
+    1e4f:	90                   	nop
+
+0000000000001e50 <std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1e50:	89 f8                	mov    %edi,%eax
+    1e52:	c3                   	retq   
+    1e53:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1e5a:	00 00 00 00 
+    1e5e:	66 90                	xchg   %ax,%ax
+
+0000000000001e60 <unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long)>:
+    1e60:	eb ee                	jmp    1e50 <std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1e62:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1e69:	00 00 00 00 
+    1e6d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001e70 <std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1e70:	48 89 f8             	mov    %rdi,%rax
+    1e73:	48 c1 e8 04          	shr    $0x4,%rax
+    1e77:	48 ba 21 0d d2 20 0d 	movabs $0xd20d20d20d20d21,%rdx
+    1e7e:	d2 20 0d 
+    1e81:	48 f7 e2             	mul    %rdx
+    1e84:	48 89 d0             	mov    %rdx,%rax
+    1e87:	48 d1 e8             	shr    %rax
+    1e8a:	48 69 d0 70 02 00 00 	imul   $0x270,%rax,%rdx
+    1e91:	48 89 f8             	mov    %rdi,%rax
+    1e94:	48 29 d0             	sub    %rdx,%rax
+    1e97:	c3                   	retq   
+    1e98:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    1e9f:	00 
+
+0000000000001ea0 <unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long)>:
+    1ea0:	eb ce                	jmp    1e70 <std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1ea2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1ea9:	00 00 00 00 
+    1ead:	0f 1f 00             	nopl   (%rax)
+
+0000000000001eb0 <std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)>:
+    1eb0:	48 89 f8             	mov    %rdi,%rax
+    1eb3:	c3                   	retq   
+    1eb4:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1ebb:	00 00 00 00 
+    1ebf:	90                   	nop
+
+0000000000001ec0 <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>:
+    1ec0:	eb ee                	jmp    1eb0 <std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)>
+    1ec2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1ec9:	00 00 00 00 
+    1ecd:	0f 1f 00             	nopl   (%rax)
+
+0000000000001ed0 <std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1ed0:	48 89 f8             	mov    %rdi,%rax
+    1ed3:	48 c1 e8 03          	shr    $0x3,%rax
+    1ed7:	48 ba 21 0d d2 20 0d 	movabs $0xd20d20d20d20d21,%rdx
+    1ede:	d2 20 0d 
+    1ee1:	48 f7 e2             	mul    %rdx
+    1ee4:	48 89 d0             	mov    %rdx,%rax
+    1ee7:	48 d1 e8             	shr    %rax
+    1eea:	48 69 d0 38 01 00 00 	imul   $0x138,%rax,%rdx
+    1ef1:	48 89 f8             	mov    %rdi,%rax
+    1ef4:	48 29 d0             	sub    %rdx,%rax
+    1ef7:	c3                   	retq   
+    1ef8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    1eff:	00 
+
+0000000000001f00 <unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)>:
+    1f00:	eb ce                	jmp    1ed0 <std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1f02:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1f09:	00 00 00 00 
+    1f0d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001f10 <std::__detail::_Mod<unsigned int, 0u, 1u, 0u, true, false>::__calc(unsigned int)>:
+    1f10:	89 f8                	mov    %edi,%eax
+    1f12:	c3                   	retq   
+    1f13:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1f1a:	00 00 00 00 
+    1f1e:	66 90                	xchg   %ax,%ax
+
+0000000000001f20 <unsigned int std::__detail::__mod<unsigned int, 0u, 1u, 0u>(unsigned int)>:
+    1f20:	eb ee                	jmp    1f10 <std::__detail::_Mod<unsigned int, 0u, 1u, 0u, true, false>::__calc(unsigned int)>
+    1f22:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1f29:	00 00 00 00 
+    1f2d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001f30 <std::__detail::_Mod<unsigned long, 16777216ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1f30:	48 89 f8             	mov    %rdi,%rax
+    1f33:	25 ff ff ff 00       	and    $0xffffff,%eax
+    1f38:	c3                   	retq   
+    1f39:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001f40 <unsigned long std::__detail::__mod<unsigned long, 16777216ul, 1ul, 0ul>(unsigned long)>:
+    1f40:	eb ee                	jmp    1f30 <std::__detail::_Mod<unsigned long, 16777216ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1f42:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1f49:	00 00 00 00 
+    1f4d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001f50 <std::__detail::_Mod<unsigned long, 281474976710656ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1f50:	48 b8 ff ff ff ff ff 	movabs $0xffffffffffff,%rax
+    1f57:	ff 00 00 
+    1f5a:	48 21 f8             	and    %rdi,%rax
+    1f5d:	c3                   	retq   
+    1f5e:	66 90                	xchg   %ax,%ax
+
+0000000000001f60 <unsigned long std::__detail::__mod<unsigned long, 281474976710656ul, 1ul, 0ul>(unsigned long)>:
+    1f60:	eb ee                	jmp    1f50 <std::__detail::_Mod<unsigned long, 281474976710656ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1f62:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1f69:	00 00 00 00 
+    1f6d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001f70 <std::__detail::_Mod<unsigned long, 2147483563ul, 40014ul, 0ul, true, true>::__calc(unsigned long)>:
+    1f70:	48 69 ff 4e 9c 00 00 	imul   $0x9c4e,%rdi,%rdi
+    1f77:	48 ba e5 70 00 00 aa 	movabs $0xaa000070e5,%rdx
+    1f7e:	00 00 00 
+    1f81:	48 89 f8             	mov    %rdi,%rax
+    1f84:	48 f7 e2             	mul    %rdx
+    1f87:	48 89 f8             	mov    %rdi,%rax
+    1f8a:	48 29 d0             	sub    %rdx,%rax
+    1f8d:	48 d1 e8             	shr    %rax
+    1f90:	48 01 d0             	add    %rdx,%rax
+    1f93:	48 c1 e8 1e          	shr    $0x1e,%rax
+    1f97:	48 69 d0 ab ff ff 7f 	imul   $0x7fffffab,%rax,%rdx
+    1f9e:	48 89 f8             	mov    %rdi,%rax
+    1fa1:	48 29 d0             	sub    %rdx,%rax
+    1fa4:	c3                   	retq   
+    1fa5:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1fac:	00 00 00 00 
+
+0000000000001fb0 <unsigned long std::__detail::__mod<unsigned long, 2147483563ul, 40014ul, 0ul>(unsigned long)>:
+    1fb0:	eb be                	jmp    1f70 <std::__detail::_Mod<unsigned long, 2147483563ul, 40014ul, 0ul, true, true>::__calc(unsigned long)>
+    1fb2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1fb9:	00 00 00 00 
+    1fbd:	0f 1f 00             	nopl   (%rax)
+
+0000000000001fc0 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::operator()()>:
+    1fc0:	48 89 f9             	mov    %rdi,%rcx
+    1fc3:	48 8b 3f             	mov    (%rdi),%rdi
+    1fc6:	e8 e5 ff ff ff       	callq  1fb0 <unsigned long std::__detail::__mod<unsigned long, 2147483563ul, 40014ul, 0ul>(unsigned long)>
+    1fcb:	48 89 01             	mov    %rax,(%rcx)
+    1fce:	c3                   	retq   
+    1fcf:	90                   	nop
+
+0000000000001fd0 <std::__detail::_Mod<unsigned long, 2147483563ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1fd0:	48 89 f8             	mov    %rdi,%rax
+    1fd3:	48 ba e5 70 00 00 aa 	movabs $0xaa000070e5,%rdx
+    1fda:	00 00 00 
+    1fdd:	48 f7 e2             	mul    %rdx
+    1fe0:	48 89 f8             	mov    %rdi,%rax
+    1fe3:	48 29 d0             	sub    %rdx,%rax
+    1fe6:	48 d1 e8             	shr    %rax
+    1fe9:	48 01 d0             	add    %rdx,%rax
+    1fec:	48 c1 e8 1e          	shr    $0x1e,%rax
+    1ff0:	48 69 d0 ab ff ff 7f 	imul   $0x7fffffab,%rax,%rdx
+    1ff7:	48 89 f8             	mov    %rdi,%rax
+    1ffa:	48 29 d0             	sub    %rdx,%rax
+    1ffd:	c3                   	retq   
+    1ffe:	66 90                	xchg   %ax,%ax
+
+0000000000002000 <unsigned long std::__detail::__mod<unsigned long, 2147483563ul, 1ul, 0ul>(unsigned long)>:
+    2000:	eb ce                	jmp    1fd0 <std::__detail::_Mod<unsigned long, 2147483563ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    2002:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2009:	00 00 00 00 
+    200d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002010 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::seed(unsigned long)>:
+    2010:	48 89 f9             	mov    %rdi,%rcx
+    2013:	31 ff                	xor    %edi,%edi
+    2015:	e8 e6 ff ff ff       	callq  2000 <unsigned long std::__detail::__mod<unsigned long, 2147483563ul, 1ul, 0ul>(unsigned long)>
+    201a:	49 89 f0             	mov    %rsi,%r8
+    201d:	4c 89 c7             	mov    %r8,%rdi
+    2020:	48 89 c6             	mov    %rax,%rsi
+    2023:	e8 d8 ff ff ff       	callq  2000 <unsigned long std::__detail::__mod<unsigned long, 2147483563ul, 1ul, 0ul>(unsigned long)>
+    2028:	48 85 f6             	test   %rsi,%rsi
+    202b:	75 0c                	jne    2039 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::seed(unsigned long)+0x29>
+    202d:	48 85 c0             	test   %rax,%rax
+    2030:	ba 01 00 00 00       	mov    $0x1,%edx
+    2035:	48 0f 44 c2          	cmove  %rdx,%rax
+    2039:	48 89 01             	mov    %rax,(%rcx)
+    203c:	c3                   	retq   
+    203d:	90                   	nop
+    203e:	66 90                	xchg   %ax,%ax
+
+0000000000002040 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::linear_congruential_engine(unsigned long)>:
+    2040:	eb ce                	jmp    2010 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::seed(unsigned long)>
+    2042:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2049:	00 00 00 00 
+    204d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002050 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::seed(unsigned long) [clone .constprop.0]>:
+    2050:	48 83 ec 18          	sub    $0x18,%rsp
+    2054:	49 89 e1             	mov    %rsp,%r9
+    2057:	49 89 fa             	mov    %rdi,%r10
+    205a:	be 97 d3 2d 01       	mov    $0x12dd397,%esi
+    205f:	4c 89 cf             	mov    %r9,%rdi
+    2062:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2069:	00 00 
+    206b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2070:	31 c0                	xor    %eax,%eax
+    2072:	4d 8d 5a 60          	lea    0x60(%r10),%r11
+    2076:	e8 c5 ff ff ff       	callq  2040 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::linear_congruential_engine(unsigned long)>
+    207b:	4d 89 d0             	mov    %r10,%r8
+    207e:	66 90                	xchg   %ax,%ax
+    2080:	4c 89 cf             	mov    %r9,%rdi
+    2083:	e8 38 ff ff ff       	callq  1fc0 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::operator()()>
+    2088:	48 89 c7             	mov    %rax,%rdi
+    208b:	e8 90 fe ff ff       	callq  1f20 <unsigned int std::__detail::__mod<unsigned int, 0u, 1u, 0u>(unsigned int)>
+    2090:	4c 89 cf             	mov    %r9,%rdi
+    2093:	89 c6                	mov    %eax,%esi
+    2095:	e8 26 ff ff ff       	callq  1fc0 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::operator()()>
+    209a:	48 89 c7             	mov    %rax,%rdi
+    209d:	e8 7e fe ff ff       	callq  1f20 <unsigned int std::__detail::__mod<unsigned int, 0u, 1u, 0u>(unsigned int)>
+    20a2:	48 c1 e0 20          	shl    $0x20,%rax
+    20a6:	89 f7                	mov    %esi,%edi
+    20a8:	48 01 c7             	add    %rax,%rdi
+    20ab:	e8 b0 fe ff ff       	callq  1f60 <unsigned long std::__detail::__mod<unsigned long, 281474976710656ul, 1ul, 0ul>(unsigned long)>
+    20b0:	49 89 00             	mov    %rax,(%r8)
+    20b3:	49 83 c0 08          	add    $0x8,%r8
+    20b7:	4d 39 c3             	cmp    %r8,%r11
+    20ba:	75 c4                	jne    2080 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::seed(unsigned long) [clone .constprop.0]+0x30>
+    20bc:	31 c0                	xor    %eax,%eax
+    20be:	49 83 7a 58 00       	cmpq   $0x0,0x58(%r10)
+    20c3:	0f 94 c0             	sete   %al
+    20c6:	49 89 42 60          	mov    %rax,0x60(%r10)
+    20ca:	49 c7 42 68 00 00 00 	movq   $0x0,0x68(%r10)
+    20d1:	00 
+    20d2:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    20d7:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    20de:	00 00 
+    20e0:	75 05                	jne    20e7 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::seed(unsigned long) [clone .constprop.0]+0x97>
+    20e2:	48 83 c4 18          	add    $0x18,%rsp
+    20e6:	c3                   	retq   
+    20e7:	e8 84 f0 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    20ec:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000020f0 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::subtract_with_carry_engine(unsigned long) [clone .constprop.0]>:
+    20f0:	e9 5b ff ff ff       	jmpq   2050 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::seed(unsigned long) [clone .constprop.0]>
+    20f5:	90                   	nop
+    20f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    20fd:	00 00 00 
+
+0000000000002100 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::subtract_with_carry_engine()>:
+    2100:	eb ee                	jmp    20f0 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::subtract_with_carry_engine(unsigned long) [clone .constprop.0]>
+    2102:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2109:	00 00 00 00 
+    210d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002110 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::discard_block_engine()>:
+    2110:	53                   	push   %rbx
+    2111:	48 89 fb             	mov    %rdi,%rbx
+    2114:	e8 e7 ff ff ff       	callq  2100 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::subtract_with_carry_engine()>
+    2119:	48 c7 43 70 00 00 00 	movq   $0x0,0x70(%rbx)
+    2120:	00 
+    2121:	5b                   	pop    %rbx
+    2122:	c3                   	retq   
+    2123:	90                   	nop
+    2124:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    212b:	00 00 00 00 
+    212f:	90                   	nop
+
+0000000000002130 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::seed(unsigned long) [clone .constprop.0]>:
+    2130:	48 83 ec 18          	sub    $0x18,%rsp
+    2134:	49 89 e2             	mov    %rsp,%r10
+    2137:	49 89 f9             	mov    %rdi,%r9
+    213a:	be 97 d3 2d 01       	mov    $0x12dd397,%esi
+    213f:	4c 89 d7             	mov    %r10,%rdi
+    2142:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2149:	00 00 
+    214b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2150:	31 c0                	xor    %eax,%eax
+    2152:	e8 e9 fe ff ff       	callq  2040 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::linear_congruential_engine(unsigned long)>
+    2157:	4c 89 ce             	mov    %r9,%rsi
+    215a:	4d 8d 81 c0 00 00 00 	lea    0xc0(%r9),%r8
+    2161:	4c 89 d7             	mov    %r10,%rdi
+    2164:	e8 57 fe ff ff       	callq  1fc0 <std::linear_congruential_engine<unsigned long, 40014ul, 0ul, 2147483563ul>::operator()()>
+    2169:	48 89 c7             	mov    %rax,%rdi
+    216c:	e8 af fd ff ff       	callq  1f20 <unsigned int std::__detail::__mod<unsigned int, 0u, 1u, 0u>(unsigned int)>
+    2171:	89 c7                	mov    %eax,%edi
+    2173:	e8 c8 fd ff ff       	callq  1f40 <unsigned long std::__detail::__mod<unsigned long, 16777216ul, 1ul, 0ul>(unsigned long)>
+    2178:	48 89 06             	mov    %rax,(%rsi)
+    217b:	48 83 c6 08          	add    $0x8,%rsi
+    217f:	49 39 f0             	cmp    %rsi,%r8
+    2182:	75 dd                	jne    2161 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::seed(unsigned long) [clone .constprop.0]+0x31>
+    2184:	31 c0                	xor    %eax,%eax
+    2186:	49 83 b9 b8 00 00 00 	cmpq   $0x0,0xb8(%r9)
+    218d:	00 
+    218e:	0f 94 c0             	sete   %al
+    2191:	49 89 81 c0 00 00 00 	mov    %rax,0xc0(%r9)
+    2198:	49 c7 81 c8 00 00 00 	movq   $0x0,0xc8(%r9)
+    219f:	00 00 00 00 
+    21a3:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    21a8:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    21af:	00 00 
+    21b1:	75 05                	jne    21b8 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::seed(unsigned long) [clone .constprop.0]+0x88>
+    21b3:	48 83 c4 18          	add    $0x18,%rsp
+    21b7:	c3                   	retq   
+    21b8:	e8 b3 ef ff ff       	callq  1170 <__stack_chk_fail@plt>
+    21bd:	90                   	nop
+    21be:	66 90                	xchg   %ax,%ax
+
+00000000000021c0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::subtract_with_carry_engine(unsigned long) [clone .constprop.0]>:
+    21c0:	e9 6b ff ff ff       	jmpq   2130 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::seed(unsigned long) [clone .constprop.0]>
+    21c5:	90                   	nop
+    21c6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    21cd:	00 00 00 
+
+00000000000021d0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::subtract_with_carry_engine()>:
+    21d0:	eb ee                	jmp    21c0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::subtract_with_carry_engine(unsigned long) [clone .constprop.0]>
+    21d2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    21d9:	00 00 00 00 
+    21dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000021e0 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::discard_block_engine()>:
+    21e0:	53                   	push   %rbx
+    21e1:	48 89 fb             	mov    %rdi,%rbx
+    21e4:	e8 e7 ff ff ff       	callq  21d0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::subtract_with_carry_engine()>
+    21e9:	48 c7 83 d0 00 00 00 	movq   $0x0,0xd0(%rbx)
+    21f0:	00 00 00 00 
+    21f4:	5b                   	pop    %rbx
+    21f5:	c3                   	retq   
+    21f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    21fd:	00 00 00 
+
+0000000000002200 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [clone .constprop.0]>:
+    2200:	49 89 f8             	mov    %rdi,%r8
+    2203:	bf 71 15 00 00       	mov    $0x1571,%edi
+    2208:	e8 b3 fc ff ff       	callq  1ec0 <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>
+    220d:	49 89 00             	mov    %rax,(%r8)
+    2210:	be 01 00 00 00       	mov    $0x1,%esi
+    2215:	49 b9 2d 7f 95 4c 2d 	movabs $0x5851f42d4c957f2d,%r9
+    221c:	f4 51 58 
+    221f:	90                   	nop
+    2220:	48 89 c1             	mov    %rax,%rcx
+    2223:	48 c1 e9 3e          	shr    $0x3e,%rcx
+    2227:	48 31 c1             	xor    %rax,%rcx
+    222a:	49 0f af c9          	imul   %r9,%rcx
+    222e:	48 89 f7             	mov    %rsi,%rdi
+    2231:	e8 ca fc ff ff       	callq  1f00 <unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)>
+    2236:	48 8d 3c 01          	lea    (%rcx,%rax,1),%rdi
+    223a:	e8 81 fc ff ff       	callq  1ec0 <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>
+    223f:	49 89 04 f0          	mov    %rax,(%r8,%rsi,8)
+    2243:	48 ff c6             	inc    %rsi
+    2246:	48 81 fe 38 01 00 00 	cmp    $0x138,%rsi
+    224d:	75 d1                	jne    2220 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [clone .constprop.0]+0x20>
+    224f:	49 c7 80 c0 09 00 00 	movq   $0x138,0x9c0(%r8)
+    2256:	38 01 00 00 
+    225a:	c3                   	retq   
+    225b:	90                   	nop
+    225c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002260 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [clone .constprop.0]>:
+    2260:	eb 9e                	jmp    2200 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long) [clone .constprop.0]>
+    2262:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2269:	00 00 00 00 
+    226d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002270 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine()>:
+    2270:	eb ee                	jmp    2260 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long) [clone .constprop.0]>
+    2272:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2279:	00 00 00 00 
+    227d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002280 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [clone .constprop.0]>:
+    2280:	49 89 f8             	mov    %rdi,%r8
+    2283:	bf 71 15 00 00       	mov    $0x1571,%edi
+    2288:	e8 d3 fb ff ff       	callq  1e60 <unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long)>
+    228d:	49 89 00             	mov    %rax,(%r8)
+    2290:	be 01 00 00 00       	mov    $0x1,%esi
+    2295:	0f 1f 00             	nopl   (%rax)
+    2298:	48 89 c1             	mov    %rax,%rcx
+    229b:	48 c1 e9 1e          	shr    $0x1e,%rcx
+    229f:	48 31 c1             	xor    %rax,%rcx
+    22a2:	48 69 c9 65 89 07 6c 	imul   $0x6c078965,%rcx,%rcx
+    22a9:	48 89 f7             	mov    %rsi,%rdi
+    22ac:	e8 ef fb ff ff       	callq  1ea0 <unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long)>
+    22b1:	48 8d 3c 01          	lea    (%rcx,%rax,1),%rdi
+    22b5:	e8 a6 fb ff ff       	callq  1e60 <unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long)>
+    22ba:	49 89 04 f0          	mov    %rax,(%r8,%rsi,8)
+    22be:	48 ff c6             	inc    %rsi
+    22c1:	48 81 fe 70 02 00 00 	cmp    $0x270,%rsi
+    22c8:	75 ce                	jne    2298 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [clone .constprop.0]+0x18>
+    22ca:	49 c7 80 80 13 00 00 	movq   $0x270,0x1380(%r8)
+    22d1:	70 02 00 00 
+    22d5:	c3                   	retq   
+    22d6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    22dd:	00 00 00 
+
+00000000000022e0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [clone .constprop.0]>:
+    22e0:	eb 9e                	jmp    2280 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [clone .constprop.0]>
+    22e2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    22e9:	00 00 00 00 
+    22ed:	0f 1f 00             	nopl   (%rax)
+
+00000000000022f0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine()>:
+    22f0:	eb ee                	jmp    22e0 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [clone .constprop.0]>
+    22f2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    22f9:	00 00 00 00 
+    22fd:	0f 1f 00             	nopl   (%rax)
+
+0000000000002300 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [clone .constprop.0]>:
+    2300:	b8 01 00 00 00       	mov    $0x1,%eax
+    2305:	c3                   	retq   
+    2306:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    230d:	00 00 00 
+
+0000000000002310 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.0]>:
+    2310:	eb ee                	jmp    2300 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [clone .constprop.0]>
+    2312:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2319:	00 00 00 00 
+    231d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002320 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [clone .constprop.1]>:
+    2320:	31 c0                	xor    %eax,%eax
+    2322:	c3                   	retq   
+    2323:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    232a:	00 00 00 00 
+    232e:	66 90                	xchg   %ax,%ax
+
+0000000000002330 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.1]>:
+    2330:	eb ee                	jmp    2320 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long) [clone .constprop.1]>
+    2332:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2339:	00 00 00 00 
+    233d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002340 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>:
+    2340:	e8 eb ff ff ff       	callq  2330 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.1]>
+    2345:	48 89 c2             	mov    %rax,%rdx
+    2348:	e8 c3 ff ff ff       	callq  2310 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.0]>
+    234d:	48 85 d2             	test   %rdx,%rdx
+    2350:	75 0c                	jne    235e <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]+0x1e>
+    2352:	48 85 c0             	test   %rax,%rax
+    2355:	ba 01 00 00 00       	mov    $0x1,%edx
+    235a:	48 0f 44 c2          	cmove  %rdx,%rax
+    235e:	48 89 07             	mov    %rax,(%rdi)
+    2361:	c3                   	retq   
+    2362:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2369:	00 00 00 00 
+    236d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002370 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>:
+    2370:	eb ce                	jmp    2340 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>
+    2372:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2379:	00 00 00 00 
+    237d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002380 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::linear_congruential_engine()>:
+    2380:	eb ee                	jmp    2370 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>
+    2382:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2389:	00 00 00 00 
+    238d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002390 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>:
+    2390:	e8 9b ff ff ff       	callq  2330 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.1]>
+    2395:	48 89 c2             	mov    %rax,%rdx
+    2398:	e8 73 ff ff ff       	callq  2310 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long) [clone .constprop.0]>
+    239d:	48 85 d2             	test   %rdx,%rdx
+    23a0:	75 0c                	jne    23ae <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]+0x1e>
+    23a2:	48 85 c0             	test   %rax,%rax
+    23a5:	ba 01 00 00 00       	mov    $0x1,%edx
+    23aa:	48 0f 44 c2          	cmove  %rdx,%rax
+    23ae:	48 89 07             	mov    %rax,(%rdi)
+    23b1:	c3                   	retq   
+    23b2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    23b9:	00 00 00 00 
+    23bd:	0f 1f 00             	nopl   (%rax)
+
+00000000000023c0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>:
+    23c0:	eb ce                	jmp    2390 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>
+    23c2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    23c9:	00 00 00 00 
+    23cd:	0f 1f 00             	nopl   (%rax)
+
+00000000000023d0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine()>:
+    23d0:	eb ee                	jmp    23c0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>
+    23d2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    23d9:	00 00 00 00 
+    23dd:	0f 1f 00             	nopl   (%rax)
+
+00000000000023e0 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::shuffle_order_engine()>:
+    23e0:	e8 eb ff ff ff       	callq  23d0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine()>
+    23e5:	e9 16 f9 ff ff       	jmpq   1d00 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::_M_initialize()>
+    23ea:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000000023f0 <std::setprecision(int) [clone .constprop.0]>:
+    23f0:	b8 02 00 00 00       	mov    $0x2,%eax
+    23f5:	c3                   	retq   
+    23f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    23fd:	00 00 00 
+
+0000000000002400 <std::operator~(std::_Ios_Fmtflags) [clone .constprop.0]>:
+    2400:	b8 fb fe ff ff       	mov    $0xfffffefb,%eax
+    2405:	c3                   	retq   
+    2406:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    240d:	00 00 00 
+
+0000000000002410 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<double, void>(double const&) [clone .isra.0]>:
+    2410:	c5 fb 11 07          	vmovsd %xmm0,(%rdi)
+    2414:	c3                   	retq   
+    2415:	90                   	nop
+    2416:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    241d:	00 00 00 
+
+0000000000002420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>:
+    2420:	c3                   	retq   
+    2421:	90                   	nop
+    2422:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2429:	00 00 00 00 
+    242d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002430 <std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const [clone .isra.0]>:
+    2430:	48 89 f8             	mov    %rdi,%rax
+    2433:	c3                   	retq   
+    2434:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    243b:	00 00 00 00 
+    243f:	90                   	nop
+
+0000000000002440 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&) [clone .isra.0]>:
+    2440:	48 89 37             	mov    %rsi,(%rdi)
+    2443:	c3                   	retq   
+    2444:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    244b:	00 00 00 00 
+    244f:	90                   	nop
+
+0000000000002450 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [clone .isra.0]>:
+    2450:	48 89 f8             	mov    %rdi,%rax
+    2453:	c3                   	retq   
+    2454:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    245b:	00 00 00 00 
+    245f:	90                   	nop
+
+0000000000002460 <std::chrono::duration<double, std::ratio<1l, 1000l> > std::chrono::__duration_cast_impl<std::chrono::duration<double, std::ratio<1l, 1000l> >, std::ratio<1l, 1000000l>, double, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>:
+    2460:	48 83 ec 18          	sub    $0x18,%rsp
+    2464:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    246b:	00 00 
+    246d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2472:	31 c0                	xor    %eax,%eax
+    2474:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    2478:	e8 d3 ff ff ff       	callq  2450 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [clone .isra.0]>
+    247d:	c4 e1 fb 2a c0       	vcvtsi2sd %rax,%xmm0,%xmm0
+    2482:	48 89 e7             	mov    %rsp,%rdi
+    2485:	c5 fb 5e 05 93 1c 00 	vdivsd 0x1c93(%rip),%xmm0,%xmm0        # 4120 <_IO_stdin_used+0x120>
+    248c:	00 
+    248d:	e8 7e ff ff ff       	callq  2410 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<double, void>(double const&) [clone .isra.0]>
+    2492:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2497:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    249c:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    24a3:	00 00 
+    24a5:	75 05                	jne    24ac <std::chrono::duration<double, std::ratio<1l, 1000l> > std::chrono::__duration_cast_impl<std::chrono::duration<double, std::ratio<1l, 1000l> >, std::ratio<1l, 1000000l>, double, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]+0x4c>
+    24a7:	48 83 c4 18          	add    $0x18,%rsp
+    24ab:	c3                   	retq   
+    24ac:	e8 bf ec ff ff       	callq  1170 <__stack_chk_fail@plt>
+    24b1:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    24b8:	00 00 00 00 
+    24bc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000024c0 <std::enable_if<std::chrono::__is_duration<std::chrono::duration<double, std::ratio<1l, 1000l> > >::value, std::chrono::duration<double, std::ratio<1l, 1000l> > >::type std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1l, 1000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>:
+    24c0:	eb 9e                	jmp    2460 <std::chrono::duration<double, std::ratio<1l, 1000l> > std::chrono::__duration_cast_impl<std::chrono::duration<double, std::ratio<1l, 1000l> >, std::ratio<1l, 1000000l>, double, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>
+    24c2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    24c9:	00 00 00 00 
+    24cd:	0f 1f 00             	nopl   (%rax)
+
+00000000000024d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>:
+    24d0:	53                   	push   %rbx
+    24d1:	48 89 fb             	mov    %rdi,%rbx
+    24d4:	48 8b 3e             	mov    (%rsi),%rdi
+    24d7:	e8 e4 ff ff ff       	callq  24c0 <std::enable_if<std::chrono::__is_duration<std::chrono::duration<double, std::ratio<1l, 1000l> > >::value, std::chrono::duration<double, std::ratio<1l, 1000l> > >::type std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1l, 1000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>
+    24dc:	e8 3f ff ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    24e1:	c5 fb 11 03          	vmovsd %xmm0,(%rbx)
+    24e5:	5b                   	pop    %rbx
+    24e6:	c3                   	retq   
+    24e7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    24ee:	00 00 
+
+00000000000024f0 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>:
+    24f0:	48 83 ec 18          	sub    $0x18,%rsp
+    24f4:	49 89 f0             	mov    %rsi,%r8
+    24f7:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    24fe:	00 00 
+    2500:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2505:	31 c0                	xor    %eax,%eax
+    2507:	e8 44 ff ff ff       	callq  2450 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [clone .isra.0]>
+    250c:	4c 89 c7             	mov    %r8,%rdi
+    250f:	48 89 c6             	mov    %rax,%rsi
+    2512:	e8 39 ff ff ff       	callq  2450 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const [clone .isra.0]>
+    2517:	48 29 c6             	sub    %rax,%rsi
+    251a:	48 89 e7             	mov    %rsp,%rdi
+    251d:	e8 1e ff ff ff       	callq  2440 <std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&) [clone .isra.0]>
+    2522:	48 8b 04 24          	mov    (%rsp),%rax
+    2526:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+    252b:	64 48 2b 14 25 28 00 	sub    %fs:0x28,%rdx
+    2532:	00 00 
+    2534:	75 05                	jne    253b <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]+0x4b>
+    2536:	48 83 c4 18          	add    $0x18,%rsp
+    253a:	c3                   	retq   
+    253b:	e8 30 ec ff ff       	callq  1170 <__stack_chk_fail@plt>
+
+0000000000002540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>:
+    2540:	48 83 ec 08          	sub    $0x8,%rsp
+    2544:	48 89 fa             	mov    %rdi,%rdx
+    2547:	48 89 f7             	mov    %rsi,%rdi
+    254a:	e8 e1 fe ff ff       	callq  2430 <std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const [clone .isra.0]>
+    254f:	48 8b 3a             	mov    (%rdx),%rdi
+    2552:	48 89 c6             	mov    %rax,%rsi
+    2555:	e8 d6 fe ff ff       	callq  2430 <std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const [clone .isra.0]>
+    255a:	48 89 c7             	mov    %rax,%rdi
+    255d:	48 83 c4 08          	add    $0x8,%rsp
+    2561:	eb 8d                	jmp    24f0 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&) [clone .isra.0]>
+    2563:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    256a:	00 00 00 00 
+    256e:	66 90                	xchg   %ax,%ax
+
+0000000000002570 <std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [clone .isra.0]>:
+    2570:	48 89 fa             	mov    %rdi,%rdx
+    2573:	8b 3f                	mov    (%rdi),%edi
+    2575:	e8 f6 f0 ff ff       	callq  1670 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    257a:	89 02                	mov    %eax,(%rdx)
+    257c:	c3                   	retq   
+    257d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002580 <std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [clone .isra.0]>:
+    2580:	48 89 fa             	mov    %rdi,%rdx
+    2583:	8b 3f                	mov    (%rdi),%edi
+    2585:	e8 f6 f0 ff ff       	callq  1680 <std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    258a:	89 02                	mov    %eax,(%rdx)
+    258c:	c3                   	retq   
+    258d:	90                   	nop
+    258e:	66 90                	xchg   %ax,%ax
+
+0000000000002590 <std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [clone .constprop.0] [clone .isra.0]>:
+    2590:	e8 6b fe ff ff       	callq  2400 <std::operator~(std::_Ios_Fmtflags) [clone .constprop.0]>
+    2595:	4c 8d 47 18          	lea    0x18(%rdi),%r8
+    2599:	89 c6                	mov    %eax,%esi
+    259b:	4c 89 c7             	mov    %r8,%rdi
+    259e:	e8 cd ff ff ff       	callq  2570 <std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [clone .isra.0]>
+    25a3:	be 04 01 00 00       	mov    $0x104,%esi
+    25a8:	bf 04 00 00 00       	mov    $0x4,%edi
+    25ad:	e8 be f0 ff ff       	callq  1670 <std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)>
+    25b2:	89 c6                	mov    %eax,%esi
+    25b4:	4c 89 c7             	mov    %r8,%rdi
+    25b7:	eb c7                	jmp    2580 <std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) [clone .isra.0]>
+    25b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000025c0 <std::fixed(std::ios_base&)>:
+    25c0:	f3 0f 1e fa          	endbr64 
+    25c4:	49 89 f9             	mov    %rdi,%r9
+    25c7:	e8 c4 ff ff ff       	callq  2590 <std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) [clone .constprop.0] [clone .isra.0]>
+    25cc:	4c 89 c8             	mov    %r9,%rax
+    25cf:	c3                   	retq   
+
+00000000000025d0 <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>:
+    25d0:	41 54                	push   %r12
+    25d2:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    25d7:	55                   	push   %rbp
+    25d8:	31 ed                	xor    %ebp,%ebp
+    25da:	53                   	push   %rbx
+    25db:	48 83 ec 30          	sub    $0x30,%rsp
+    25df:	48 89 7c 24 08       	mov    %rdi,0x8(%rsp)
+    25e4:	48 8d 5c 24 08       	lea    0x8(%rsp),%rbx
+    25e9:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    25f0:	00 00 
+    25f2:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    25f7:	31 c0                	xor    %eax,%eax
+    25f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    2600:	48 89 df             	mov    %rbx,%rdi
+    2603:	e8 e8 f6 ff ff       	callq  1cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    2608:	48 31 c5             	xor    %rax,%rbp
+    260b:	ff ce                	dec    %esi
+    260d:	75 f1                	jne    2600 <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)+0x30>
+    260f:	e8 ec ea ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2614:	49 89 c4             	mov    %rax,%r12
+    2617:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    261c:	0f 1f 40 00          	nopl   0x0(%rax)
+    2620:	48 89 df             	mov    %rbx,%rdi
+    2623:	e8 c8 f6 ff ff       	callq  1cf0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    2628:	48 31 c5             	xor    %rax,%rbp
+    262b:	ff ce                	dec    %esi
+    262d:	75 f1                	jne    2620 <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)+0x50>
+    262f:	e8 cc ea ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2634:	48 8d 7c 24 18       	lea    0x18(%rsp),%rdi
+    2639:	4c 89 e6             	mov    %r12,%rsi
+    263c:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2641:	e8 fa fe ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2646:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+    264b:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+    2650:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+    2655:	e8 76 fe ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    265a:	48 8b 3d 6f 49 00 00 	mov    0x496f(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2661:	48 8d 35 9c 19 00 00 	lea    0x199c(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2668:	e8 e3 ea ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    266d:	48 89 c7             	mov    %rax,%rdi
+    2670:	48 8d 35 49 ff ff ff 	lea    -0xb7(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2677:	e8 a4 ea ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    267c:	48 89 c7             	mov    %rax,%rdi
+    267f:	e8 6c fd ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2684:	89 c6                	mov    %eax,%esi
+    2686:	e8 15 eb ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    268b:	bf 06 00 00 00       	mov    $0x6,%edi
+    2690:	49 89 c0             	mov    %rax,%r8
+    2693:	e8 f8 ef ff ff       	callq  1690 <std::setw(int)>
+    2698:	89 c6                	mov    %eax,%esi
+    269a:	4c 89 c7             	mov    %r8,%rdi
+    269d:	e8 de ea ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    26a2:	c5 fb 10 44 24 10    	vmovsd 0x10(%rsp),%xmm0
+    26a8:	48 89 c7             	mov    %rax,%rdi
+    26ab:	e8 70 fd ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    26b0:	e8 fb ea ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    26b5:	48 89 c7             	mov    %rax,%rdi
+    26b8:	48 8d 35 4d 19 00 00 	lea    0x194d(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    26bf:	e8 8c ea ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    26c4:	bf 13 00 00 00       	mov    $0x13,%edi
+    26c9:	49 89 c0             	mov    %rax,%r8
+    26cc:	e8 bf ef ff ff       	callq  1690 <std::setw(int)>
+    26d1:	89 c6                	mov    %eax,%esi
+    26d3:	4c 89 c7             	mov    %r8,%rdi
+    26d6:	e8 a5 ea ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    26db:	48 89 c7             	mov    %rax,%rdi
+    26de:	48 89 ee             	mov    %rbp,%rsi
+    26e1:	e8 2a ea ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    26e6:	48 8b 35 db 48 00 00 	mov    0x48db(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    26ed:	48 89 c7             	mov    %rax,%rdi
+    26f0:	e8 6b ea ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    26f5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+    26fa:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2701:	00 00 
+    2703:	75 09                	jne    270e <void f<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)+0x13e>
+    2705:	48 83 c4 30          	add    $0x30,%rsp
+    2709:	5b                   	pop    %rbx
+    270a:	5d                   	pop    %rbp
+    270b:	41 5c                	pop    %r12
+    270d:	c3                   	retq   
+    270e:	e8 5d ea ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2713:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    271a:	00 00 00 00 
+    271e:	66 90                	xchg   %ax,%ax
+
+0000000000002720 <void f<std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>)>:
+    2720:	41 54                	push   %r12
+    2722:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2727:	55                   	push   %rbp
+    2728:	31 ed                	xor    %ebp,%ebp
+    272a:	53                   	push   %rbx
+    272b:	48 83 ec 30          	sub    $0x30,%rsp
+    272f:	48 89 7c 24 08       	mov    %rdi,0x8(%rsp)
+    2734:	48 8d 5c 24 08       	lea    0x8(%rsp),%rbx
+    2739:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2740:	00 00 
+    2742:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+    2747:	31 c0                	xor    %eax,%eax
+    2749:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    2750:	48 89 df             	mov    %rbx,%rdi
+    2753:	e8 e8 f6 ff ff       	callq  1e40 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::operator()()>
+    2758:	48 31 c5             	xor    %rax,%rbp
+    275b:	ff ce                	dec    %esi
+    275d:	75 f1                	jne    2750 <void f<std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>)+0x30>
+    275f:	e8 9c e9 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2764:	49 89 c4             	mov    %rax,%r12
+    2767:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    276c:	0f 1f 40 00          	nopl   0x0(%rax)
+    2770:	48 89 df             	mov    %rbx,%rdi
+    2773:	e8 c8 f6 ff ff       	callq  1e40 <std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>::operator()()>
+    2778:	48 31 c5             	xor    %rax,%rbp
+    277b:	ff ce                	dec    %esi
+    277d:	75 f1                	jne    2770 <void f<std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>)+0x50>
+    277f:	e8 7c e9 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2784:	48 8d 7c 24 18       	lea    0x18(%rsp),%rdi
+    2789:	4c 89 e6             	mov    %r12,%rsi
+    278c:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2791:	e8 aa fd ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2796:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+    279b:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+    27a0:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+    27a5:	e8 26 fd ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    27aa:	48 8b 3d 1f 48 00 00 	mov    0x481f(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    27b1:	48 8d 35 4c 18 00 00 	lea    0x184c(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    27b8:	e8 93 e9 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    27bd:	48 89 c7             	mov    %rax,%rdi
+    27c0:	48 8d 35 f9 fd ff ff 	lea    -0x207(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    27c7:	e8 54 e9 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    27cc:	48 89 c7             	mov    %rax,%rdi
+    27cf:	e8 1c fc ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    27d4:	89 c6                	mov    %eax,%esi
+    27d6:	e8 c5 e9 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    27db:	bf 06 00 00 00       	mov    $0x6,%edi
+    27e0:	49 89 c0             	mov    %rax,%r8
+    27e3:	e8 a8 ee ff ff       	callq  1690 <std::setw(int)>
+    27e8:	89 c6                	mov    %eax,%esi
+    27ea:	4c 89 c7             	mov    %r8,%rdi
+    27ed:	e8 8e e9 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    27f2:	c5 fb 10 44 24 10    	vmovsd 0x10(%rsp),%xmm0
+    27f8:	48 89 c7             	mov    %rax,%rdi
+    27fb:	e8 20 fc ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2800:	e8 ab e9 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2805:	48 89 c7             	mov    %rax,%rdi
+    2808:	48 8d 35 fd 17 00 00 	lea    0x17fd(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    280f:	e8 3c e9 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2814:	bf 13 00 00 00       	mov    $0x13,%edi
+    2819:	49 89 c0             	mov    %rax,%r8
+    281c:	e8 6f ee ff ff       	callq  1690 <std::setw(int)>
+    2821:	89 c6                	mov    %eax,%esi
+    2823:	4c 89 c7             	mov    %r8,%rdi
+    2826:	e8 55 e9 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    282b:	48 89 c7             	mov    %rax,%rdi
+    282e:	48 89 ee             	mov    %rbp,%rsi
+    2831:	e8 da e8 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2836:	48 8b 35 8b 47 00 00 	mov    0x478b(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    283d:	48 89 c7             	mov    %rax,%rdi
+    2840:	e8 1b e9 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2845:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+    284a:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2851:	00 00 
+    2853:	75 09                	jne    285e <void f<std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 48271ul, 0ul, 2147483647ul>)+0x13e>
+    2855:	48 83 c4 30          	add    $0x30,%rsp
+    2859:	5b                   	pop    %rbx
+    285a:	5d                   	pop    %rbp
+    285b:	41 5c                	pop    %r12
+    285d:	c3                   	retq   
+    285e:	e8 0d e9 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2863:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    286a:	00 00 00 00 
+    286e:	66 90                	xchg   %ax,%ax
+
+0000000000002870 <void f<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>)>:
+    2870:	41 54                	push   %r12
+    2872:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2877:	55                   	push   %rbp
+    2878:	31 ed                	xor    %ebp,%ebp
+    287a:	48 83 ec 28          	sub    $0x28,%rsp
+    287e:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2885:	00 00 
+    2887:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    288c:	31 c0                	xor    %eax,%eax
+    288e:	66 90                	xchg   %ax,%ax
+    2890:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2895:	e8 a6 f0 ff ff       	callq  1940 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()>
+    289a:	48 31 c5             	xor    %rax,%rbp
+    289d:	ff ce                	dec    %esi
+    289f:	75 ef                	jne    2890 <void f<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>)+0x20>
+    28a1:	e8 5a e8 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    28a6:	49 89 c4             	mov    %rax,%r12
+    28a9:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    28ae:	66 90                	xchg   %ax,%ax
+    28b0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    28b5:	e8 86 f0 ff ff       	callq  1940 <std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()>
+    28ba:	48 31 c5             	xor    %rax,%rbp
+    28bd:	ff ce                	dec    %esi
+    28bf:	75 ef                	jne    28b0 <void f<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>)+0x40>
+    28c1:	e8 3a e8 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    28c6:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    28cb:	4c 89 e6             	mov    %r12,%rsi
+    28ce:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    28d3:	e8 68 fc ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    28d8:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    28dd:	48 89 e7             	mov    %rsp,%rdi
+    28e0:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    28e5:	e8 e6 fb ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    28ea:	48 8b 3d df 46 00 00 	mov    0x46df(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    28f1:	48 8d 35 0c 17 00 00 	lea    0x170c(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    28f8:	e8 53 e8 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    28fd:	48 89 c7             	mov    %rax,%rdi
+    2900:	48 8d 35 b9 fc ff ff 	lea    -0x347(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2907:	e8 14 e8 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    290c:	48 89 c7             	mov    %rax,%rdi
+    290f:	e8 dc fa ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2914:	89 c6                	mov    %eax,%esi
+    2916:	e8 85 e8 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    291b:	bf 06 00 00 00       	mov    $0x6,%edi
+    2920:	49 89 c0             	mov    %rax,%r8
+    2923:	e8 68 ed ff ff       	callq  1690 <std::setw(int)>
+    2928:	89 c6                	mov    %eax,%esi
+    292a:	4c 89 c7             	mov    %r8,%rdi
+    292d:	e8 4e e8 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2932:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2937:	48 89 c7             	mov    %rax,%rdi
+    293a:	e8 e1 fa ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    293f:	e8 6c e8 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2944:	48 89 c7             	mov    %rax,%rdi
+    2947:	48 8d 35 be 16 00 00 	lea    0x16be(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    294e:	e8 fd e7 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2953:	bf 13 00 00 00       	mov    $0x13,%edi
+    2958:	49 89 c0             	mov    %rax,%r8
+    295b:	e8 30 ed ff ff       	callq  1690 <std::setw(int)>
+    2960:	89 c6                	mov    %eax,%esi
+    2962:	4c 89 c7             	mov    %r8,%rdi
+    2965:	e8 16 e8 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    296a:	48 89 c7             	mov    %rax,%rdi
+    296d:	48 89 ee             	mov    %rbp,%rsi
+    2970:	e8 9b e7 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2975:	48 8b 35 4c 46 00 00 	mov    0x464c(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    297c:	48 89 c7             	mov    %rax,%rdi
+    297f:	e8 dc e7 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2984:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2989:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2990:	00 00 
+    2992:	75 08                	jne    299c <void f<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>)+0x12c>
+    2994:	48 83 c4 28          	add    $0x28,%rsp
+    2998:	5d                   	pop    %rbp
+    2999:	41 5c                	pop    %r12
+    299b:	c3                   	retq   
+    299c:	e8 cf e7 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    29a1:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    29a8:	00 00 00 00 
+    29ac:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000029b0 <void f<std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul> >(std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>)>:
+    29b0:	41 54                	push   %r12
+    29b2:	41 b8 40 42 0f 00    	mov    $0xf4240,%r8d
+    29b8:	55                   	push   %rbp
+    29b9:	31 ed                	xor    %ebp,%ebp
+    29bb:	48 83 ec 28          	sub    $0x28,%rsp
+    29bf:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    29c6:	00 00 
+    29c8:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    29cd:	31 c0                	xor    %eax,%eax
+    29cf:	90                   	nop
+    29d0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    29d5:	e8 76 f1 ff ff       	callq  1b50 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()>
+    29da:	48 31 c5             	xor    %rax,%rbp
+    29dd:	41 ff c8             	dec    %r8d
+    29e0:	75 ee                	jne    29d0 <void f<std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul> >(std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>)+0x20>
+    29e2:	e8 19 e7 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    29e7:	49 89 c4             	mov    %rax,%r12
+    29ea:	41 b8 40 42 0f 00    	mov    $0xf4240,%r8d
+    29f0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    29f5:	e8 56 f1 ff ff       	callq  1b50 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()>
+    29fa:	48 31 c5             	xor    %rax,%rbp
+    29fd:	41 ff c8             	dec    %r8d
+    2a00:	75 ee                	jne    29f0 <void f<std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul> >(std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>)+0x40>
+    2a02:	e8 f9 e6 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2a07:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    2a0c:	4c 89 e6             	mov    %r12,%rsi
+    2a0f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2a14:	e8 27 fb ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2a19:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    2a1e:	48 89 e7             	mov    %rsp,%rdi
+    2a21:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2a26:	e8 a5 fa ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    2a2b:	48 8b 3d 9e 45 00 00 	mov    0x459e(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2a32:	48 8d 35 cb 15 00 00 	lea    0x15cb(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2a39:	e8 12 e7 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2a3e:	48 89 c7             	mov    %rax,%rdi
+    2a41:	48 8d 35 78 fb ff ff 	lea    -0x488(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2a48:	e8 d3 e6 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    2a4d:	48 89 c7             	mov    %rax,%rdi
+    2a50:	e8 9b f9 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2a55:	89 c6                	mov    %eax,%esi
+    2a57:	e8 44 e7 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    2a5c:	bf 06 00 00 00       	mov    $0x6,%edi
+    2a61:	49 89 c0             	mov    %rax,%r8
+    2a64:	e8 27 ec ff ff       	callq  1690 <std::setw(int)>
+    2a69:	89 c6                	mov    %eax,%esi
+    2a6b:	4c 89 c7             	mov    %r8,%rdi
+    2a6e:	e8 0d e7 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2a73:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2a78:	48 89 c7             	mov    %rax,%rdi
+    2a7b:	e8 a0 f9 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2a80:	e8 2b e7 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2a85:	48 89 c7             	mov    %rax,%rdi
+    2a88:	48 8d 35 7d 15 00 00 	lea    0x157d(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    2a8f:	e8 bc e6 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2a94:	bf 13 00 00 00       	mov    $0x13,%edi
+    2a99:	49 89 c0             	mov    %rax,%r8
+    2a9c:	e8 ef eb ff ff       	callq  1690 <std::setw(int)>
+    2aa1:	89 c6                	mov    %eax,%esi
+    2aa3:	4c 89 c7             	mov    %r8,%rdi
+    2aa6:	e8 d5 e6 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2aab:	48 89 c7             	mov    %rax,%rdi
+    2aae:	48 89 ee             	mov    %rbp,%rsi
+    2ab1:	e8 5a e6 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2ab6:	48 8b 35 0b 45 00 00 	mov    0x450b(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    2abd:	48 89 c7             	mov    %rax,%rdi
+    2ac0:	e8 9b e6 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2ac5:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2aca:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2ad1:	00 00 
+    2ad3:	75 08                	jne    2add <void f<std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul> >(std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>)+0x12d>
+    2ad5:	48 83 c4 28          	add    $0x28,%rsp
+    2ad9:	5d                   	pop    %rbp
+    2ada:	41 5c                	pop    %r12
+    2adc:	c3                   	retq   
+    2add:	e8 8e e6 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2ae2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2ae9:	00 00 00 00 
+    2aed:	0f 1f 00             	nopl   (%rax)
+
+0000000000002af0 <void f<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul> >(std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>)>:
+    2af0:	41 54                	push   %r12
+    2af2:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2af7:	55                   	push   %rbp
+    2af8:	31 ed                	xor    %ebp,%ebp
+    2afa:	48 83 ec 28          	sub    $0x28,%rsp
+    2afe:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2b05:	00 00 
+    2b07:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2b0c:	31 c0                	xor    %eax,%eax
+    2b0e:	66 90                	xchg   %ax,%ax
+    2b10:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2b15:	e8 86 eb ff ff       	callq  16a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>
+    2b1a:	48 31 c5             	xor    %rax,%rbp
+    2b1d:	ff ce                	dec    %esi
+    2b1f:	75 ef                	jne    2b10 <void f<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul> >(std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>)+0x20>
+    2b21:	e8 da e5 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2b26:	49 89 c4             	mov    %rax,%r12
+    2b29:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2b2e:	66 90                	xchg   %ax,%ax
+    2b30:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2b35:	e8 66 eb ff ff       	callq  16a0 <std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>::operator()()>
+    2b3a:	48 31 c5             	xor    %rax,%rbp
+    2b3d:	ff ce                	dec    %esi
+    2b3f:	75 ef                	jne    2b30 <void f<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul> >(std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>)+0x40>
+    2b41:	e8 ba e5 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2b46:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    2b4b:	4c 89 e6             	mov    %r12,%rsi
+    2b4e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2b53:	e8 e8 f9 ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2b58:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    2b5d:	48 89 e7             	mov    %rsp,%rdi
+    2b60:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2b65:	e8 66 f9 ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    2b6a:	48 8b 3d 5f 44 00 00 	mov    0x445f(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2b71:	48 8d 35 8c 14 00 00 	lea    0x148c(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2b78:	e8 d3 e5 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2b7d:	48 89 c7             	mov    %rax,%rdi
+    2b80:	48 8d 35 39 fa ff ff 	lea    -0x5c7(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2b87:	e8 94 e5 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    2b8c:	48 89 c7             	mov    %rax,%rdi
+    2b8f:	e8 5c f8 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2b94:	89 c6                	mov    %eax,%esi
+    2b96:	e8 05 e6 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    2b9b:	bf 06 00 00 00       	mov    $0x6,%edi
+    2ba0:	49 89 c0             	mov    %rax,%r8
+    2ba3:	e8 e8 ea ff ff       	callq  1690 <std::setw(int)>
+    2ba8:	89 c6                	mov    %eax,%esi
+    2baa:	4c 89 c7             	mov    %r8,%rdi
+    2bad:	e8 ce e5 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2bb2:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2bb7:	48 89 c7             	mov    %rax,%rdi
+    2bba:	e8 61 f8 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2bbf:	e8 ec e5 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2bc4:	48 89 c7             	mov    %rax,%rdi
+    2bc7:	48 8d 35 3e 14 00 00 	lea    0x143e(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    2bce:	e8 7d e5 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2bd3:	bf 13 00 00 00       	mov    $0x13,%edi
+    2bd8:	49 89 c0             	mov    %rax,%r8
+    2bdb:	e8 b0 ea ff ff       	callq  1690 <std::setw(int)>
+    2be0:	89 c6                	mov    %eax,%esi
+    2be2:	4c 89 c7             	mov    %r8,%rdi
+    2be5:	e8 96 e5 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2bea:	48 89 c7             	mov    %rax,%rdi
+    2bed:	48 89 ee             	mov    %rbp,%rsi
+    2bf0:	e8 1b e5 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2bf5:	48 8b 35 cc 43 00 00 	mov    0x43cc(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    2bfc:	48 89 c7             	mov    %rax,%rdi
+    2bff:	e8 5c e5 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2c04:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2c09:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2c10:	00 00 
+    2c12:	75 08                	jne    2c1c <void f<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul> >(std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>)+0x12c>
+    2c14:	48 83 c4 28          	add    $0x28,%rsp
+    2c18:	5d                   	pop    %rbp
+    2c19:	41 5c                	pop    %r12
+    2c1b:	c3                   	retq   
+    2c1c:	e8 4f e5 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2c21:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2c28:	00 00 00 00 
+    2c2c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002c30 <void f<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul> >(std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>)>:
+    2c30:	41 54                	push   %r12
+    2c32:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2c37:	55                   	push   %rbp
+    2c38:	31 ed                	xor    %ebp,%ebp
+    2c3a:	48 83 ec 28          	sub    $0x28,%rsp
+    2c3e:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2c45:	00 00 
+    2c47:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2c4c:	31 c0                	xor    %eax,%eax
+    2c4e:	66 90                	xchg   %ax,%ax
+    2c50:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2c55:	e8 b6 ea ff ff       	callq  1710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>
+    2c5a:	48 31 c5             	xor    %rax,%rbp
+    2c5d:	ff ce                	dec    %esi
+    2c5f:	75 ef                	jne    2c50 <void f<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul> >(std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>)+0x20>
+    2c61:	e8 9a e4 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2c66:	49 89 c4             	mov    %rax,%r12
+    2c69:	be 40 42 0f 00       	mov    $0xf4240,%esi
+    2c6e:	66 90                	xchg   %ax,%ax
+    2c70:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2c75:	e8 96 ea ff ff       	callq  1710 <std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>::operator()()>
+    2c7a:	48 31 c5             	xor    %rax,%rbp
+    2c7d:	ff ce                	dec    %esi
+    2c7f:	75 ef                	jne    2c70 <void f<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul> >(std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>)+0x40>
+    2c81:	e8 7a e4 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2c86:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    2c8b:	4c 89 e6             	mov    %r12,%rsi
+    2c8e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2c93:	e8 a8 f8 ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2c98:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    2c9d:	48 89 e7             	mov    %rsp,%rdi
+    2ca0:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2ca5:	e8 26 f8 ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    2caa:	48 8b 3d 1f 43 00 00 	mov    0x431f(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2cb1:	48 8d 35 4c 13 00 00 	lea    0x134c(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2cb8:	e8 93 e4 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2cbd:	48 89 c7             	mov    %rax,%rdi
+    2cc0:	48 8d 35 f9 f8 ff ff 	lea    -0x707(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2cc7:	e8 54 e4 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    2ccc:	48 89 c7             	mov    %rax,%rdi
+    2ccf:	e8 1c f7 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2cd4:	89 c6                	mov    %eax,%esi
+    2cd6:	e8 c5 e4 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    2cdb:	bf 06 00 00 00       	mov    $0x6,%edi
+    2ce0:	49 89 c0             	mov    %rax,%r8
+    2ce3:	e8 a8 e9 ff ff       	callq  1690 <std::setw(int)>
+    2ce8:	89 c6                	mov    %eax,%esi
+    2cea:	4c 89 c7             	mov    %r8,%rdi
+    2ced:	e8 8e e4 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2cf2:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2cf7:	48 89 c7             	mov    %rax,%rdi
+    2cfa:	e8 21 f7 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2cff:	e8 ac e4 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2d04:	48 89 c7             	mov    %rax,%rdi
+    2d07:	48 8d 35 fe 12 00 00 	lea    0x12fe(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    2d0e:	e8 3d e4 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2d13:	bf 13 00 00 00       	mov    $0x13,%edi
+    2d18:	49 89 c0             	mov    %rax,%r8
+    2d1b:	e8 70 e9 ff ff       	callq  1690 <std::setw(int)>
+    2d20:	89 c6                	mov    %eax,%esi
+    2d22:	4c 89 c7             	mov    %r8,%rdi
+    2d25:	e8 56 e4 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2d2a:	48 89 c7             	mov    %rax,%rdi
+    2d2d:	48 89 ee             	mov    %rbp,%rsi
+    2d30:	e8 db e3 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2d35:	48 8b 35 8c 42 00 00 	mov    0x428c(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    2d3c:	48 89 c7             	mov    %rax,%rdi
+    2d3f:	e8 1c e4 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2d44:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2d49:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2d50:	00 00 
+    2d52:	75 08                	jne    2d5c <void f<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul> >(std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>)+0x12c>
+    2d54:	48 83 c4 28          	add    $0x28,%rsp
+    2d58:	5d                   	pop    %rbp
+    2d59:	41 5c                	pop    %r12
+    2d5b:	c3                   	retq   
+    2d5c:	e8 0f e4 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2d61:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2d68:	00 00 00 00 
+    2d6c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002d70 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>)>:
+    2d70:	41 54                	push   %r12
+    2d72:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    2d78:	55                   	push   %rbp
+    2d79:	31 ed                	xor    %ebp,%ebp
+    2d7b:	48 83 ec 28          	sub    $0x28,%rsp
+    2d7f:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2d86:	00 00 
+    2d88:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2d8d:	31 c0                	xor    %eax,%eax
+    2d8f:	90                   	nop
+    2d90:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2d95:	e8 66 ee ff ff       	callq  1c00 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::operator()()>
+    2d9a:	48 31 c5             	xor    %rax,%rbp
+    2d9d:	41 ff c9             	dec    %r9d
+    2da0:	75 ee                	jne    2d90 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>)+0x20>
+    2da2:	e8 59 e3 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2da7:	49 89 c4             	mov    %rax,%r12
+    2daa:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    2db0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2db5:	e8 46 ee ff ff       	callq  1c00 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>::operator()()>
+    2dba:	48 31 c5             	xor    %rax,%rbp
+    2dbd:	41 ff c9             	dec    %r9d
+    2dc0:	75 ee                	jne    2db0 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>)+0x40>
+    2dc2:	e8 39 e3 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2dc7:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    2dcc:	4c 89 e6             	mov    %r12,%rsi
+    2dcf:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2dd4:	e8 67 f7 ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2dd9:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    2dde:	48 89 e7             	mov    %rsp,%rdi
+    2de1:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2de6:	e8 e5 f6 ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    2deb:	48 8b 3d de 41 00 00 	mov    0x41de(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2df2:	48 8d 35 0b 12 00 00 	lea    0x120b(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2df9:	e8 52 e3 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2dfe:	48 89 c7             	mov    %rax,%rdi
+    2e01:	48 8d 35 b8 f7 ff ff 	lea    -0x848(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2e08:	e8 13 e3 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    2e0d:	48 89 c7             	mov    %rax,%rdi
+    2e10:	e8 db f5 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2e15:	89 c6                	mov    %eax,%esi
+    2e17:	e8 84 e3 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    2e1c:	bf 06 00 00 00       	mov    $0x6,%edi
+    2e21:	49 89 c0             	mov    %rax,%r8
+    2e24:	e8 67 e8 ff ff       	callq  1690 <std::setw(int)>
+    2e29:	89 c6                	mov    %eax,%esi
+    2e2b:	4c 89 c7             	mov    %r8,%rdi
+    2e2e:	e8 4d e3 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2e33:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2e38:	48 89 c7             	mov    %rax,%rdi
+    2e3b:	e8 e0 f5 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2e40:	e8 6b e3 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2e45:	48 89 c7             	mov    %rax,%rdi
+    2e48:	48 8d 35 bd 11 00 00 	lea    0x11bd(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    2e4f:	e8 fc e2 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2e54:	bf 13 00 00 00       	mov    $0x13,%edi
+    2e59:	49 89 c0             	mov    %rax,%r8
+    2e5c:	e8 2f e8 ff ff       	callq  1690 <std::setw(int)>
+    2e61:	89 c6                	mov    %eax,%esi
+    2e63:	4c 89 c7             	mov    %r8,%rdi
+    2e66:	e8 15 e3 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2e6b:	48 89 c7             	mov    %rax,%rdi
+    2e6e:	48 89 ee             	mov    %rbp,%rsi
+    2e71:	e8 9a e2 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2e76:	48 8b 35 4b 41 00 00 	mov    0x414b(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    2e7d:	48 89 c7             	mov    %rax,%rdi
+    2e80:	e8 db e2 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2e85:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2e8a:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2e91:	00 00 
+    2e93:	75 08                	jne    2e9d <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 24ul, 10ul, 24ul>, 223ul, 23ul>)+0x12d>
+    2e95:	48 83 c4 28          	add    $0x28,%rsp
+    2e99:	5d                   	pop    %rbp
+    2e9a:	41 5c                	pop    %r12
+    2e9c:	c3                   	retq   
+    2e9d:	e8 ce e2 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2ea2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2ea9:	00 00 00 00 
+    2ead:	0f 1f 00             	nopl   (%rax)
+
+0000000000002eb0 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>)>:
+    2eb0:	41 54                	push   %r12
+    2eb2:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    2eb8:	55                   	push   %rbp
+    2eb9:	31 ed                	xor    %ebp,%ebp
+    2ebb:	48 83 ec 28          	sub    $0x28,%rsp
+    2ebf:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    2ec6:	00 00 
+    2ec8:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    2ecd:	31 c0                	xor    %eax,%eax
+    2ecf:	90                   	nop
+    2ed0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2ed5:	e8 86 ed ff ff       	callq  1c60 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::operator()()>
+    2eda:	48 31 c5             	xor    %rax,%rbp
+    2edd:	41 ff c9             	dec    %r9d
+    2ee0:	75 ee                	jne    2ed0 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>)+0x20>
+    2ee2:	e8 19 e2 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2ee7:	49 89 c4             	mov    %rax,%r12
+    2eea:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    2ef0:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    2ef5:	e8 66 ed ff ff       	callq  1c60 <std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>::operator()()>
+    2efa:	48 31 c5             	xor    %rax,%rbp
+    2efd:	41 ff c9             	dec    %r9d
+    2f00:	75 ee                	jne    2ef0 <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>)+0x40>
+    2f02:	e8 f9 e1 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    2f07:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    2f0c:	4c 89 e6             	mov    %r12,%rsi
+    2f0f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    2f14:	e8 27 f6 ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    2f19:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    2f1e:	48 89 e7             	mov    %rsp,%rdi
+    2f21:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    2f26:	e8 a5 f5 ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    2f2b:	48 8b 3d 9e 40 00 00 	mov    0x409e(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    2f32:	48 8d 35 cb 10 00 00 	lea    0x10cb(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    2f39:	e8 12 e2 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2f3e:	48 89 c7             	mov    %rax,%rdi
+    2f41:	48 8d 35 78 f6 ff ff 	lea    -0x988(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    2f48:	e8 d3 e1 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    2f4d:	48 89 c7             	mov    %rax,%rdi
+    2f50:	e8 9b f4 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    2f55:	89 c6                	mov    %eax,%esi
+    2f57:	e8 44 e2 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    2f5c:	bf 06 00 00 00       	mov    $0x6,%edi
+    2f61:	49 89 c0             	mov    %rax,%r8
+    2f64:	e8 27 e7 ff ff       	callq  1690 <std::setw(int)>
+    2f69:	89 c6                	mov    %eax,%esi
+    2f6b:	4c 89 c7             	mov    %r8,%rdi
+    2f6e:	e8 0d e2 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2f73:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    2f78:	48 89 c7             	mov    %rax,%rdi
+    2f7b:	e8 a0 f4 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    2f80:	e8 2b e2 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    2f85:	48 89 c7             	mov    %rax,%rdi
+    2f88:	48 8d 35 7d 10 00 00 	lea    0x107d(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    2f8f:	e8 bc e1 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    2f94:	bf 13 00 00 00       	mov    $0x13,%edi
+    2f99:	49 89 c0             	mov    %rax,%r8
+    2f9c:	e8 ef e6 ff ff       	callq  1690 <std::setw(int)>
+    2fa1:	89 c6                	mov    %eax,%esi
+    2fa3:	4c 89 c7             	mov    %r8,%rdi
+    2fa6:	e8 d5 e1 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    2fab:	48 89 c7             	mov    %rax,%rdi
+    2fae:	48 89 ee             	mov    %rbp,%rsi
+    2fb1:	e8 5a e1 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    2fb6:	48 8b 35 0b 40 00 00 	mov    0x400b(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    2fbd:	48 89 c7             	mov    %rax,%rdi
+    2fc0:	e8 9b e1 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    2fc5:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    2fca:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    2fd1:	00 00 
+    2fd3:	75 08                	jne    2fdd <void f<std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul> >(std::discard_block_engine<std::subtract_with_carry_engine<unsigned long, 48ul, 5ul, 12ul>, 389ul, 11ul>)+0x12d>
+    2fd5:	48 83 c4 28          	add    $0x28,%rsp
+    2fd9:	5d                   	pop    %rbp
+    2fda:	41 5c                	pop    %r12
+    2fdc:	c3                   	retq   
+    2fdd:	e8 8e e1 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    2fe2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    2fe9:	00 00 00 00 
+    2fed:	0f 1f 00             	nopl   (%rax)
+
+0000000000002ff0 <void f<std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul> >(std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>)>:
+    2ff0:	41 54                	push   %r12
+    2ff2:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    2ff8:	55                   	push   %rbp
+    2ff9:	31 ed                	xor    %ebp,%ebp
+    2ffb:	48 83 ec 28          	sub    $0x28,%rsp
+    2fff:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    3006:	00 00 
+    3008:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+    300d:	31 c0                	xor    %eax,%eax
+    300f:	90                   	nop
+    3010:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    3015:	e8 26 ed ff ff       	callq  1d40 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()>
+    301a:	48 31 c5             	xor    %rax,%rbp
+    301d:	41 ff c9             	dec    %r9d
+    3020:	75 ee                	jne    3010 <void f<std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul> >(std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>)+0x20>
+    3022:	e8 d9 e0 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    3027:	49 89 c4             	mov    %rax,%r12
+    302a:	41 b9 40 42 0f 00    	mov    $0xf4240,%r9d
+    3030:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+    3035:	e8 06 ed ff ff       	callq  1d40 <std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>::operator()()>
+    303a:	48 31 c5             	xor    %rax,%rbp
+    303d:	41 ff c9             	dec    %r9d
+    3040:	75 ee                	jne    3030 <void f<std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul> >(std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>)+0x40>
+    3042:	e8 b9 e0 ff ff       	callq  1100 <std::chrono::_V2::system_clock::now()@plt>
+    3047:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    304c:	4c 89 e6             	mov    %r12,%rsi
+    304f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    3054:	e8 e7 f4 ff ff       	callq  2540 <std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&) [clone .isra.0]>
+    3059:	48 8d 74 24 10       	lea    0x10(%rsp),%rsi
+    305e:	48 89 e7             	mov    %rsp,%rdi
+    3061:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+    3066:	e8 65 f4 ff ff       	callq  24d0 <std::chrono::duration<double, std::ratio<1l, 1000l> >::duration<long, std::ratio<1l, 1000000000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)>
+    306b:	48 8b 3d 5e 3f 00 00 	mov    0x3f5e(%rip),%rdi        # 6fd0 <std::cout@GLIBCXX_3.4>
+    3072:	48 8d 35 8b 0f 00 00 	lea    0xf8b(%rip),%rsi        # 4004 <_IO_stdin_used+0x4>
+    3079:	e8 d2 e0 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    307e:	48 89 c7             	mov    %rax,%rdi
+    3081:	48 8d 35 38 f5 ff ff 	lea    -0xac8(%rip),%rsi        # 25c0 <std::fixed(std::ios_base&)>
+    3088:	e8 93 e0 ff ff       	callq  1120 <std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@plt>
+    308d:	48 89 c7             	mov    %rax,%rdi
+    3090:	e8 5b f3 ff ff       	callq  23f0 <std::setprecision(int) [clone .constprop.0]>
+    3095:	89 c6                	mov    %eax,%esi
+    3097:	e8 04 e1 ff ff       	callq  11a0 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)@plt>
+    309c:	bf 06 00 00 00       	mov    $0x6,%edi
+    30a1:	49 89 c0             	mov    %rax,%r8
+    30a4:	e8 e7 e5 ff ff       	callq  1690 <std::setw(int)>
+    30a9:	89 c6                	mov    %eax,%esi
+    30ab:	4c 89 c7             	mov    %r8,%rdi
+    30ae:	e8 cd e0 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    30b3:	c5 fb 10 04 24       	vmovsd (%rsp),%xmm0
+    30b8:	48 89 c7             	mov    %rax,%rdi
+    30bb:	e8 60 f3 ff ff       	callq  2420 <std::chrono::duration<double, std::ratio<1l, 1000l> >::count() const [clone .isra.0]>
+    30c0:	e8 eb e0 ff ff       	callq  11b0 <std::ostream::operator<<(double)@plt>
+    30c5:	48 89 c7             	mov    %rax,%rdi
+    30c8:	48 8d 35 3d 0f 00 00 	lea    0xf3d(%rip),%rsi        # 400c <_IO_stdin_used+0xc>
+    30cf:	e8 7c e0 ff ff       	callq  1150 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@plt>
+    30d4:	bf 13 00 00 00       	mov    $0x13,%edi
+    30d9:	49 89 c0             	mov    %rax,%r8
+    30dc:	e8 af e5 ff ff       	callq  1690 <std::setw(int)>
+    30e1:	89 c6                	mov    %eax,%esi
+    30e3:	4c 89 c7             	mov    %r8,%rdi
+    30e6:	e8 95 e0 ff ff       	callq  1180 <std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@plt>
+    30eb:	48 89 c7             	mov    %rax,%rdi
+    30ee:	48 89 ee             	mov    %rbp,%rsi
+    30f1:	e8 1a e0 ff ff       	callq  1110 <std::ostream::operator<<(unsigned long)@plt>
+    30f6:	48 8b 35 cb 3e 00 00 	mov    0x3ecb(%rip),%rsi        # 6fc8 <std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@GLIBCXX_3.4>
+    30fd:	48 89 c7             	mov    %rax,%rdi
+    3100:	e8 5b e0 ff ff       	callq  1160 <std::ostream::operator<<(std::ostream& (*)(std::ostream&))@plt>
+    3105:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+    310a:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    3111:	00 00 
+    3113:	75 08                	jne    311d <void f<std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul> >(std::shuffle_order_engine<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, 256ul>)+0x12d>
+    3115:	48 83 c4 28          	add    $0x28,%rsp
+    3119:	5d                   	pop    %rbp
+    311a:	41 5c                	pop    %r12
+    311c:	c3                   	retq   
+    311d:	e8 4e e0 ff ff       	callq  1170 <__stack_chk_fail@plt>
+    3122:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    3129:	00 00 00 
+    312c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000003130 <__libc_csu_init>:
+    3130:	f3 0f 1e fa          	endbr64 
+    3134:	41 57                	push   %r15
+    3136:	4c 8d 3d f3 3b 00 00 	lea    0x3bf3(%rip),%r15        # 6d30 <__frame_dummy_init_array_entry>
+    313d:	41 56                	push   %r14
+    313f:	49 89 d6             	mov    %rdx,%r14
+    3142:	41 55                	push   %r13
+    3144:	49 89 f5             	mov    %rsi,%r13
+    3147:	41 54                	push   %r12
+    3149:	41 89 fc             	mov    %edi,%r12d
+    314c:	55                   	push   %rbp
+    314d:	48 8d 2d ec 3b 00 00 	lea    0x3bec(%rip),%rbp        # 6d40 <__do_global_dtors_aux_fini_array_entry>
+    3154:	53                   	push   %rbx
+    3155:	4c 29 fd             	sub    %r15,%rbp
+    3158:	48 83 ec 08          	sub    $0x8,%rsp
+    315c:	e8 9f de ff ff       	callq  1000 <_init>
+    3161:	48 c1 fd 03          	sar    $0x3,%rbp
+    3165:	74 1f                	je     3186 <random.cc.a8b7b3df+0x19>
+    3167:	31 db                	xor    %ebx,%ebx
+    3169:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    3170:	4c 89 f2             	mov    %r14,%rdx
+    3173:	4c 89 ee             	mov    %r13,%rsi
+    3176:	44 89 e7             	mov    %r12d,%edi
+    3179:	41 ff 14 df          	callq  *(%r15,%rbx,8)
+    317d:	48 83 c3 01          	add    $0x1,%rbx
+    3181:	48 39 dd             	cmp    %rbx,%rbp
+    3184:	75 ea                	jne    3170 <random.cc.a8b7b3df+0x3>
+    3186:	48 83 c4 08          	add    $0x8,%rsp
+    318a:	5b                   	pop    %rbx
+    318b:	5d                   	pop    %rbp
+    318c:	41 5c                	pop    %r12
+    318e:	41 5d                	pop    %r13
+    3190:	41 5e                	pop    %r14
+    3192:	41 5f                	pop    %r15
+    3194:	c3                   	retq   
+    3195:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    319c:	00 00 00 00 
+
+00000000000031a0 <__libc_csu_fini>:
+    31a0:	f3 0f 1e fa          	endbr64 
+    31a4:	c3                   	retq   
+
+Desensamblado de la sección .fini:
+
+00000000000031a8 <_fini>:
+    31a8:	f3 0f 1e fa          	endbr64 
+    31ac:	48 83 ec 08          	sub    $0x8,%rsp
+    31b0:	48 83 c4 08          	add    $0x8,%rsp
+    31b4:	c3                   	retq   

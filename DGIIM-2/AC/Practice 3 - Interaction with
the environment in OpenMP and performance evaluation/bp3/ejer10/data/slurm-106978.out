@@ -1,0 +1,54 @@
+Id. usuario del trabajo: e1estudiante21
+Id. del trabajo: 106978
+Nombre del trabajo especificado por usuario: pmtv-OpenMP
+Directorio de trabajo (en el que se ejecuta el script): /home/e1estudiante21/bp3/ejer10
+Cola: ac
+Nodo que ejecuta este trabajo:atcgrid.ugr.es
+Nº de nodos asignados al trabajo: 1
+Nodos asignados al trabajo: atcgrid1
+CPUs por nodo: 24
+PLANIFICACION: monotonic:static | CHUNK: DEFAULT
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.262942
+ Primera componente: 0.158611
+ Última componente: 7664.048613
+PLANIFICACION: monotonic:static | CHUNK: 1
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.402290
+ Primera componente: 0.760686
+ Última componente: 7664.869059
+PLANIFICACION: monotonic:static | CHUNK: 64
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.231029
+ Primera componente: 0.545220
+ Última componente: 7804.364528
+PLANIFICACION: monotonic:dynamic | CHUNK: DEFAULT
+Tamaño vectores: 15360
+ Tiempo de ejecución: 4.993390
+ Primera componente: 0.847109
+ Última componente: 7741.998351
+PLANIFICACION: monotonic:dynamic | CHUNK: 1
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.203451
+ Primera componente: 5.236392
+ Última componente: 7802.006152
+PLANIFICACION: monotonic:dynamic | CHUNK: 64
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.184271
+ Primera componente: 0.291302
+ Última componente: 7762.884423
+PLANIFICACION: monotonic:guided | CHUNK: DEFAULT
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.200945
+ Primera componente: 0.093230
+ Última componente: 4077.432828
+PLANIFICACION: monotonic:guided | CHUNK: 1
+Tamaño vectores: 15360
+ Tiempo de ejecución: 4.239911
+ Primera componente: 0.233503
+ Última componente: 7714.502133
+PLANIFICACION: monotonic:guided | CHUNK: 64
+Tamaño vectores: 15360
+ Tiempo de ejecución: 5.238659
+ Primera componente: 0.950726
+ Última componente: 7984.290685

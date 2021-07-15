@@ -1,0 +1,673 @@
+
+struct:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 2f 00 00 	mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	callq  *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	retq   
+
+Desensamblado de la sección .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 9a 2f 00 00    	pushq  0x2f9a(%rip)        # 3fc0 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 9b 2f 00 00 	bnd jmpq *0x2f9b(%rip)        # 3fc8 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nopl   (%rax)
+    1030:	f3 0f 1e fa          	endbr64 
+    1034:	68 00 00 00 00       	pushq  $0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmpq 1020 <.plt>
+    103f:	90                   	nop
+
+Desensamblado de la sección .plt.got:
+
+0000000000001040 <__cxa_finalize@plt>:
+    1040:	f3 0f 1e fa          	endbr64 
+    1044:	f2 ff 25 ad 2f 00 00 	bnd jmpq *0x2fad(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    104b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .plt.sec:
+
+0000000000001050 <__stack_chk_fail@plt>:
+    1050:	f3 0f 1e fa          	endbr64 
+    1054:	f2 ff 25 75 2f 00 00 	bnd jmpq *0x2f75(%rip)        # 3fd0 <__stack_chk_fail@GLIBC_2.4>
+    105b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .text:
+
+0000000000001060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>:
+    1060:	48 89 f8             	mov    %rdi,%rax
+    1063:	c3                   	retq   
+    1064:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    106b:	00 00 00 00 
+    106f:	90                   	nop
+
+0000000000001070 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+    1070:	48 89 f8             	mov    %rdi,%rax
+    1073:	c3                   	retq   
+    1074:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    107b:	00 00 00 00 
+    107f:	90                   	nop
+
+0000000000001080 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long)>:
+    1080:	eb ee                	jmp    1070 <std::__detail::_Mod<unsigned long, 2147483647ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+    1082:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1089:	00 00 00 00 
+    108d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001090 <std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>::_Head_base<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>:
+    1090:	48 89 fa             	mov    %rdi,%rdx
+    1093:	48 89 f7             	mov    %rsi,%rdi
+    1096:	e8 c5 ff ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    109b:	48 8b 00             	mov    (%rax),%rax
+    109e:	48 89 02             	mov    %rax,(%rdx)
+    10a1:	c3                   	retq   
+    10a2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    10a9:	00 00 00 00 
+    10ad:	0f 1f 00             	nopl   (%rax)
+
+00000000000010b0 <std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::_Tuple_impl<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>:
+    10b0:	49 89 f8             	mov    %rdi,%r8
+    10b3:	48 89 f7             	mov    %rsi,%rdi
+    10b6:	e8 a5 ff ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    10bb:	48 89 c6             	mov    %rax,%rsi
+    10be:	4c 89 c7             	mov    %r8,%rdi
+    10c1:	eb cd                	jmp    1090 <std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>::_Head_base<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>
+    10c3:	90                   	nop
+    10c4:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    10cb:	00 00 00 00 
+    10cf:	90                   	nop
+
+00000000000010d0 <std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, true, true>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>:
+    10d0:	49 89 f8             	mov    %rdi,%r8
+    10d3:	48 89 f7             	mov    %rsi,%rdi
+    10d6:	e8 85 ff ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    10db:	48 89 c6             	mov    %rax,%rsi
+    10de:	4c 89 c7             	mov    %r8,%rdi
+    10e1:	eb cd                	jmp    10b0 <std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::_Tuple_impl<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>
+    10e3:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    10ea:	00 00 00 00 
+    10ee:	66 90                	xchg   %ax,%ax
+
+00000000000010f0 <std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long)>:
+    10f0:	48 69 ff a7 41 00 00 	imul   $0x41a7,%rdi,%rdi
+    10f7:	48 ba 05 00 00 00 02 	movabs $0x200000005,%rdx
+    10fe:	00 00 00 
+    1101:	48 89 f8             	mov    %rdi,%rax
+    1104:	48 f7 e2             	mul    %rdx
+    1107:	48 89 f8             	mov    %rdi,%rax
+    110a:	48 29 d0             	sub    %rdx,%rax
+    110d:	48 d1 e8             	shr    %rax
+    1110:	48 01 d0             	add    %rdx,%rax
+    1113:	48 c1 e8 1e          	shr    $0x1e,%rax
+    1117:	48 89 c2             	mov    %rax,%rdx
+    111a:	48 c1 e2 1f          	shl    $0x1f,%rdx
+    111e:	48 29 c2             	sub    %rax,%rdx
+    1121:	48 89 f8             	mov    %rdi,%rax
+    1124:	48 29 d0             	sub    %rdx,%rax
+    1127:	c3                   	retq   
+    1128:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    112f:	00 
+
+0000000000001130 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long)>:
+    1130:	eb be                	jmp    10f0 <std::__detail::_Mod<unsigned long, 2147483647ul, 16807ul, 0ul, true, true>::__calc(unsigned long)>
+    1132:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1139:	00 00 00 00 
+    113d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001140 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>:
+    1140:	48 89 f9             	mov    %rdi,%rcx
+    1143:	48 8b 3f             	mov    (%rdi),%rdi
+    1146:	e8 e5 ff ff ff       	callq  1130 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 16807ul, 0ul>(unsigned long)>
+    114b:	48 89 01             	mov    %rax,(%rcx)
+    114e:	c3                   	retq   
+    114f:	90                   	nop
+
+0000000000001150 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>:
+    1150:	e9 8b 04 00 00       	jmpq   15e0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>
+    1155:	90                   	nop
+    1156:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    115d:	00 00 00 
+
+0000000000001160 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>& std::_Mu<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false, false>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::tuple<> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::tuple<>&) const volatile [clone .constprop.0]>:
+    1160:	e9 fb fe ff ff       	jmpq   1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    1165:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    116c:	00 00 00 00 
+
+0000000000001170 <std::tuple_element<0ul, std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> > >::type& std::get<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >&) [clone .constprop.0]>:
+    1170:	e9 bb 04 00 00       	jmpq   1630 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>& std::__get_helper<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>>(std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>>&) [clone .constprop.0]>
+    1175:	90                   	nop
+    1176:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    117d:	00 00 00 
+
+0000000000001180 <std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [clone .constprop.0]>:
+    1180:	be 09 00 00 00       	mov    $0x9,%esi
+    1185:	48 8d 3d b4 2e 00 00 	lea    0x2eb4(%rip),%rdi        # 4040 <distribution>
+    118c:	e9 af 04 00 00       	jmpq   1640 <std::uniform_int_distribution<int>::param_type::param_type(int, int) [clone .constprop.0]>
+    1191:	90                   	nop
+    1192:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1199:	00 00 00 00 
+    119d:	0f 1f 00             	nopl   (%rax)
+
+00000000000011a0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]>:
+    11a0:	41 56                	push   %r14
+    11a2:	41 55                	push   %r13
+    11a4:	41 54                	push   %r12
+    11a6:	49 89 f4             	mov    %rsi,%r12
+    11a9:	55                   	push   %rbp
+    11aa:	48 89 fd             	mov    %rdi,%rbp
+    11ad:	53                   	push   %rbx
+    11ae:	48 83 ec 10          	sub    $0x10,%rsp
+    11b2:	8b 7e 04             	mov    0x4(%rsi),%edi
+    11b5:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    11bc:	00 00 
+    11be:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    11c3:	31 c0                	xor    %eax,%eax
+    11c5:	e8 76 05 00 00       	callq  1740 <std::uniform_int_distribution<int>::param_type::b() const [clone .isra.0]>
+    11ca:	8b 3e                	mov    (%rsi),%edi
+    11cc:	48 63 d8             	movslq %eax,%rbx
+    11cf:	e8 5c 05 00 00       	callq  1730 <std::uniform_int_distribution<int>::param_type::a() const [clone .isra.0]>
+    11d4:	48 98                	cltq   
+    11d6:	48 29 c3             	sub    %rax,%rbx
+    11d9:	48 81 fb fc ff ff 7f 	cmp    $0x7ffffffc,%rbx
+    11e0:	77 66                	ja     1248 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0xa8>
+    11e2:	48 ff c3             	inc    %rbx
+    11e5:	b8 fd ff ff 7f       	mov    $0x7ffffffd,%eax
+    11ea:	31 d2                	xor    %edx,%edx
+    11ec:	48 f7 f3             	div    %rbx
+    11ef:	48 0f af d8          	imul   %rax,%rbx
+    11f3:	48 89 c6             	mov    %rax,%rsi
+    11f6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    11fd:	00 00 00 
+    1200:	48 89 ef             	mov    %rbp,%rdi
+    1203:	e8 38 ff ff ff       	callq  1140 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    1208:	48 ff c8             	dec    %rax
+    120b:	48 39 c3             	cmp    %rax,%rbx
+    120e:	76 f0                	jbe    1200 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0x60>
+    1210:	31 d2                	xor    %edx,%edx
+    1212:	48 f7 f6             	div    %rsi
+    1215:	48 89 c1             	mov    %rax,%rcx
+    1218:	41 8b 3c 24          	mov    (%r12),%edi
+    121c:	e8 0f 05 00 00       	callq  1730 <std::uniform_int_distribution<int>::param_type::a() const [clone .isra.0]>
+    1221:	01 c8                	add    %ecx,%eax
+    1223:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+    1228:	64 48 2b 14 25 28 00 	sub    %fs:0x28,%rdx
+    122f:	00 00 
+    1231:	0f 85 9a 00 00 00    	jne    12d1 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0x131>
+    1237:	48 83 c4 10          	add    $0x10,%rsp
+    123b:	5b                   	pop    %rbx
+    123c:	5d                   	pop    %rbp
+    123d:	41 5c                	pop    %r12
+    123f:	41 5d                	pop    %r13
+    1241:	41 5e                	pop    %r14
+    1243:	c3                   	retq   
+    1244:	0f 1f 40 00          	nopl   0x0(%rax)
+    1248:	48 81 fb fd ff ff 7f 	cmp    $0x7ffffffd,%rbx
+    124f:	74 6f                	je     12c0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0x120>
+    1251:	48 89 da             	mov    %rbx,%rdx
+    1254:	48 d1 ea             	shr    %rdx
+    1257:	49 bd 09 00 00 00 02 	movabs $0x8000000200000009,%r13
+    125e:	00 00 80 
+    1261:	48 89 d0             	mov    %rdx,%rax
+    1264:	49 f7 e5             	mul    %r13
+    1267:	49 89 e6             	mov    %rsp,%r14
+    126a:	48 c1 ea 1d          	shr    $0x1d,%rdx
+    126e:	41 89 d5             	mov    %edx,%r13d
+    1271:	44 89 ee             	mov    %r13d,%esi
+    1274:	4c 89 f7             	mov    %r14,%rdi
+    1277:	e8 c4 03 00 00       	callq  1640 <std::uniform_int_distribution<int>::param_type::param_type(int, int) [clone .constprop.0]>
+    127c:	4c 89 f6             	mov    %r14,%rsi
+    127f:	48 89 ef             	mov    %rbp,%rdi
+    1282:	e8 19 ff ff ff       	callq  11a0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]>
+    1287:	89 c6                	mov    %eax,%esi
+    1289:	48 89 ef             	mov    %rbp,%rdi
+    128c:	e8 af fe ff ff       	callq  1140 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    1291:	48 63 ce             	movslq %esi,%rcx
+    1294:	48 69 c9 fe ff ff 7f 	imul   $0x7ffffffe,%rcx,%rcx
+    129b:	48 ff c8             	dec    %rax
+    129e:	31 d2                	xor    %edx,%edx
+    12a0:	48 01 c8             	add    %rcx,%rax
+    12a3:	0f 92 c2             	setb   %dl
+    12a6:	48 89 c1             	mov    %rax,%rcx
+    12a9:	48 39 c3             	cmp    %rax,%rbx
+    12ac:	72 c3                	jb     1271 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0xd1>
+    12ae:	48 85 d2             	test   %rdx,%rdx
+    12b1:	75 be                	jne    1271 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0xd1>
+    12b3:	e9 60 ff ff ff       	jmpq   1218 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0x78>
+    12b8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    12bf:	00 
+    12c0:	48 89 ef             	mov    %rbp,%rdi
+    12c3:	e8 78 fe ff ff       	callq  1140 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::operator()()>
+    12c8:	48 8d 48 ff          	lea    -0x1(%rax),%rcx
+    12cc:	e9 47 ff ff ff       	jmpq   1218 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]+0x78>
+    12d1:	e8 7a fd ff ff       	callq  1050 <__stack_chk_fail@plt>
+    12d6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    12dd:	00 00 00 
+
+00000000000012e0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>:
+    12e0:	49 89 f8             	mov    %rdi,%r8
+    12e3:	48 89 f7             	mov    %rsi,%rdi
+    12e6:	4c 89 c6             	mov    %r8,%rsi
+    12e9:	e9 b2 fe ff ff       	jmpq   11a0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]>
+    12ee:	66 90                	xchg   %ax,%ax
+
+00000000000012f0 <std::__invoke_result<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>::type std::__invoke<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>:
+    12f0:	48 83 ec 08          	sub    $0x8,%rsp
+    12f4:	e8 67 fd ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    12f9:	48 8d 3d a0 c9 00 00 	lea    0xc9a0(%rip),%rdi        # dca0 <rng>
+    1300:	48 89 c6             	mov    %rax,%rsi
+    1303:	e8 58 fd ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    1308:	48 89 c7             	mov    %rax,%rdi
+    130b:	48 83 c4 08          	add    $0x8,%rsp
+    130f:	e9 3c 04 00 00       	jmpq   1750 <int std::__invoke_impl<int, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::__invoke_other, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>
+    1314:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    131b:	00 00 00 00 
+    131f:	90                   	nop
+
+0000000000001320 <int std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::__call<int, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) [clone .constprop.0] [clone .isra.0]>:
+    1320:	48 83 ec 08          	sub    $0x8,%rsp
+    1324:	e8 47 fe ff ff       	callq  1170 <std::tuple_element<0ul, std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> > >::type& std::get<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >&) [clone .constprop.0]>
+    1329:	48 89 c7             	mov    %rax,%rdi
+    132c:	e8 2f fe ff ff       	callq  1160 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>& std::_Mu<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false, false>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::tuple<> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, std::tuple<>&) const volatile [clone .constprop.0]>
+    1331:	48 89 c7             	mov    %rax,%rdi
+    1334:	48 83 c4 08          	add    $0x8,%rsp
+    1338:	eb b6                	jmp    12f0 <std::__invoke_result<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>::type std::__invoke<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>
+    133a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001340 <int std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::operator()<, int>() [clone .constprop.0]>:
+    1340:	eb de                	jmp    1320 <int std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::__call<int, , 0ul>(std::tuple<>&&, std::_Index_tuple<0ul>) [clone .constprop.0] [clone .isra.0]>
+    1342:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1349:	00 00 00 00 
+    134d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001350 <S::S()>:
+    1350:	53                   	push   %rbx
+    1351:	48 89 fb             	mov    %rdi,%rbx
+    1354:	e8 e7 ff ff ff       	callq  1340 <int std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::operator()<, int>() [clone .constprop.0]>
+    1359:	89 03                	mov    %eax,(%rbx)
+    135b:	e8 e0 ff ff ff       	callq  1340 <int std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::operator()<, int>() [clone .constprop.0]>
+    1360:	89 43 04             	mov    %eax,0x4(%rbx)
+    1363:	5b                   	pop    %rbx
+    1364:	c3                   	retq   
+    1365:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    136c:	00 00 00 00 
+
+0000000000001370 <std::_Bind_helper<std::__or_<std::is_integral<std::decay<std::uniform_int_distribution<int>&>::type>, std::is_enum<std::decay<std::uniform_int_distribution<int>&>::type> >::value, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>::type std::bind<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>:
+    1370:	49 89 f9             	mov    %rdi,%r9
+    1373:	48 8d 3d ce 2c 00 00 	lea    0x2cce(%rip),%rdi        # 4048 <generator>
+    137a:	e8 e1 fc ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    137f:	48 8d 3d ba 2c 00 00 	lea    0x2cba(%rip),%rdi        # 4040 <distribution>
+    1386:	48 89 c2             	mov    %rax,%rdx
+    1389:	e8 d2 fc ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    138e:	48 8b 30             	mov    (%rax),%rsi
+    1391:	4c 89 cf             	mov    %r9,%rdi
+    1394:	e8 e7 03 00 00       	callq  1780 <std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::_Bind<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int> const&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .isra.0]>
+    1399:	4c 89 c8             	mov    %r9,%rax
+    139c:	c3                   	retq   
+    139d:	0f 1f 00             	nopl   (%rax)
+
+00000000000013a0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>:
+    13a0:	55                   	push   %rbp
+    13a1:	53                   	push   %rbx
+    13a2:	48 8d 1d b7 2c 00 00 	lea    0x2cb7(%rip),%rbx        # 4060 <s>
+    13a9:	48 8d ab 40 9c 00 00 	lea    0x9c40(%rbx),%rbp
+    13b0:	48 83 ec 18          	sub    $0x18,%rsp
+    13b4:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    13bb:	00 00 
+    13bd:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    13c2:	31 c0                	xor    %eax,%eax
+    13c4:	e8 87 fd ff ff       	callq  1150 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::linear_congruential_engine(unsigned long) [clone .constprop.0]>
+    13c9:	e8 b2 fd ff ff       	callq  1180 <std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [clone .constprop.0]>
+    13ce:	48 8d 3d cb c8 00 00 	lea    0xc8cb(%rip),%rdi        # dca0 <rng>
+    13d5:	e8 96 ff ff ff       	callq  1370 <std::_Bind_helper<std::__or_<std::is_integral<std::decay<std::uniform_int_distribution<int>&>::type>, std::is_enum<std::decay<std::uniform_int_distribution<int>&>::type> >::value, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>::type std::bind<std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>
+    13da:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    13e0:	48 89 df             	mov    %rbx,%rdi
+    13e3:	48 83 c3 08          	add    $0x8,%rbx
+    13e7:	e8 64 ff ff ff       	callq  1350 <S::S()>
+    13ec:	48 39 eb             	cmp    %rbp,%rbx
+    13ef:	75 ef                	jne    13e0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]+0x40>
+    13f1:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    13f6:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    13fd:	00 00 
+    13ff:	75 07                	jne    1408 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]+0x68>
+    1401:	48 83 c4 18          	add    $0x18,%rsp
+    1405:	5b                   	pop    %rbx
+    1406:	5d                   	pop    %rbp
+    1407:	c3                   	retq   
+    1408:	e8 43 fc ff ff       	callq  1050 <__stack_chk_fail@plt>
+    140d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001410 <main>:
+    1410:	f3 0f 1e fa          	endbr64 
+    1414:	55                   	push   %rbp
+    1415:	48 89 e5             	mov    %rsp,%rbp
+    1418:	48 83 e4 e0          	and    $0xffffffffffffffe0,%rsp
+    141c:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    1423:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1428:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    142f:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1434:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    143b:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1440:	48 81 ec a0 0e 00 00 	sub    $0xea0,%rsp
+    1447:	c5 fd 6f 15 d1 0b 00 	vmovdqa 0xbd1(%rip),%ymm2        # 2020 <_IO_stdin_used+0x20>
+    144e:	00 
+    144f:	c5 fd 6f 2d e9 0b 00 	vmovdqa 0xbe9(%rip),%ymm5        # 2040 <_IO_stdin_used+0x40>
+    1456:	00 
+    1457:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    145e:	00 00 
+    1460:	48 89 84 24 98 3e 00 	mov    %rax,0x3e98(%rsp)
+    1467:	00 
+    1468:	31 c0                	xor    %eax,%eax
+    146a:	8b 05 2c c8 00 00    	mov    0xc82c(%rip),%eax        # dc9c <s+0x9c3c>
+    1470:	48 89 e7             	mov    %rsp,%rdi
+    1473:	8d 04 40             	lea    (%rax,%rax,2),%eax
+    1476:	c5 f9 6e d8          	vmovd  %eax,%xmm3
+    147a:	8b 05 18 c8 00 00    	mov    0xc818(%rip),%eax        # dc98 <s+0x9c38>
+    1480:	48 89 fa             	mov    %rdi,%rdx
+    1483:	01 c0                	add    %eax,%eax
+    1485:	c5 f9 6e c0          	vmovd  %eax,%xmm0
+    1489:	48 8d b4 24 80 3e 00 	lea    0x3e80(%rsp),%rsi
+    1490:	00 
+    1491:	c4 e2 7d 58 db       	vpbroadcastd %xmm3,%ymm3
+    1496:	c4 e2 7d 58 c0       	vpbroadcastd %xmm0,%ymm0
+    149b:	c5 fd 6f ca          	vmovdqa %ymm2,%ymm1
+    149f:	c5 fd fe e1          	vpaddd %ymm1,%ymm0,%ymm4
+    14a3:	c5 e5 fa c9          	vpsubd %ymm1,%ymm3,%ymm1
+    14a7:	c4 e2 5d 39 c9       	vpminsd %ymm1,%ymm4,%ymm1
+    14ac:	c5 fd 7f 0a          	vmovdqa %ymm1,(%rdx)
+    14b0:	48 83 c2 20          	add    $0x20,%rdx
+    14b4:	c5 ed fe d5          	vpaddd %ymm5,%ymm2,%ymm2
+    14b8:	48 39 d6             	cmp    %rdx,%rsi
+    14bb:	75 de                	jne    149b <main+0x8b>
+    14bd:	c5 f8 77             	vzeroupper 
+    14c0:	e8 8b 01 00 00       	callq  1650 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]>
+    14c5:	48 8b 8c 24 98 3e 00 	mov    0x3e98(%rsp),%rcx
+    14cc:	00 
+    14cd:	64 48 2b 0c 25 28 00 	sub    %fs:0x28,%rcx
+    14d4:	00 00 
+    14d6:	75 02                	jne    14da <main+0xca>
+    14d8:	c9                   	leaveq 
+    14d9:	c3                   	retq   
+    14da:	e8 71 fb ff ff       	callq  1050 <__stack_chk_fail@plt>
+    14df:	90                   	nop
+
+00000000000014e0 <_GLOBAL__sub_I_generator>:
+    14e0:	f3 0f 1e fa          	endbr64 
+    14e4:	e9 b7 fe ff ff       	jmpq   13a0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>
+    14e9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000014f0 <_start>:
+    14f0:	f3 0f 1e fa          	endbr64 
+    14f4:	31 ed                	xor    %ebp,%ebp
+    14f6:	49 89 d1             	mov    %rdx,%r9
+    14f9:	5e                   	pop    %rsi
+    14fa:	48 89 e2             	mov    %rsp,%rdx
+    14fd:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    1501:	50                   	push   %rax
+    1502:	54                   	push   %rsp
+    1503:	4c 8d 05 06 03 00 00 	lea    0x306(%rip),%r8        # 1810 <__libc_csu_fini>
+    150a:	48 8d 0d 8f 02 00 00 	lea    0x28f(%rip),%rcx        # 17a0 <__libc_csu_init>
+    1511:	48 8d 3d f8 fe ff ff 	lea    -0x108(%rip),%rdi        # 1410 <main>
+    1518:	ff 15 c2 2a 00 00    	callq  *0x2ac2(%rip)        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    151e:	f4                   	hlt    
+    151f:	90                   	nop
+
+0000000000001520 <deregister_tm_clones>:
+    1520:	48 8d 3d e9 2a 00 00 	lea    0x2ae9(%rip),%rdi        # 4010 <__TMC_END__>
+    1527:	48 8d 05 e2 2a 00 00 	lea    0x2ae2(%rip),%rax        # 4010 <__TMC_END__>
+    152e:	48 39 f8             	cmp    %rdi,%rax
+    1531:	74 15                	je     1548 <deregister_tm_clones+0x28>
+    1533:	48 8b 05 9e 2a 00 00 	mov    0x2a9e(%rip),%rax        # 3fd8 <_ITM_deregisterTMCloneTable>
+    153a:	48 85 c0             	test   %rax,%rax
+    153d:	74 09                	je     1548 <deregister_tm_clones+0x28>
+    153f:	ff e0                	jmpq   *%rax
+    1541:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1548:	c3                   	retq   
+    1549:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001550 <register_tm_clones>:
+    1550:	48 8d 3d b9 2a 00 00 	lea    0x2ab9(%rip),%rdi        # 4010 <__TMC_END__>
+    1557:	48 8d 35 b2 2a 00 00 	lea    0x2ab2(%rip),%rsi        # 4010 <__TMC_END__>
+    155e:	48 29 fe             	sub    %rdi,%rsi
+    1561:	48 89 f0             	mov    %rsi,%rax
+    1564:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1568:	48 c1 f8 03          	sar    $0x3,%rax
+    156c:	48 01 c6             	add    %rax,%rsi
+    156f:	48 d1 fe             	sar    %rsi
+    1572:	74 14                	je     1588 <register_tm_clones+0x38>
+    1574:	48 8b 05 75 2a 00 00 	mov    0x2a75(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable>
+    157b:	48 85 c0             	test   %rax,%rax
+    157e:	74 08                	je     1588 <register_tm_clones+0x38>
+    1580:	ff e0                	jmpq   *%rax
+    1582:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1588:	c3                   	retq   
+    1589:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001590 <__do_global_dtors_aux>:
+    1590:	f3 0f 1e fa          	endbr64 
+    1594:	80 3d 85 2a 00 00 00 	cmpb   $0x0,0x2a85(%rip)        # 4020 <completed.0>
+    159b:	75 2b                	jne    15c8 <__do_global_dtors_aux+0x38>
+    159d:	55                   	push   %rbp
+    159e:	48 83 3d 52 2a 00 00 	cmpq   $0x0,0x2a52(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    15a5:	00 
+    15a6:	48 89 e5             	mov    %rsp,%rbp
+    15a9:	74 0c                	je     15b7 <__do_global_dtors_aux+0x27>
+    15ab:	48 8b 3d 56 2a 00 00 	mov    0x2a56(%rip),%rdi        # 4008 <__dso_handle>
+    15b2:	e8 89 fa ff ff       	callq  1040 <__cxa_finalize@plt>
+    15b7:	e8 64 ff ff ff       	callq  1520 <deregister_tm_clones>
+    15bc:	c6 05 5d 2a 00 00 01 	movb   $0x1,0x2a5d(%rip)        # 4020 <completed.0>
+    15c3:	5d                   	pop    %rbp
+    15c4:	c3                   	retq   
+    15c5:	0f 1f 00             	nopl   (%rax)
+    15c8:	c3                   	retq   
+    15c9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000015d0 <frame_dummy>:
+    15d0:	f3 0f 1e fa          	endbr64 
+    15d4:	e9 77 ff ff ff       	jmpq   1550 <register_tm_clones>
+    15d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000015e0 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]>:
+    15e0:	31 ff                	xor    %edi,%edi
+    15e2:	e8 99 fa ff ff       	callq  1080 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long)>
+    15e7:	48 89 c2             	mov    %rax,%rdx
+    15ea:	bf 00 2d 31 01       	mov    $0x1312d00,%edi
+    15ef:	e8 8c fa ff ff       	callq  1080 <unsigned long std::__detail::__mod<unsigned long, 2147483647ul, 1ul, 0ul>(unsigned long)>
+    15f4:	48 85 d2             	test   %rdx,%rdx
+    15f7:	75 0c                	jne    1605 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>::seed(unsigned long) [clone .constprop.0]+0x25>
+    15f9:	48 85 c0             	test   %rax,%rax
+    15fc:	ba 01 00 00 00       	mov    $0x1,%edx
+    1601:	48 0f 44 c2          	cmove  %rdx,%rax
+    1605:	48 89 05 3c 2a 00 00 	mov    %rax,0x2a3c(%rip)        # 4048 <generator>
+    160c:	c3                   	retq   
+    160d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001610 <std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>::_M_head(std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>&) [clone .constprop.0]>:
+    1610:	48 8d 05 91 c6 00 00 	lea    0xc691(%rip),%rax        # dca8 <rng+0x8>
+    1617:	c3                   	retq   
+    1618:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    161f:	00 
+
+0000000000001620 <std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::_M_head(std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >&) [clone .constprop.0]>:
+    1620:	eb ee                	jmp    1610 <std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>::_M_head(std::_Head_base<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>, false>&) [clone .constprop.0]>
+    1622:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1629:	00 00 00 00 
+    162d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001630 <std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>& std::__get_helper<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>>(std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>>&) [clone .constprop.0]>:
+    1630:	eb ee                	jmp    1620 <std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::_M_head(std::_Tuple_impl<0ul, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >&) [clone .constprop.0]>
+    1632:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1639:	00 00 00 00 
+    163d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001640 <std::uniform_int_distribution<int>::param_type::param_type(int, int) [clone .constprop.0]>:
+    1640:	c7 07 00 00 00 00    	movl   $0x0,(%rdi)
+    1646:	89 77 04             	mov    %esi,0x4(%rdi)
+    1649:	c3                   	retq   
+    164a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001650 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]>:
+    1650:	48 39 fe             	cmp    %rdi,%rsi
+    1653:	0f 84 c6 00 00 00    	je     171f <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xcf>
+    1659:	48 89 f2             	mov    %rsi,%rdx
+    165c:	48 29 fa             	sub    %rdi,%rdx
+    165f:	48 83 ea 04          	sub    $0x4,%rdx
+    1663:	48 89 d1             	mov    %rdx,%rcx
+    1666:	48 c1 e9 02          	shr    $0x2,%rcx
+    166a:	48 89 f8             	mov    %rdi,%rax
+    166d:	48 ff c1             	inc    %rcx
+    1670:	48 83 fa 18          	cmp    $0x18,%rdx
+    1674:	0f 86 ac 00 00 00    	jbe    1726 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd6>
+    167a:	48 89 ca             	mov    %rcx,%rdx
+    167d:	48 c1 ea 03          	shr    $0x3,%rdx
+    1681:	48 c1 e2 05          	shl    $0x5,%rdx
+    1685:	48 01 fa             	add    %rdi,%rdx
+    1688:	c5 f1 ef c9          	vpxor  %xmm1,%xmm1,%xmm1
+    168c:	0f 1f 40 00          	nopl   0x0(%rax)
+    1690:	c5 f5 fe 08          	vpaddd (%rax),%ymm1,%ymm1
+    1694:	48 83 c0 20          	add    $0x20,%rax
+    1698:	48 39 d0             	cmp    %rdx,%rax
+    169b:	75 f3                	jne    1690 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0x40>
+    169d:	c5 f9 6f c1          	vmovdqa %xmm1,%xmm0
+    16a1:	c4 e3 7d 39 c9 01    	vextracti128 $0x1,%ymm1,%xmm1
+    16a7:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+    16ab:	c5 f1 73 d8 08       	vpsrldq $0x8,%xmm0,%xmm1
+    16b0:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+    16b4:	c5 f1 73 d8 04       	vpsrldq $0x4,%xmm0,%xmm1
+    16b9:	48 89 ca             	mov    %rcx,%rdx
+    16bc:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+    16c0:	48 83 e2 f8          	and    $0xfffffffffffffff8,%rdx
+    16c4:	c5 f9 7e c0          	vmovd  %xmm0,%eax
+    16c8:	48 8d 3c 97          	lea    (%rdi,%rdx,4),%rdi
+    16cc:	48 39 d1             	cmp    %rdx,%rcx
+    16cf:	74 51                	je     1722 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd2>
+    16d1:	c5 f8 77             	vzeroupper 
+    16d4:	48 8d 57 04          	lea    0x4(%rdi),%rdx
+    16d8:	03 07                	add    (%rdi),%eax
+    16da:	48 39 d6             	cmp    %rdx,%rsi
+    16dd:	74 42                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    16df:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+    16e3:	03 47 04             	add    0x4(%rdi),%eax
+    16e6:	48 39 d6             	cmp    %rdx,%rsi
+    16e9:	74 36                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    16eb:	48 8d 57 0c          	lea    0xc(%rdi),%rdx
+    16ef:	03 47 08             	add    0x8(%rdi),%eax
+    16f2:	48 39 d6             	cmp    %rdx,%rsi
+    16f5:	74 2a                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    16f7:	48 8d 57 10          	lea    0x10(%rdi),%rdx
+    16fb:	03 47 0c             	add    0xc(%rdi),%eax
+    16fe:	48 39 d6             	cmp    %rdx,%rsi
+    1701:	74 1e                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    1703:	48 8d 57 14          	lea    0x14(%rdi),%rdx
+    1707:	03 47 10             	add    0x10(%rdi),%eax
+    170a:	48 39 d6             	cmp    %rdx,%rsi
+    170d:	74 12                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    170f:	48 8d 57 18          	lea    0x18(%rdi),%rdx
+    1713:	03 47 14             	add    0x14(%rdi),%eax
+    1716:	48 39 d6             	cmp    %rdx,%rsi
+    1719:	74 06                	je     1721 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0xd1>
+    171b:	03 47 18             	add    0x18(%rdi),%eax
+    171e:	c3                   	retq   
+    171f:	31 c0                	xor    %eax,%eax
+    1721:	c3                   	retq   
+    1722:	c5 f8 77             	vzeroupper 
+    1725:	c3                   	retq   
+    1726:	31 c0                	xor    %eax,%eax
+    1728:	eb aa                	jmp    16d4 <int std::accumulate<int*, int>(int*, int*, int) [clone .constprop.0]+0x84>
+    172a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001730 <std::uniform_int_distribution<int>::param_type::a() const [clone .isra.0]>:
+    1730:	89 f8                	mov    %edi,%eax
+    1732:	c3                   	retq   
+    1733:	90                   	nop
+    1734:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    173b:	00 00 00 00 
+    173f:	90                   	nop
+
+0000000000001740 <std::uniform_int_distribution<int>::param_type::b() const [clone .isra.0]>:
+    1740:	89 f8                	mov    %edi,%eax
+    1742:	c3                   	retq   
+    1743:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    174a:	00 00 00 00 
+    174e:	66 90                	xchg   %ax,%ax
+
+0000000000001750 <int std::__invoke_impl<int, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::__invoke_other, std::uniform_int_distribution<int>&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .constprop.0]>:
+    1750:	48 83 ec 08          	sub    $0x8,%rsp
+    1754:	e8 07 f9 ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    1759:	48 89 f7             	mov    %rsi,%rdi
+    175c:	49 89 c0             	mov    %rax,%r8
+    175f:	e8 fc f8 ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    1764:	48 89 c6             	mov    %rax,%rsi
+    1767:	4c 89 c7             	mov    %r8,%rdi
+    176a:	48 83 c4 08          	add    $0x8,%rsp
+    176e:	e9 6d fb ff ff       	jmpq   12e0 <int std::uniform_int_distribution<int>::operator()<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>
+    1773:	90                   	nop
+    1774:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    177b:	00 00 00 00 
+    177f:	90                   	nop
+
+0000000000001780 <std::_Bind<std::uniform_int_distribution<int> (std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>)>::_Bind<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&>(std::uniform_int_distribution<int> const&, std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&) [clone .isra.0]>:
+    1780:	48 89 f9             	mov    %rdi,%rcx
+    1783:	48 89 31             	mov    %rsi,(%rcx)
+    1786:	48 89 d7             	mov    %rdx,%rdi
+    1789:	e8 d2 f8 ff ff       	callq  1060 <std::uniform_int_distribution<int>& std::forward<std::uniform_int_distribution<int>&>(std::remove_reference<std::uniform_int_distribution<int>&>::type&)>
+    178e:	48 89 c6             	mov    %rax,%rsi
+    1791:	48 8d 79 08          	lea    0x8(%rcx),%rdi
+    1795:	e9 36 f9 ff ff       	jmpq   10d0 <std::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul> >::tuple<std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&, true, true>(std::linear_congruential_engine<unsigned long, 16807ul, 0ul, 2147483647ul>&)>
+    179a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000000017a0 <__libc_csu_init>:
+    17a0:	f3 0f 1e fa          	endbr64 
+    17a4:	41 57                	push   %r15
+    17a6:	4c 8d 3d 03 26 00 00 	lea    0x2603(%rip),%r15        # 3db0 <__frame_dummy_init_array_entry>
+    17ad:	41 56                	push   %r14
+    17af:	49 89 d6             	mov    %rdx,%r14
+    17b2:	41 55                	push   %r13
+    17b4:	49 89 f5             	mov    %rsi,%r13
+    17b7:	41 54                	push   %r12
+    17b9:	41 89 fc             	mov    %edi,%r12d
+    17bc:	55                   	push   %rbp
+    17bd:	48 8d 2d fc 25 00 00 	lea    0x25fc(%rip),%rbp        # 3dc0 <__do_global_dtors_aux_fini_array_entry>
+    17c4:	53                   	push   %rbx
+    17c5:	4c 29 fd             	sub    %r15,%rbp
+    17c8:	48 83 ec 08          	sub    $0x8,%rsp
+    17cc:	e8 2f f8 ff ff       	callq  1000 <_init>
+    17d1:	48 c1 fd 03          	sar    $0x3,%rbp
+    17d5:	74 1f                	je     17f6 <__libc_csu_init+0x56>
+    17d7:	31 db                	xor    %ebx,%ebx
+    17d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    17e0:	4c 89 f2             	mov    %r14,%rdx
+    17e3:	4c 89 ee             	mov    %r13,%rsi
+    17e6:	44 89 e7             	mov    %r12d,%edi
+    17e9:	41 ff 14 df          	callq  *(%r15,%rbx,8)
+    17ed:	48 83 c3 01          	add    $0x1,%rbx
+    17f1:	48 39 dd             	cmp    %rbx,%rbp
+    17f4:	75 ea                	jne    17e0 <__libc_csu_init+0x40>
+    17f6:	48 83 c4 08          	add    $0x8,%rsp
+    17fa:	5b                   	pop    %rbx
+    17fb:	5d                   	pop    %rbp
+    17fc:	41 5c                	pop    %r12
+    17fe:	41 5d                	pop    %r13
+    1800:	41 5e                	pop    %r14
+    1802:	41 5f                	pop    %r15
+    1804:	c3                   	retq   
+    1805:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    180c:	00 00 00 00 
+
+0000000000001810 <__libc_csu_fini>:
+    1810:	f3 0f 1e fa          	endbr64 
+    1814:	c3                   	retq   
+
+Desensamblado de la sección .fini:
+
+0000000000001818 <_fini>:
+    1818:	f3 0f 1e fa          	endbr64 
+    181c:	48 83 ec 08          	sub    $0x8,%rsp
+    1820:	48 83 c4 08          	add    $0x8,%rsp
+    1824:	c3                   	retq   

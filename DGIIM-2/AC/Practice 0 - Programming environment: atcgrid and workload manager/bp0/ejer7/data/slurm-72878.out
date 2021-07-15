@@ -1,0 +1,45 @@
+Id, usuario del trabajo: e1estudiante21
+Id, del trabajo: 72878
+Nombre del trabajo especificado por usuario: SumaLocal
+Directorio de trbajo (en el que se ejecuta el script): /home/e1estudiante21/bp0/ejer7
+Cola: ac
+Nodo que ejecuta este trabajo: atcgrid,ugr,es
+Nº de nodos asignados al trabajo: 1
+Nodos asignados al trabajo: atcgrid3
+CPUs por nodo: 2
+VECTORES LOCALES
+Tiempo:0,000179524	 / Tamaño Vectores:65536	/ V1[0]+V2[0]=V3[0](0,459415+0,616132=1,075547) / / V1[65535]+V2[65535]=V3[65535](0,032944+1,021359=1,054303) /
+Tiempo:0,000258992	 / Tamaño Vectores:131072	/ V1[0]+V2[0]=V3[0](0,773733+0,150301=0,924033) / / V1[131071]+V2[131071]=V3[131071](0,619691+0,716525=1,336216) /
+Tiempo:0,000484678	 / Tamaño Vectores:262144	/ V1[0]+V2[0]=V3[0](0,773733+0,150301=0,924033) / / V1[262143]+V2[262143]=V3[262143](1,303283+2,428433=3,731716) /
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16375 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16377 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16383 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16385 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16387 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16389 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16391 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+/var/spool/slurmd/job72878/slurm_script: línea 25: 16393 Violación de segmento  (`core' generado) ,/SumaVectoresC-local $P
+VECTORES GLOBALES
+Tiempo:0,000464989	 / Tamaño Vectores:65536	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[65535]+V2[65535]=V3[65535](0,233386+3,029106=3,262492) /
+Tiempo:0,000829643	 / Tamaño Vectores:131072	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[131071]+V2[131071]=V3[131071](0,510579+1,901150=2,411729) /
+Tiempo:0,001121265	 / Tamaño Vectores:262144	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[262143]+V2[262143]=V3[262143](0,561078+0,999669=1,560747) /
+Tiempo:0,002973524	 / Tamaño Vectores:524288	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[524287]+V2[524287]=V3[524287](0,068006+0,591220=0,659227) /
+Tiempo:0,005471715	 / Tamaño Vectores:1048576	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[1048575]+V2[1048575]=V3[1048575](0,408231+3,128649=3,536880) /
+Tiempo:0,009240331	 / Tamaño Vectores:2097152	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[2097151]+V2[2097151]=V3[2097151](0,346500+0,021006=0,367506) /
+Tiempo:0,017531881	 / Tamaño Vectores:4194304	/ V1[0]+V2[0]=V3[0](0,536783+0,640538=1,177322) / / V1[4194303]+V2[4194303]=V3[4194303](0,655910+2,219002=2,874912) /
+Tiempo:0,033463767	 / Tamaño Vectores:8388608	/ V1[0]+V2[0]=V3[0](0,729696+1,489720=2,219415) / / V1[8388607]+V2[8388607]=V3[8388607](0,270778+6,245711=6,516489) /
+Tiempo:0,069094101	 / Tamaño Vectores:16777216	/ V1[0]+V2[0]=V3[0](0,729696+1,489720=2,219415) / / V1[16777215]+V2[16777215]=V3[16777215](2,244156+1,838238=4,082394) /
+Tiempo:0,132581874	 / Tamaño Vectores:33554432	/ V1[0]+V2[0]=V3[0](1,389343+0,045783=1,435126) / / V1[33554431]+V2[33554431]=V3[33554431](0,243406+0,980139=1,223546) /
+Tiempo:0,133457356	 / Tamaño Vectores:33554432	/ V1[0]+V2[0]=V3[0](0,219900+0,675595=0,895495) / / V1[33554431]+V2[33554431]=V3[33554431](0,795791+0,564034=1,359825) /
+VECTORES DINAMICOS
+Tiempo:0,000430703	 / Tamaño Vectores:65536	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[65535]+V2[65535]=V3[65535](0,697267+5,535656=6,232923) /
+Tiempo:0,000722416	 / Tamaño Vectores:131072	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[131071]+V2[131071]=V3[131071](0,243465+1,489814=1,733280) /
+Tiempo:0,001791194	 / Tamaño Vectores:262144	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[262143]+V2[262143]=V3[262143](1,373986+0,242638=1,616624) /
+Tiempo:0,002593601	 / Tamaño Vectores:524288	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[524287]+V2[524287]=V3[524287](33,980756+0,470406=34,451162) /
+Tiempo:0,005010531	 / Tamaño Vectores:1048576	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[1048575]+V2[1048575]=V3[1048575](7,263322+1,065022=8,328344) /
+Tiempo:0,008809842	 / Tamaño Vectores:2097152	/ V1[0]+V2[0]=V3[0](1,038519+7,942236=8,980755) / / V1[2097151]+V2[2097151]=V3[2097151](3,263105+1,024375=4,287480) /
+Tiempo:0,016548818	 / Tamaño Vectores:4194304	/ V1[0]+V2[0]=V3[0](3,290767+0,059867=3,350634) / / V1[4194303]+V2[4194303]=V3[4194303](0,944954+0,172198=1,117152) /
+Tiempo:0,032614521	 / Tamaño Vectores:8388608	/ V1[0]+V2[0]=V3[0](3,290767+0,059867=3,350634) / / V1[8388607]+V2[8388607]=V3[8388607](0,095530+0,453386=0,548916) /
+Tiempo:0,064153001	 / Tamaño Vectores:16777216	/ V1[0]+V2[0]=V3[0](3,290767+0,059867=3,350634) / / V1[16777215]+V2[16777215]=V3[16777215](0,154979+0,676081=0,831059) /
+Tiempo:0,128195669	 / Tamaño Vectores:33554432	/ V1[0]+V2[0]=V3[0](1,685046+12,147480=13,832526) / / V1[33554431]+V2[33554431]=V3[33554431](1,199579+1,899293=3,098872) /
+Tiempo:0,245463666	 / Tamaño Vectores:67108864	/ V1[0]+V2[0]=V3[0](1,716380+3,892749=5,609129) / / V1[67108863]+V2[67108863]=V3[67108863](0,555069+1,271838=1,826907) /

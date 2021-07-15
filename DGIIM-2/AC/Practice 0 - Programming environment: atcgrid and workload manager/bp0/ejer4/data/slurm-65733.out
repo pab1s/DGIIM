@@ -1,0 +1,24 @@
+Id. usuario del trabajo: e1estudiante21
+Id. del trabajo: 65733
+Nombre del trabajo especificado por usuario: helloOMP2
+Directorio de trabajo (en el que se ejecuta el script): /home/e1estudiante21/bp0/ejer4
+Cola: ac
+Nodo que ejecuta este trabajo:atcgrid.ugr.es
+Nº de nodos asignadosal trabajo: 1
+Nodos asignados al trabajo: atcgrid1
+CPUspor nodo: 24
+
+ 1. Ejecución helloOMPuna vez sin cambiar nº de threads(valor por defecto):
+
+(0:Hello)(11:Hello)(10:Hello)(5:Hello)(8:Hello)(9:Hello)(1:Hello)(7:Hello)(2:Hello)(3:Hello)(4:Hello)(6:Hello)(0:world!)
+ 2. Ejecución helloOMPvarias veces con distinto nº de threads:
+
+
+  -Para 12 threads:
+(0:Hello)(2:Hello)(3:Hello)(6:Hello)(1:Hello)(4:Hello)(10:Hello)(5:Hello)(9:Hello)(8:Hello)(11:Hello)(7:Hello)(0:world!)
+  -Para 6 threads:
+(3:Hello)(0:Hello)(1:Hello)(5:Hello)(4:Hello)(2:Hello)(0:world!)
+  -Para 3 threads:
+(1:Hello)(0:Hello)(2:Hello)(0:world!)
+  -Para 1 threads:
+(0:Hello)(0:world!)

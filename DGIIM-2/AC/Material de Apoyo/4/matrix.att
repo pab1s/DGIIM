@@ -1,0 +1,604 @@
+
+matrix:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 2f 00 00 	mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	callq  *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	retq   
+
+Desensamblado de la sección .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 7a 2f 00 00    	pushq  0x2f7a(%rip)        # 3fa0 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 7b 2f 00 00 	bnd jmpq *0x2f7b(%rip)        # 3fa8 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nopl   (%rax)
+    1030:	f3 0f 1e fa          	endbr64 
+    1034:	68 00 00 00 00       	pushq  $0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmpq 1020 <.plt>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64 
+    1044:	68 01 00 00 00       	pushq  $0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmpq 1020 <.plt>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64 
+    1054:	68 02 00 00 00       	pushq  $0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmpq 1020 <.plt>
+    105f:	90                   	nop
+    1060:	f3 0f 1e fa          	endbr64 
+    1064:	68 03 00 00 00       	pushq  $0x3
+    1069:	f2 e9 b1 ff ff ff    	bnd jmpq 1020 <.plt>
+    106f:	90                   	nop
+
+Desensamblado de la sección .plt.got:
+
+0000000000001070 <__cxa_finalize@plt>:
+    1070:	f3 0f 1e fa          	endbr64 
+    1074:	f2 ff 25 55 2f 00 00 	bnd jmpq *0x2f55(%rip)        # 3fd0 <__cxa_finalize@GLIBC_2.2.5>
+    107b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .plt.sec:
+
+0000000000001080 <memset@plt>:
+    1080:	f3 0f 1e fa          	endbr64 
+    1084:	f2 ff 25 25 2f 00 00 	bnd jmpq *0x2f25(%rip)        # 3fb0 <memset@GLIBC_2.2.5>
+    108b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001090 <__cxa_atexit@plt>:
+    1090:	f3 0f 1e fa          	endbr64 
+    1094:	f2 ff 25 1d 2f 00 00 	bnd jmpq *0x2f1d(%rip)        # 3fb8 <__cxa_atexit@GLIBC_2.2.5>
+    109b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000010a0 <__stack_chk_fail@plt>:
+    10a0:	f3 0f 1e fa          	endbr64 
+    10a4:	f2 ff 25 15 2f 00 00 	bnd jmpq *0x2f15(%rip)        # 3fc0 <__stack_chk_fail@GLIBC_2.4>
+    10ab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000010b0 <std::ios_base::Init::Init()@plt>:
+    10b0:	f3 0f 1e fa          	endbr64 
+    10b4:	f2 ff 25 0d 2f 00 00 	bnd jmpq *0x2f0d(%rip)        # 3fc8 <std::ios_base::Init::Init()@GLIBCXX_3.4>
+    10bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Desensamblado de la sección .text:
+
+00000000000010c0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>:
+    10c0:	48 83 ec 08          	sub    $0x8,%rsp
+    10c4:	48 8d 3d 75 2f 00 00 	lea    0x2f75(%rip),%rdi        # 4040 <std::__ioinit>
+    10cb:	e8 e0 ff ff ff       	callq  10b0 <std::ios_base::Init::Init()@plt>
+    10d0:	48 8b 3d 21 2f 00 00 	mov    0x2f21(%rip),%rdi        # 3ff8 <std::ios_base::Init::~Init()@GLIBCXX_3.4>
+    10d7:	48 8d 15 2a 2f 00 00 	lea    0x2f2a(%rip),%rdx        # 4008 <__dso_handle>
+    10de:	48 8d 35 5b 2f 00 00 	lea    0x2f5b(%rip),%rsi        # 4040 <std::__ioinit>
+    10e5:	48 83 c4 08          	add    $0x8,%rsp
+    10e9:	e9 a2 ff ff ff       	jmpq   1090 <__cxa_atexit@plt>
+    10ee:	66 90                	xchg   %ax,%ax
+
+00000000000010f0 <main>:
+    10f0:	f3 0f 1e fa          	endbr64 
+    10f4:	53                   	push   %rbx
+    10f5:	e8 c6 04 00 00       	callq  15c0 <f1()>
+    10fa:	89 c3                	mov    %eax,%ebx
+    10fc:	e8 5f 05 00 00       	callq  1660 <f2()>
+    1101:	01 d8                	add    %ebx,%eax
+    1103:	5b                   	pop    %rbx
+    1104:	c3                   	retq   
+    1105:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    110c:	00 00 00 00 
+
+0000000000001110 <_GLOBAL__sub_I_v1>:
+    1110:	f3 0f 1e fa          	endbr64 
+    1114:	eb aa                	jmp    10c0 <__static_initialization_and_destruction_0(int, int) [clone .constprop.0]>
+    1116:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    111d:	00 00 00 
+
+0000000000001120 <_start>:
+    1120:	f3 0f 1e fa          	endbr64 
+    1124:	31 ed                	xor    %ebp,%ebp
+    1126:	49 89 d1             	mov    %rdx,%r9
+    1129:	5e                   	pop    %rsi
+    112a:	48 89 e2             	mov    %rsp,%rdx
+    112d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    1131:	50                   	push   %rax
+    1132:	54                   	push   %rsp
+    1133:	4c 8d 05 56 06 00 00 	lea    0x656(%rip),%r8        # 1790 <__libc_csu_fini>
+    113a:	48 8d 0d df 05 00 00 	lea    0x5df(%rip),%rcx        # 1720 <__libc_csu_init>
+    1141:	48 8d 3d a8 ff ff ff 	lea    -0x58(%rip),%rdi        # 10f0 <main>
+    1148:	ff 15 92 2e 00 00    	callq  *0x2e92(%rip)        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    114e:	f4                   	hlt    
+    114f:	90                   	nop
+
+0000000000001150 <deregister_tm_clones>:
+    1150:	48 8d 3d b9 2e 00 00 	lea    0x2eb9(%rip),%rdi        # 4010 <__TMC_END__>
+    1157:	48 8d 05 b2 2e 00 00 	lea    0x2eb2(%rip),%rax        # 4010 <__TMC_END__>
+    115e:	48 39 f8             	cmp    %rdi,%rax
+    1161:	74 15                	je     1178 <deregister_tm_clones+0x28>
+    1163:	48 8b 05 6e 2e 00 00 	mov    0x2e6e(%rip),%rax        # 3fd8 <_ITM_deregisterTMCloneTable>
+    116a:	48 85 c0             	test   %rax,%rax
+    116d:	74 09                	je     1178 <deregister_tm_clones+0x28>
+    116f:	ff e0                	jmpq   *%rax
+    1171:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1178:	c3                   	retq   
+    1179:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001180 <register_tm_clones>:
+    1180:	48 8d 3d 89 2e 00 00 	lea    0x2e89(%rip),%rdi        # 4010 <__TMC_END__>
+    1187:	48 8d 35 82 2e 00 00 	lea    0x2e82(%rip),%rsi        # 4010 <__TMC_END__>
+    118e:	48 29 fe             	sub    %rdi,%rsi
+    1191:	48 89 f0             	mov    %rsi,%rax
+    1194:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1198:	48 c1 f8 03          	sar    $0x3,%rax
+    119c:	48 01 c6             	add    %rax,%rsi
+    119f:	48 d1 fe             	sar    %rsi
+    11a2:	74 14                	je     11b8 <register_tm_clones+0x38>
+    11a4:	48 8b 05 45 2e 00 00 	mov    0x2e45(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable>
+    11ab:	48 85 c0             	test   %rax,%rax
+    11ae:	74 08                	je     11b8 <register_tm_clones+0x38>
+    11b0:	ff e0                	jmpq   *%rax
+    11b2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    11b8:	c3                   	retq   
+    11b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000011c0 <__do_global_dtors_aux>:
+    11c0:	f3 0f 1e fa          	endbr64 
+    11c4:	80 3d 55 2e 00 00 00 	cmpb   $0x0,0x2e55(%rip)        # 4020 <completed.0>
+    11cb:	75 2b                	jne    11f8 <__do_global_dtors_aux+0x38>
+    11cd:	55                   	push   %rbp
+    11ce:	48 83 3d fa 2d 00 00 	cmpq   $0x0,0x2dfa(%rip)        # 3fd0 <__cxa_finalize@GLIBC_2.2.5>
+    11d5:	00 
+    11d6:	48 89 e5             	mov    %rsp,%rbp
+    11d9:	74 0c                	je     11e7 <__do_global_dtors_aux+0x27>
+    11db:	48 8b 3d 26 2e 00 00 	mov    0x2e26(%rip),%rdi        # 4008 <__dso_handle>
+    11e2:	e8 89 fe ff ff       	callq  1070 <__cxa_finalize@plt>
+    11e7:	e8 64 ff ff ff       	callq  1150 <deregister_tm_clones>
+    11ec:	c6 05 2d 2e 00 00 01 	movb   $0x1,0x2e2d(%rip)        # 4020 <completed.0>
+    11f3:	5d                   	pop    %rbp
+    11f4:	c3                   	retq   
+    11f5:	0f 1f 00             	nopl   (%rax)
+    11f8:	c3                   	retq   
+    11f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001200 <frame_dummy>:
+    1200:	f3 0f 1e fa          	endbr64 
+    1204:	e9 77 ff ff ff       	jmpq   1180 <register_tm_clones>
+    1209:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001210 <std::__array_traits<std::array<int, 1ul>, 10000ul>::_S_ref(std::array<int, 1ul> const (&) [10000], unsigned long)>:
+    1210:	48 8d 04 b7          	lea    (%rdi,%rsi,4),%rax
+    1214:	c3                   	retq   
+    1215:	90                   	nop
+    1216:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    121d:	00 00 00 
+
+0000000000001220 <std::array<int, 10000ul>::operator[](unsigned long) const>:
+    1220:	eb ee                	jmp    1210 <std::__array_traits<std::array<int, 1ul>, 10000ul>::_S_ref(std::array<int, 1ul> const (&) [10000], unsigned long)>
+    1222:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1229:	00 00 00 00 
+    122d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001230 <std::__array_traits<std::array<int, 10000ul>, 10000ul>::_S_ref(std::array<int, 10000ul> const (&) [10000], unsigned long)>:
+    1230:	48 69 c6 40 9c 00 00 	imul   $0x9c40,%rsi,%rax
+    1237:	48 01 f8             	add    %rdi,%rax
+    123a:	c3                   	retq   
+    123b:	90                   	nop
+    123c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001240 <std::array<std::array<int, 10000ul>, 10000ul>::operator[](unsigned long) const>:
+    1240:	eb ee                	jmp    1230 <std::__array_traits<std::array<int, 10000ul>, 10000ul>::_S_ref(std::array<int, 10000ul> const (&) [10000], unsigned long)>
+    1242:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    1249:	00 00 00 00 
+    124d:	0f 1f 00             	nopl   (%rax)
+
+0000000000001250 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)>:
+    1250:	41 54                	push   %r12
+    1252:	49 89 fc             	mov    %rdi,%r12
+    1255:	55                   	push   %rbp
+    1256:	48 89 f5             	mov    %rsi,%rbp
+    1259:	31 f6                	xor    %esi,%esi
+    125b:	53                   	push   %rbx
+    125c:	48 89 d3             	mov    %rdx,%rbx
+    125f:	ba 40 9c 00 00       	mov    $0x9c40,%edx
+    1264:	e8 17 fe ff ff       	callq  1080 <memset@plt>
+    1269:	45 31 d2             	xor    %r10d,%r10d
+    126c:	4c 89 d6             	mov    %r10,%rsi
+    126f:	48 89 ef             	mov    %rbp,%rdi
+    1272:	e8 a9 ff ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    1277:	48 89 df             	mov    %rbx,%rdi
+    127a:	49 89 c1             	mov    %rax,%r9
+    127d:	e8 be ff ff ff       	callq  1240 <std::array<std::array<int, 10000ul>, 10000ul>::operator[](unsigned long) const>
+    1282:	49 89 c0             	mov    %rax,%r8
+    1285:	31 d2                	xor    %edx,%edx
+    1287:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    128e:	00 00 
+    1290:	48 89 d6             	mov    %rdx,%rsi
+    1293:	4c 89 c7             	mov    %r8,%rdi
+    1296:	e8 85 ff ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    129b:	41 8b 09             	mov    (%r9),%ecx
+    129e:	4c 89 e7             	mov    %r12,%rdi
+    12a1:	0f af 08             	imul   (%rax),%ecx
+    12a4:	48 ff c2             	inc    %rdx
+    12a7:	e8 74 ff ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    12ac:	01 08                	add    %ecx,(%rax)
+    12ae:	48 81 fa 10 27 00 00 	cmp    $0x2710,%rdx
+    12b5:	75 d9                	jne    1290 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)+0x40>
+    12b7:	49 ff c2             	inc    %r10
+    12ba:	49 81 fa 10 27 00 00 	cmp    $0x2710,%r10
+    12c1:	75 a9                	jne    126c <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)+0x1c>
+    12c3:	5b                   	pop    %rbx
+    12c4:	5d                   	pop    %rbp
+    12c5:	4c 89 e0             	mov    %r12,%rax
+    12c8:	41 5c                	pop    %r12
+    12ca:	c3                   	retq   
+    12cb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000012d0 <std::__array_traits<int, 10000ul>::_S_ptr(int const (&) [10000])>:
+    12d0:	48 89 f8             	mov    %rdi,%rax
+    12d3:	c3                   	retq   
+    12d4:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    12db:	00 00 00 00 
+    12df:	90                   	nop
+
+00000000000012e0 <std::array<int, 10000ul>::data() const>:
+    12e0:	eb ee                	jmp    12d0 <std::__array_traits<int, 10000ul>::_S_ptr(int const (&) [10000])>
+    12e2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    12e9:	00 00 00 00 
+    12ed:	0f 1f 00             	nopl   (%rax)
+
+00000000000012f0 <std::array<int, 10000ul>::begin() const>:
+    12f0:	eb ee                	jmp    12e0 <std::array<int, 10000ul>::data() const>
+    12f2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    12f9:	00 00 00 00 
+    12fd:	0f 1f 00             	nopl   (%rax)
+
+0000000000001300 <std::array<int, 10000ul>::end() const>:
+    1300:	e8 db ff ff ff       	callq  12e0 <std::array<int, 10000ul>::data() const>
+    1305:	48 05 40 9c 00 00    	add    $0x9c40,%rax
+    130b:	c3                   	retq   
+    130c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001310 <std::array<std::array<int, 10000ul>, 1ul>::operator[](unsigned long) const [clone .constprop.0]>:
+    1310:	31 f6                	xor    %esi,%esi
+    1312:	48 8d 3d 47 2d 00 00 	lea    0x2d47(%rip),%rdi        # 4060 <m3>
+    1319:	e9 12 ff ff ff       	jmpq   1230 <std::__array_traits<std::array<int, 10000ul>, 10000ul>::_S_ref(std::array<int, 10000ul> const (&) [10000], unsigned long)>
+    131e:	66 90                	xchg   %ax,%ax
+
+0000000000001320 <std::array<std::array<int, 1ul>, 10000ul>::operator[](unsigned long) const [clone .constprop.0]>:
+    1320:	48 89 fe             	mov    %rdi,%rsi
+    1323:	48 8d 3d 76 c9 00 00 	lea    0xc976(%rip),%rdi        # dca0 <m0>
+    132a:	e9 e1 fe ff ff       	jmpq   1210 <std::__array_traits<std::array<int, 1ul>, 10000ul>::_S_ref(std::array<int, 1ul> const (&) [10000], unsigned long)>
+    132f:	90                   	nop
+
+0000000000001330 <std::array<int, 1ul>::operator[](unsigned long) const [clone .constprop.0]>:
+    1330:	31 f6                	xor    %esi,%esi
+    1332:	e9 d9 fe ff ff       	jmpq   1210 <std::__array_traits<std::array<int, 1ul>, 10000ul>::_S_ref(std::array<int, 1ul> const (&) [10000], unsigned long)>
+    1337:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    133e:	00 00 
+
+0000000000001340 <std::array<int, 10000ul> operator*<int, 1ul, 10000ul>(std::array<int, 1ul> const&, std::array<std::array<int, 10000ul>, 1ul> const&) [clone .constprop.0]>:
+    1340:	41 54                	push   %r12
+    1342:	ba 40 9c 00 00       	mov    $0x9c40,%edx
+    1347:	49 89 fc             	mov    %rdi,%r12
+    134a:	55                   	push   %rbp
+    134b:	48 89 f5             	mov    %rsi,%rbp
+    134e:	31 f6                	xor    %esi,%esi
+    1350:	48 83 ec 08          	sub    $0x8,%rsp
+    1354:	e8 27 fd ff ff       	callq  1080 <memset@plt>
+    1359:	48 89 ef             	mov    %rbp,%rdi
+    135c:	e8 cf ff ff ff       	callq  1330 <std::array<int, 1ul>::operator[](unsigned long) const [clone .constprop.0]>
+    1361:	49 89 c1             	mov    %rax,%r9
+    1364:	e8 a7 ff ff ff       	callq  1310 <std::array<std::array<int, 10000ul>, 1ul>::operator[](unsigned long) const [clone .constprop.0]>
+    1369:	49 89 c0             	mov    %rax,%r8
+    136c:	31 d2                	xor    %edx,%edx
+    136e:	66 90                	xchg   %ax,%ax
+    1370:	48 89 d6             	mov    %rdx,%rsi
+    1373:	4c 89 c7             	mov    %r8,%rdi
+    1376:	e8 a5 fe ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    137b:	41 8b 09             	mov    (%r9),%ecx
+    137e:	4c 89 e7             	mov    %r12,%rdi
+    1381:	0f af 08             	imul   (%rax),%ecx
+    1384:	48 ff c2             	inc    %rdx
+    1387:	e8 94 fe ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    138c:	01 08                	add    %ecx,(%rax)
+    138e:	48 81 fa 10 27 00 00 	cmp    $0x2710,%rdx
+    1395:	75 d9                	jne    1370 <std::array<int, 10000ul> operator*<int, 1ul, 10000ul>(std::array<int, 1ul> const&, std::array<std::array<int, 10000ul>, 1ul> const&) [clone .constprop.0]+0x30>
+    1397:	48 83 c4 08          	add    $0x8,%rsp
+    139b:	5d                   	pop    %rbp
+    139c:	4c 89 e0             	mov    %r12,%rax
+    139f:	41 5c                	pop    %r12
+    13a1:	c3                   	retq   
+    13a2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    13a9:	00 00 00 00 
+    13ad:	0f 1f 00             	nopl   (%rax)
+
+00000000000013b0 <std::array<int, 1ul> operator*<int, 10000ul, 1ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 1ul>, 10000ul> const&) [clone .constprop.0]>:
+    13b0:	48 83 ec 18          	sub    $0x18,%rsp
+    13b4:	49 89 f9             	mov    %rdi,%r9
+    13b7:	48 8d 7c 24 04       	lea    0x4(%rsp),%rdi
+    13bc:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    13c3:	00 00 
+    13c5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+    13ca:	31 c0                	xor    %eax,%eax
+    13cc:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%rsp)
+    13d3:	00 
+    13d4:	e8 57 ff ff ff       	callq  1330 <std::array<int, 1ul>::operator[](unsigned long) const [clone .constprop.0]>
+    13d9:	44 8b 00             	mov    (%rax),%r8d
+    13dc:	48 89 c1             	mov    %rax,%rcx
+    13df:	31 d2                	xor    %edx,%edx
+    13e1:	48 89 d6             	mov    %rdx,%rsi
+    13e4:	4c 89 cf             	mov    %r9,%rdi
+    13e7:	e8 34 fe ff ff       	callq  1220 <std::array<int, 10000ul>::operator[](unsigned long) const>
+    13ec:	48 89 d7             	mov    %rdx,%rdi
+    13ef:	49 89 c2             	mov    %rax,%r10
+    13f2:	e8 29 ff ff ff       	callq  1320 <std::array<std::array<int, 1ul>, 10000ul>::operator[](unsigned long) const [clone .constprop.0]>
+    13f7:	48 89 c7             	mov    %rax,%rdi
+    13fa:	e8 31 ff ff ff       	callq  1330 <std::array<int, 1ul>::operator[](unsigned long) const [clone .constprop.0]>
+    13ff:	49 89 c3             	mov    %rax,%r11
+    1402:	41 8b 02             	mov    (%r10),%eax
+    1405:	48 ff c2             	inc    %rdx
+    1408:	41 0f af 03          	imul   (%r11),%eax
+    140c:	41 01 c0             	add    %eax,%r8d
+    140f:	44 89 01             	mov    %r8d,(%rcx)
+    1412:	48 81 fa 10 27 00 00 	cmp    $0x2710,%rdx
+    1419:	75 c6                	jne    13e1 <std::array<int, 1ul> operator*<int, 10000ul, 1ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 1ul>, 10000ul> const&) [clone .constprop.0]+0x31>
+    141b:	8b 44 24 04          	mov    0x4(%rsp),%eax
+    141f:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    1424:	64 48 2b 34 25 28 00 	sub    %fs:0x28,%rsi
+    142b:	00 00 
+    142d:	75 05                	jne    1434 <std::array<int, 1ul> operator*<int, 10000ul, 1ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 1ul>, 10000ul> const&) [clone .constprop.0]+0x84>
+    142f:	48 83 c4 18          	add    $0x18,%rsp
+    1433:	c3                   	retq   
+    1434:	e8 67 fc ff ff       	callq  10a0 <__stack_chk_fail@plt>
+    1439:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001440 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]>:
+    1440:	49 89 f2             	mov    %rsi,%r10
+    1443:	48 39 fe             	cmp    %rdi,%rsi
+    1446:	0f 84 12 01 00 00    	je     155e <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11e>
+    144c:	48 89 f0             	mov    %rsi,%rax
+    144f:	48 29 f8             	sub    %rdi,%rax
+    1452:	48 83 e8 04          	sub    $0x4,%rax
+    1456:	49 89 c3             	mov    %rax,%r11
+    1459:	49 c1 eb 02          	shr    $0x2,%r11
+    145d:	49 8d 73 01          	lea    0x1(%r11),%rsi
+    1461:	48 83 f8 18          	cmp    $0x18,%rax
+    1465:	0f 86 fd 00 00 00    	jbe    1568 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x128>
+    146b:	48 89 f1             	mov    %rsi,%rcx
+    146e:	48 c1 e9 03          	shr    $0x3,%rcx
+    1472:	48 c1 e1 05          	shl    $0x5,%rcx
+    1476:	31 c0                	xor    %eax,%eax
+    1478:	c5 f1 ef c9          	vpxor  %xmm1,%xmm1,%xmm1
+    147c:	0f 1f 40 00          	nopl   0x0(%rax)
+    1480:	c5 fe 6f 14 07       	vmovdqu (%rdi,%rax,1),%ymm2
+    1485:	c4 e2 6d 40 04 02    	vpmulld (%rdx,%rax,1),%ymm2,%ymm0
+    148b:	48 83 c0 20          	add    $0x20,%rax
+    148f:	c5 f5 fe c8          	vpaddd %ymm0,%ymm1,%ymm1
+    1493:	48 39 c8             	cmp    %rcx,%rax
+    1496:	75 e8                	jne    1480 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x40>
+    1498:	c5 f9 6f c1          	vmovdqa %xmm1,%xmm0
+    149c:	c4 e3 7d 39 c9 01    	vextracti128 $0x1,%ymm1,%xmm1
+    14a2:	c5 f9 fe c9          	vpaddd %xmm1,%xmm0,%xmm1
+    14a6:	c5 f9 73 d9 08       	vpsrldq $0x8,%xmm1,%xmm0
+    14ab:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+    14af:	48 89 f0             	mov    %rsi,%rax
+    14b2:	c5 f9 73 d9 04       	vpsrldq $0x4,%xmm1,%xmm0
+    14b7:	48 83 e0 f8          	and    $0xfffffffffffffff8,%rax
+    14bb:	48 8d 0c 85 00 00 00 	lea    0x0(,%rax,4),%rcx
+    14c2:	00 
+    14c3:	c5 f1 fe c8          	vpaddd %xmm0,%xmm1,%xmm1
+    14c7:	4c 8d 0c 0f          	lea    (%rdi,%rcx,1),%r9
+    14cb:	c4 c1 79 7e c8       	vmovd  %xmm1,%r8d
+    14d0:	48 01 d1             	add    %rdx,%rcx
+    14d3:	48 39 c6             	cmp    %rax,%rsi
+    14d6:	0f 84 87 00 00 00    	je     1563 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x123>
+    14dc:	c5 f8 77             	vzeroupper 
+    14df:	49 29 c3             	sub    %rax,%r11
+    14e2:	48 29 c6             	sub    %rax,%rsi
+    14e5:	49 83 fb 02          	cmp    $0x2,%r11
+    14e9:	76 3e                	jbe    1529 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0xe9>
+    14eb:	c5 fa 6f 04 82       	vmovdqu (%rdx,%rax,4),%xmm0
+    14f0:	c4 e2 79 40 04 87    	vpmulld (%rdi,%rax,4),%xmm0,%xmm0
+    14f6:	c5 f1 73 d8 08       	vpsrldq $0x8,%xmm0,%xmm1
+    14fb:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+    14ff:	c5 f1 73 d8 04       	vpsrldq $0x4,%xmm0,%xmm1
+    1504:	c5 f9 fe c1          	vpaddd %xmm1,%xmm0,%xmm0
+    1508:	c5 f9 7e c0          	vmovd  %xmm0,%eax
+    150c:	41 01 c0             	add    %eax,%r8d
+    150f:	48 89 f0             	mov    %rsi,%rax
+    1512:	48 83 e0 fc          	and    $0xfffffffffffffffc,%rax
+    1516:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+    151d:	00 
+    151e:	49 01 d1             	add    %rdx,%r9
+    1521:	48 01 d1             	add    %rdx,%rcx
+    1524:	48 39 c6             	cmp    %rax,%rsi
+    1527:	74 31                	je     155a <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11a>
+    1529:	41 8b 01             	mov    (%r9),%eax
+    152c:	0f af 01             	imul   (%rcx),%eax
+    152f:	41 01 c0             	add    %eax,%r8d
+    1532:	49 8d 41 04          	lea    0x4(%r9),%rax
+    1536:	49 39 c2             	cmp    %rax,%r10
+    1539:	74 1f                	je     155a <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11a>
+    153b:	41 8b 41 04          	mov    0x4(%r9),%eax
+    153f:	0f af 41 04          	imul   0x4(%rcx),%eax
+    1543:	41 01 c0             	add    %eax,%r8d
+    1546:	49 8d 41 08          	lea    0x8(%r9),%rax
+    154a:	49 39 c2             	cmp    %rax,%r10
+    154d:	74 0b                	je     155a <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11a>
+    154f:	41 8b 41 08          	mov    0x8(%r9),%eax
+    1553:	0f af 41 08          	imul   0x8(%rcx),%eax
+    1557:	41 01 c0             	add    %eax,%r8d
+    155a:	44 89 c0             	mov    %r8d,%eax
+    155d:	c3                   	retq   
+    155e:	45 31 c0             	xor    %r8d,%r8d
+    1561:	eb f7                	jmp    155a <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11a>
+    1563:	c5 f8 77             	vzeroupper 
+    1566:	eb f2                	jmp    155a <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x11a>
+    1568:	48 89 d1             	mov    %rdx,%rcx
+    156b:	49 89 f9             	mov    %rdi,%r9
+    156e:	31 c0                	xor    %eax,%eax
+    1570:	45 31 c0             	xor    %r8d,%r8d
+    1573:	e9 67 ff ff ff       	jmpq   14df <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]+0x9f>
+    1578:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    157f:	00 
+
+0000000000001580 <int operator*<int, 10000ul>(std::array<int, 10000ul> const&, std::array<int, 10000ul> const&) [clone .constprop.0]>:
+    1580:	48 83 ec 08          	sub    $0x8,%rsp
+    1584:	49 89 f8             	mov    %rdi,%r8
+    1587:	48 8d 3d 52 63 01 00 	lea    0x16352(%rip),%rdi        # 178e0 <v2>
+    158e:	e8 5d fd ff ff       	callq  12f0 <std::array<int, 10000ul>::begin() const>
+    1593:	4c 89 c7             	mov    %r8,%rdi
+    1596:	48 89 c2             	mov    %rax,%rdx
+    1599:	e8 62 fd ff ff       	callq  1300 <std::array<int, 10000ul>::end() const>
+    159e:	48 89 c6             	mov    %rax,%rsi
+    15a1:	e8 4a fd ff ff       	callq  12f0 <std::array<int, 10000ul>::begin() const>
+    15a6:	48 89 c7             	mov    %rax,%rdi
+    15a9:	48 83 c4 08          	add    $0x8,%rsp
+    15ad:	e9 8e fe ff ff       	jmpq   1440 <int std::inner_product<int const*, int const*, int>(int const*, int const*, int const*, int) [clone .constprop.0]>
+    15b2:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    15b9:	00 00 00 00 
+    15bd:	0f 1f 00             	nopl   (%rax)
+
+00000000000015c0 <f1()>:
+    15c0:	41 54                	push   %r12
+    15c2:	55                   	push   %rbp
+    15c3:	4c 8d 9c 24 00 d0 fe 	lea    -0x13000(%rsp),%r11
+    15ca:	ff 
+    15cb:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    15d2:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    15d7:	4c 39 dc             	cmp    %r11,%rsp
+    15da:	75 ef                	jne    15cb <f1()+0xb>
+    15dc:	48 81 ec 98 08 00 00 	sub    $0x898,%rsp
+    15e3:	48 8d 15 36 83 d9 17 	lea    0x17d98336(%rip),%rdx        # 17d99920 <m1>
+    15ea:	48 8d 35 2f 07 b1 2f 	lea    0x2fb1072f(%rip),%rsi        # 2fb11d20 <v1>
+    15f1:	4c 8d a4 24 40 9c 00 	lea    0x9c40(%rsp),%r12
+    15f8:	00 
+    15f9:	4c 89 e7             	mov    %r12,%rdi
+    15fc:	48 89 e5             	mov    %rsp,%rbp
+    15ff:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1606:	00 00 
+    1608:	48 89 84 24 88 38 01 	mov    %rax,0x13888(%rsp)
+    160f:	00 
+    1610:	31 c0                	xor    %eax,%eax
+    1612:	e8 39 fc ff ff       	callq  1250 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)>
+    1617:	48 89 ef             	mov    %rbp,%rdi
+    161a:	48 8d 15 ff fe 01 00 	lea    0x1feff(%rip),%rdx        # 21520 <m2>
+    1621:	4c 89 e6             	mov    %r12,%rsi
+    1624:	e8 27 fc ff ff       	callq  1250 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)>
+    1629:	48 89 ef             	mov    %rbp,%rdi
+    162c:	e8 4f ff ff ff       	callq  1580 <int operator*<int, 10000ul>(std::array<int, 10000ul> const&, std::array<int, 10000ul> const&) [clone .constprop.0]>
+    1631:	48 8b 8c 24 88 38 01 	mov    0x13888(%rsp),%rcx
+    1638:	00 
+    1639:	64 48 2b 0c 25 28 00 	sub    %fs:0x28,%rcx
+    1640:	00 00 
+    1642:	75 0b                	jne    164f <f1()+0x8f>
+    1644:	48 81 c4 98 38 01 00 	add    $0x13898,%rsp
+    164b:	5d                   	pop    %rbp
+    164c:	41 5c                	pop    %r12
+    164e:	c3                   	retq   
+    164f:	e8 4c fa ff ff       	callq  10a0 <__stack_chk_fail@plt>
+    1654:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    165b:	00 00 00 00 
+    165f:	90                   	nop
+
+0000000000001660 <f2()>:
+    1660:	41 54                	push   %r12
+    1662:	55                   	push   %rbp
+    1663:	4c 8d 9c 24 00 30 fe 	lea    -0x1d000(%rsp),%r11
+    166a:	ff 
+    166b:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    1672:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1677:	4c 39 dc             	cmp    %r11,%rsp
+    167a:	75 ef                	jne    166b <f2()+0xb>
+    167c:	48 81 ec e8 04 00 00 	sub    $0x4e8,%rsp
+    1683:	48 8d 15 96 82 d9 17 	lea    0x17d98296(%rip),%rdx        # 17d99920 <m1>
+    168a:	48 8d 35 8f 06 b1 2f 	lea    0x2fb1068f(%rip),%rsi        # 2fb11d20 <v1>
+    1691:	48 8d ac 24 90 38 01 	lea    0x13890(%rsp),%rbp
+    1698:	00 
+    1699:	48 89 ef             	mov    %rbp,%rdi
+    169c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    16a3:	00 00 
+    16a5:	48 89 84 24 d8 d4 01 	mov    %rax,0x1d4d8(%rsp)
+    16ac:	00 
+    16ad:	31 c0                	xor    %eax,%eax
+    16af:	4c 8d a4 24 50 9c 00 	lea    0x9c50(%rsp),%r12
+    16b6:	00 
+    16b7:	e8 94 fb ff ff       	callq  1250 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)>
+    16bc:	48 89 ef             	mov    %rbp,%rdi
+    16bf:	e8 ec fc ff ff       	callq  13b0 <std::array<int, 1ul> operator*<int, 10000ul, 1ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 1ul>, 10000ul> const&) [clone .constprop.0]>
+    16c4:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+    16c9:	48 8d 74 24 0c       	lea    0xc(%rsp),%rsi
+    16ce:	4c 89 e7             	mov    %r12,%rdi
+    16d1:	89 44 24 0c          	mov    %eax,0xc(%rsp)
+    16d5:	e8 66 fc ff ff       	callq  1340 <std::array<int, 10000ul> operator*<int, 1ul, 10000ul>(std::array<int, 1ul> const&, std::array<std::array<int, 10000ul>, 1ul> const&) [clone .constprop.0]>
+    16da:	48 89 ef             	mov    %rbp,%rdi
+    16dd:	48 8d 15 3c fe 01 00 	lea    0x1fe3c(%rip),%rdx        # 21520 <m2>
+    16e4:	4c 89 e6             	mov    %r12,%rsi
+    16e7:	e8 64 fb ff ff       	callq  1250 <std::array<int, 10000ul> operator*<int, 10000ul, 10000ul>(std::array<int, 10000ul> const&, std::array<std::array<int, 10000ul>, 10000ul> const&)>
+    16ec:	48 89 ef             	mov    %rbp,%rdi
+    16ef:	e8 8c fe ff ff       	callq  1580 <int operator*<int, 10000ul>(std::array<int, 10000ul> const&, std::array<int, 10000ul> const&) [clone .constprop.0]>
+    16f4:	48 8b 8c 24 d8 d4 01 	mov    0x1d4d8(%rsp),%rcx
+    16fb:	00 
+    16fc:	64 48 2b 0c 25 28 00 	sub    %fs:0x28,%rcx
+    1703:	00 00 
+    1705:	75 0b                	jne    1712 <f2()+0xb2>
+    1707:	48 81 c4 e8 d4 01 00 	add    $0x1d4e8,%rsp
+    170e:	5d                   	pop    %rbp
+    170f:	41 5c                	pop    %r12
+    1711:	c3                   	retq   
+    1712:	e8 89 f9 ff ff       	callq  10a0 <__stack_chk_fail@plt>
+    1717:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    171e:	00 00 
+
+0000000000001720 <__libc_csu_init>:
+    1720:	f3 0f 1e fa          	endbr64 
+    1724:	41 57                	push   %r15
+    1726:	4c 8d 3d 53 26 00 00 	lea    0x2653(%rip),%r15        # 3d80 <__frame_dummy_init_array_entry>
+    172d:	41 56                	push   %r14
+    172f:	49 89 d6             	mov    %rdx,%r14
+    1732:	41 55                	push   %r13
+    1734:	49 89 f5             	mov    %rsi,%r13
+    1737:	41 54                	push   %r12
+    1739:	41 89 fc             	mov    %edi,%r12d
+    173c:	55                   	push   %rbp
+    173d:	48 8d 2d 4c 26 00 00 	lea    0x264c(%rip),%rbp        # 3d90 <__do_global_dtors_aux_fini_array_entry>
+    1744:	53                   	push   %rbx
+    1745:	4c 29 fd             	sub    %r15,%rbp
+    1748:	48 83 ec 08          	sub    $0x8,%rsp
+    174c:	e8 af f8 ff ff       	callq  1000 <_init>
+    1751:	48 c1 fd 03          	sar    $0x3,%rbp
+    1755:	74 1f                	je     1776 <__libc_csu_init+0x56>
+    1757:	31 db                	xor    %ebx,%ebx
+    1759:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1760:	4c 89 f2             	mov    %r14,%rdx
+    1763:	4c 89 ee             	mov    %r13,%rsi
+    1766:	44 89 e7             	mov    %r12d,%edi
+    1769:	41 ff 14 df          	callq  *(%r15,%rbx,8)
+    176d:	48 83 c3 01          	add    $0x1,%rbx
+    1771:	48 39 dd             	cmp    %rbx,%rbp
+    1774:	75 ea                	jne    1760 <__libc_csu_init+0x40>
+    1776:	48 83 c4 08          	add    $0x8,%rsp
+    177a:	5b                   	pop    %rbx
+    177b:	5d                   	pop    %rbp
+    177c:	41 5c                	pop    %r12
+    177e:	41 5d                	pop    %r13
+    1780:	41 5e                	pop    %r14
+    1782:	41 5f                	pop    %r15
+    1784:	c3                   	retq   
+    1785:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    178c:	00 00 00 00 
+
+0000000000001790 <__libc_csu_fini>:
+    1790:	f3 0f 1e fa          	endbr64 
+    1794:	c3                   	retq   
+
+Desensamblado de la sección .fini:
+
+0000000000001798 <_fini>:
+    1798:	f3 0f 1e fa          	endbr64 
+    179c:	48 83 ec 08          	sub    $0x8,%rsp
+    17a0:	48 83 c4 08          	add    $0x8,%rsp
+    17a4:	c3                   	retq   

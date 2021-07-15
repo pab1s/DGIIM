@@ -1,0 +1,723 @@
+Id. usuario del trabajo: e1estudiante21
+Id. del trabajo: 100204
+Nombre del trabajo especificado por usuario: tiempos_pmv_ac4
+Directorio de trbajo (en el que se ejecuta el script): /home/e1estudiante21/bp2/ejer11
+Cola: ac4
+Nodo que ejecuta este trabajo: atcgrid.ugr.es
+Nº de nodos asignados al trabajo: 1
+Nodos asignados al trabajo: atcgrid4
+CPUs por nodo: 2
+NÚMERO DE HEBRAS: 1 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.107037
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.143056
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.075232
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.147735
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.076879
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.148029
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.079567
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.151679
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 2 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074943
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.143916
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.040640
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082225
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.044991
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.085755
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.048103
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.090663
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 3 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.073429
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.143441
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.042811
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.084103
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.097123
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.166005
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.140308
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.224787
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 4 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.073552
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.146578
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.044164
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.085682
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.087646
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.141570
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.123055
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.204984
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 5 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.073954
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.144641
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041652
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082453
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.126931
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.204365
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.204667
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.314963
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 6 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074519
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.144657
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.042127
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.081024
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.122570
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.195958
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.200784
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.302080
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 7 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.073797
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.143235
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.045925
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.083028
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.157293
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.245273
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.272268
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.404409
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 8 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.073807
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.146543
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041203
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.081297
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.162397
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.256132
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.289400
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.460720
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 9 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074181
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.147203
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.043018
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.083366
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.202634
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.305066
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.362015
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.542994
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 10 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.072962
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.144700
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041561
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.081500
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.201307
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.307624
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.378625
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.616101
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 11 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074193
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.147063
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.044485
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082512
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.227484
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.357470
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.455021
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.680221
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 12 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074446
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.146107
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.042187
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082624
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.237678
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.416868
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.469189
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.714849
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 13 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074930
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.145168
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041437
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.080160
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.272838
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.472907
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.536602
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.833246
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 14 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074928
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.147452
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.040733
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.080807
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.308575
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.466618
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.529877
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.880340
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 15 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074912
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.147180
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041803
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082796
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.357291
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.514526
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.566818
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.865834
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 16 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074939
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.145294
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041452
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.081257
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.339731
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.457608
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.634281
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.991701
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+NÚMERO DE HEBRAS: 32 
+
+PMV SECUENCIAL
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.074950
+ Primera componente: 140596876250.000000
+ Última componente: 351478130000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.146975
+ Primera componente: 385819876750.000000
+ Última componente: 964522132000.000000
+
+PMV OPENMP-A
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.041311
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.082190
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-B
+Tamaño vectores: 7500
+ Tiempo de ejecución: 0.652203
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 0.923294
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
+PMV OPENMP-REDUCTION
+Tamaño vectores: 7500
+ Tiempo de ejecución: 1.208436
+ Primera componente: 15000.000000
+ Última componente: 15000.000000
+Tamaño vectores: 10500
+ Tiempo de ejecución: 1.767955
+ Primera componente: 21000.000000
+ Última componente: 21000.000000
+
