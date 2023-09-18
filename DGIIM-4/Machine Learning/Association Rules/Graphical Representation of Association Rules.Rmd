@@ -1,0 +1,39 @@
+---
+title: "Graphical representation of association rules"
+output:
+  html_document:
+    df_print: paged
+---
+
+As for other analyses, visualization is an important tool when examining association rules. The arulesViz package provides visualization tools for association rules.
+
+```{r}
+library(arules)
+library(arulesViz)
+library(vcdExtra)
+data(ICU)
+
+ICU_tr = as(ICU[-4], "transactions")
+
+rulesDeath2 <- apriori(ICU_tr,
+ parameter = list(support=0.01, confidence = 0.3, minlen=3, maxlen=3),
+ appearance = list(rhs = c("died=Yes"), default="lhs"))
+inspect(rulesDeath2)
+
+plot(rulesDeath2,method="graph")
+plot(rulesDeath2,method="graph", interactive=TRUE)
+```
+
+or rules for Coma
+
+```{r}
+rulesComa<- apriori(ICU_tr,
+ parameter = list(support=0.01, confidence = 0.95,maxlen=3),
+ appearance = list(rhs = c("coma=Coma"), default="lhs")) 
+summary(rulesComa)
+inspect(rulesComa)
+
+plot(rulesComa,method="graph")
+plot(rulesComa,method="graph", interactive=TRUE)
+```
+

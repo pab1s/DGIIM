@@ -1,0 +1,113 @@
+# Exercise A10 ------------------------------------------------------------
+# Pablo Olivares Martinez -------------------------------------------------
+
+library(caret)
+library(neuralnet)
+
+# Define necessary functions ----------------------------------------------
+
+# Normalization function
+normalize <- function(x) {
+  return((x - min(x)) / (max(x) - min(x)))
+}
+
+# Mean Square Error
+MSE = function(y.true, y.pred) { sum((y.true - y.pred)^2)/length(y.true)}
+
+# Coefficient of Determination
+r2 = function(pred, actual) {
+  rss = sum((actual - pred)^2) ## residual sum of squares
+  tss = sum((actual - mean(actual)) ^ 2) ## total sum of squares
+  result = 1 - rss / tss
+  return(result)
+}
+
+
+# Preparing Data ----------------------------------------------------------
+
+# Import datasets
+insurance = read.csv("Insurance.csv", stringsAsFactors = T)
+wisc.bc = read.csv("wisc_bc_data.csv", stringsAsFactors = T)
+wisc.bc = wisc.bc[-1]
+
+# Dummification of variables
+dummies.insurance = dummyVars(charges ~ .,insurance, fullRank = T)
+dm.insurance = as.data.frame(predict(dummies.insurance, newdata = insurance))
+
+
+# Set to numerical the diagnosis attribute and Insert charges
+wisc.bc$diagnosis = ifelse(wisc.bc$diagnosis == "M", 1, 0)
+dm.insurance$charges = insurance$charges
+
+# Normalization of data
+norm.insurance = as.data.frame(lapply(dm.insurance, normalize))
+norm.wisc.bc = as.data.frame(lapply(wisc.bc, normalize))
+
+# Division in Training and Test sets
+set.seed(99)
+trainIndexIns = createDataPartition(norm.insurance$charges, p = 0.7, list =FALSE)
+trainIndexBC = createDataPartition(norm.wisc.bc$diagnosis, p = 0.7, list =FALSE)
+
+train.insurance = norm.insurance[trainIndexIns, ]
+test.insurance = norm.insurance[-trainIndexIns, ]
+
+train.wisc.bc = norm.wisc.bc[trainIndexBC, ]
+test.wisc.bc = norm.wisc.bc[-trainIndexBC, ]
+
+
+# Modeling and evaluation -------------------------------------------------
+
+# MODEL 1: Insurance
+# Creation of the formula
+n = names(train.insurance)
+insurance.formula = as.formula(paste("charges ~", paste(n[!n %in% "charges"],collapse = " + ")))
+insurance.formula
+
+# Modeling
+insurance.net = neuralnet(insurance.formula, data = train.insurance, err.fct = "sse",
+                          linear.output = TRUE, hidden=c(3,2))
+insurance.net
+plot(insurance.net)
+
+# Evaluation
+res = compute(insurance.net, test.insurance[, 1:8])
+predTest = res$net.result
+predTest = res$net.result*(max(insurance$charges)-min(insurance$charges))+min(insurance$charges)
+test.insurance.charges = test.insurance$charges*(max(insurance$charges)-min(insurance$charges))+min(insurance$charges)
+
+r2(predTest, test.insurance.charges) # R^2 = 0.8430
+cor(predTest, test.insurance.charges) # Correlation coefficient = 0.9188
+
+# Visualization
+plot(test.insurance.charges,predTest,col='red',main='Real vs predicted NN')
+abline(0,1,lwd=2)
+
+# After evaluating this regression model, we see in the coefficient of determination
+# that our model is very good, having R^2 = 0.8430, being really next to 1.
+# What is more, the correlation coefficient is really strong (0.92), saying that the 
+# model is very good.
+
+
+# MODEL 2: Breast Cancer
+# Creation of the formula
+n = names(train.wisc.bc)
+wisc.bc.formula = as.formula(paste("diagnosis ~", paste(n[!n %in% "diagnosis"],collapse = " + ")))
+wisc.bc.formula
+
+# Modeling
+wisc.bc.net = neuralnet(wisc.bc.formula, data = train.wisc.bc, err.fct = "ce", linear.output = FALSE)
+wisc.bc.net$net.result
+plot(wisc.bc.net)
+
+# Evaluation
+res2 = compute(wisc.bc.net, test.wisc.bc[, 2:31])
+predTest2 = res2$net.result
+predTest2 = ifelse(predTest2 >= 0.5, 1, 0)
+
+confusionMatrix(as.factor(predTest2), as.factor(test.wisc.bc$diagnosis), mode = "everything", positive="1") # kappa = 0.9502, F-score = 0.9692
+
+# In the evaluation of this classification model, we can see that that all performance
+# measures are really good. Moreover, F-score says that our model is almost perfect when
+# talking about precision and recall and kappa statistic says that there is almost
+# perfect agreement between the model's predictions and the true values.
+
